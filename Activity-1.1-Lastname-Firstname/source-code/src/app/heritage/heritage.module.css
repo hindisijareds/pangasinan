@@ -1,0 +1,34 @@
+.main {
+  min-height: 100vh;
+  padding-top: 6.5rem;
+}
+
+.intro {
+  padding: clamp(3rem, 8vw, 7rem) var(--page-gutter) clamp(3rem, 7vw, 5rem);
+}
+
+.introInner {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0 auto;
+  max-width: var(--content-max);
+}
+
+.intro h1 {
+  max-width: 64rem;
+}
+
+.intro p {
+  margin: 0;
+  max-width: 42rem;
+}
+
+.collection {
+  background: var(--color-surface);
+  padding: clamp(3.5rem, 8vw, 7rem) var(--page-gutter) var(--section-space);
+}
+
+.collectionInner {
+  margin: 0 auto;
+  max-width: var(--content-max);
+}

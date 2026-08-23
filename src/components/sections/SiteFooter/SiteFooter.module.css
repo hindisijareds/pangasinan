@@ -1,0 +1,50 @@
+.footer {
+  background: var(--color-deep);
+  color: var(--color-on-dark);
+  padding: clamp(3.5rem, 10vw, 7rem) var(--page-gutter) 2rem;
+}
+
+.inner {
+  display: grid;
+  gap: 3rem;
+  margin: 0 auto;
+  max-width: var(--content-max);
+}
+
+.lead {
+  display: grid;
+  gap: 1rem;
+  max-width: 47rem;
+}
+
+.lead p {
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  gap: 1rem;
+  padding-top: 1.5rem;
+}
+
+.bottom p,
+.credits {
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 0.76rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.credits a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+@media (min-width: 48rem) {
+  .bottom {
+    align-items: start;
+    grid-template-columns: 1fr 1.6fr;
+  }
+}

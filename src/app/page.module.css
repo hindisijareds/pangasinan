@@ -1,0 +1,32 @@
+.editorial {
+  background: var(--color-surface);
+  padding: var(--section-space) var(--page-gutter);
+}
+
+.editorialInner {
+  display: grid;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: var(--content-max);
+}
+
+.editorialTitle {
+  max-width: 64rem;
+}
+
+.editorialCopy {
+  display: grid;
+  gap: 1rem;
+  max-width: 39rem;
+}
+
+.editorialCopy p {
+  margin: 0;
+}
+
+@media (min-width: 56rem) {
+  .editorialInner {
+    align-items: end;
+    grid-template-columns: 1.55fr 0.8fr;
+  }
+}

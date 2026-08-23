@@ -1,0 +1,118 @@
+.card {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.image,
+.placeholder {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-card);
+}
+
+.image img {
+  transition: transform 500ms var(--ease-out);
+}
+
+.card:hover .image img {
+  transform: scale(1.035);
+}
+
+.placeholder {
+  align-items: flex-end;
+  background:
+    radial-gradient(circle at 72% 26%, rgba(253, 215, 129, 0.7) 0 7%, transparent 8%),
+    linear-gradient(150deg, transparent 0 45%, rgba(23, 71, 60, 0.42) 46% 64%, transparent 65%),
+    linear-gradient(165deg, var(--color-sea) 0 46%, var(--color-leaf) 47% 70%, var(--color-earth) 71%);
+  color: var(--color-on-dark);
+  display: flex;
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+}
+
+.placeholder::before,
+.placeholder::after {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  content: "";
+  height: 7rem;
+  left: 50%;
+  position: absolute;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  width: 7rem;
+}
+
+.placeholder::after {
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
+.placeholderNote {
+  background: rgba(13, 39, 34, 0.72);
+  border-radius: var(--radius-pill);
+  font-size: 0.67rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 0.65rem;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.meta {
+  align-items: center;
+  color: var(--color-text-secondary);
+  display: flex;
+  font-size: 0.72rem;
+  font-weight: 750;
+  gap: 0.5rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.meta span + span::before {
+  content: "•";
+  margin-right: 0.5rem;
+}
+
+.content {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.description {
+  margin: 0;
+}
+
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+}
+
+.highlight {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-secondary);
+  font-size: 0.68rem;
+  padding: 0.38rem 0.58rem;
+}
+
+.compact .image,
+.compact .placeholder {
+  aspect-ratio: 16 / 11;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image img {
+    transition: none;
+  }
+
+  .card:hover .image img {
+    transform: none;
+  }
+}
