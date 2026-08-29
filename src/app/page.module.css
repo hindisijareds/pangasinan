@@ -1,32 +1,386 @@
-.editorial {
-  background: var(--color-surface);
-  padding: var(--section-space) var(--page-gutter);
+.manifesto {
+  align-items: center;
+  background: var(--color-background);
+  display: flex;
+  justify-content: center;
+  min-height: min(48rem, 86svh);
+  padding: clamp(7rem, 14vw, 13rem) var(--page-gutter);
+  text-align: center;
 }
 
-.editorialInner {
+.manifesto h2 {
+  color: var(--color-accent);
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 1.28;
+  margin: 0;
+  max-width: 58rem;
+}
+
+.splitStory {
+  align-items: center;
+  background: var(--color-background);
   display: grid;
-  gap: 2rem;
+  gap: clamp(3rem, 8vw, 8rem);
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
+  margin: 0 auto;
+  max-width: var(--content-max);
+  padding: clamp(3rem, 8vw, 7rem) var(--page-gutter) clamp(8rem, 15vw, 14rem);
+}
+
+.splitVisual {
+  justify-self: center;
+  max-width: 35rem;
+  position: relative;
+  width: 100%;
+}
+
+.portraitImage {
+  aspect-ratio: 4 / 5;
+}
+
+.portraitImage img {
+  object-position: 52% center;
+}
+
+.imageIndex {
+  align-items: center;
+  background: var(--color-surface);
+  bottom: -1.3rem;
+  color: var(--color-accent);
+  display: flex;
+  font: 700 0.68rem/1 var(--font-sans);
+  height: 4.3rem;
+  justify-content: center;
+  letter-spacing: 0.12em;
+  position: absolute;
+  right: -1.3rem;
+  width: 4.3rem;
+}
+
+.splitCopy,
+.seasonsCopy,
+.heritageCopy {
+  align-items: start;
+  display: grid;
+  gap: 1.15rem;
+}
+
+.splitCopy h2,
+.seasonsCopy h2,
+.heritageCopy h2 {
+  font-size: clamp(2.15rem, 4.2vw, 3.65rem);
+  font-weight: 300;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.splitCopy h2,
+.heritageCopy h2 {
+  color: var(--color-accent);
+}
+
+.splitCopy p,
+.seasonsCopy p,
+.heritageCopy p {
+  margin: 0;
+  max-width: 32rem;
+}
+
+.splitCopy a,
+.seasonsCopy a,
+.heritageCopy > a {
+  margin-top: 0.7rem;
+}
+
+.imageJourney {
+  background: var(--color-surface);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  min-height: 1350px;
+  overflow: hidden;
+  padding: clamp(7rem, 12vw, 11rem) var(--page-gutter);
+  position: relative;
+}
+
+.journeyIntro {
+  align-self: start;
+  display: grid;
+  gap: 1rem;
+  grid-column: 7 / 12;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.journeyIntro h2 {
+  color: var(--color-accent);
+  font-size: clamp(2.1rem, 4vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1.08;
+  margin: 0;
+}
+
+.journeyImage {
+  position: absolute;
+}
+
+.journeyImageTall {
+  aspect-ratio: 4 / 5;
+  left: clamp(1rem, 11vw, 10rem);
+  top: 23rem;
+  width: min(34vw, 31rem);
+}
+
+.journeyImageSmall {
+  aspect-ratio: 4 / 5;
+  bottom: 8rem;
+  left: 19%;
+  width: min(21vw, 18rem);
+}
+
+.journeyImageWide {
+  aspect-ratio: 5 / 4;
+  bottom: 18rem;
+  right: 8%;
+  width: min(32vw, 30rem);
+}
+
+.seasons {
+  background: var(--color-deep);
+  color: var(--color-on-dark);
+  padding: clamp(5rem, 10vw, 9rem) var(--page-gutter);
+}
+
+.seasonsInner {
+  align-items: center;
+  display: grid;
+  gap: clamp(3rem, 9vw, 9rem);
+  grid-template-columns: minmax(0, 0.95fr) minmax(18rem, 0.8fr);
   margin: 0 auto;
   max-width: var(--content-max);
 }
 
-.editorialTitle {
-  max-width: 64rem;
+.seasonsImage {
+  aspect-ratio: 4 / 5;
+  max-width: 36rem;
 }
 
-.editorialCopy {
+.seasonsImage img {
+  object-position: 62% center;
+}
+
+.seasonsCopy h2 {
+  color: #fffdf6;
+}
+
+.seasonsCopy p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.heritageFeature {
+  align-items: center;
+  background: var(--color-surface);
+  display: grid;
+  gap: clamp(4rem, 9vw, 9rem);
+  grid-template-columns: minmax(18rem, 0.8fr) minmax(0, 1fr);
+  padding: clamp(7rem, 12vw, 11rem) max(var(--page-gutter), calc((100vw - var(--content-max)) / 2));
+}
+
+.heritageCopy {
+  padding-left: clamp(0rem, 4vw, 4rem);
+}
+
+.placeLinks {
+  border-top: 1px solid var(--color-border);
+  display: grid;
+  margin: 1.4rem 0 0;
+  width: 100%;
+}
+
+.placeLinks a {
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  display: flex;
+  font-size: 0.76rem;
+  justify-content: space-between;
+  letter-spacing: 0.08em;
+  min-height: 3.2rem;
+  text-transform: uppercase;
+  transition: color 180ms ease, padding-left 180ms ease;
+}
+
+.placeLinks a:hover {
+  color: var(--color-accent);
+  padding-left: 0.4rem;
+}
+
+.heritageImage {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+}
+
+.heritageImage img {
+  object-position: 54% center;
+}
+
+.experiences {
+  background: #e8d5a7;
+  overflow: hidden;
+  padding: clamp(7rem, 12vw, 11rem) 0 clamp(6rem, 11vw, 9rem);
+}
+
+.experiencesHeading {
   display: grid;
   gap: 1rem;
-  max-width: 39rem;
+  margin: 0 auto clamp(3.5rem, 7vw, 6rem);
+  max-width: 52rem;
+  padding: 0 var(--page-gutter);
+  text-align: center;
 }
 
-.editorialCopy p {
+.experiencesHeading h2 {
+  color: var(--color-accent);
+  font-size: clamp(2.4rem, 4.5vw, 4.1rem);
+  font-weight: 300;
+  line-height: 1.05;
   margin: 0;
 }
 
-@media (min-width: 56rem) {
-  .editorialInner {
-    align-items: end;
-    grid-template-columns: 1.55fr 0.8fr;
+.experienceTrack {
+  display: flex;
+  gap: clamp(1rem, 2vw, 2rem);
+  overflow-x: auto;
+  padding: 0 max(var(--page-gutter), calc((100vw - var(--content-max)) / 2)) 2rem;
+  scroll-padding-left: var(--page-gutter);
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--color-accent) transparent;
+}
+
+.experienceCard {
+  display: grid;
+  flex: 0 0 min(78vw, 33rem);
+  grid-template-columns: auto 1fr;
+  position: relative;
+  scroll-snap-align: center;
+}
+
+.experienceImage {
+  aspect-ratio: 4 / 3;
+  grid-column: 1 / -1;
+}
+
+.experienceImage img {
+  transition: transform 700ms var(--ease-out);
+}
+
+.experienceCard:hover .experienceImage img {
+  transform: scale(1.035);
+}
+
+.experienceNumber {
+  font: 700 0.65rem/1 var(--font-sans);
+  letter-spacing: 0.13em;
+  padding-top: 1.3rem;
+}
+
+.experienceMeta {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.1rem 0 0 1.5rem;
+}
+
+.experienceMeta h3 {
+  color: var(--color-accent);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 300;
+  margin: 0;
+}
+
+.experienceMeta span {
+  font-size: 0.68rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 47.99rem) {
+  .splitStory,
+  .seasonsInner,
+  .heritageFeature {
+    grid-template-columns: 1fr;
+  }
+
+  .splitStory {
+    padding-bottom: 7rem;
+  }
+
+  .splitVisual {
+    margin-right: 8vw;
+    width: 84%;
+  }
+
+  .imageJourney {
+    display: block;
+    min-height: 78rem;
+    padding-top: 6rem;
+  }
+
+  .journeyIntro {
+    margin: 0;
+    max-width: 25rem;
+  }
+
+  .journeyImageTall {
+    left: var(--page-gutter);
+    top: 24rem;
+    width: 67vw;
+  }
+
+  .journeyImageSmall {
+    bottom: 5rem;
+    left: 10vw;
+    width: 45vw;
+    z-index: 2;
+  }
+
+  .journeyImageWide {
+    bottom: 13rem;
+    right: -7vw;
+    width: 64vw;
+  }
+
+  .seasons {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .seasonsCopy {
+    padding: 0 var(--page-gutter);
+  }
+
+  .heritageFeature {
+    padding-left: var(--page-gutter);
+    padding-right: var(--page-gutter);
+  }
+
+  .heritageCopy {
+    padding-left: 0;
+  }
+
+  .heritageImage {
+    grid-row: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experienceImage img,
+  .placeLinks a {
+    transition: none;
+  }
+
+  .experienceCard:hover .experienceImage img {
+    transform: none;
   }
 }
