@@ -8,13 +8,18 @@
   position: relative;
 }
 
+.backdropMotion {
+  inset: -3rem 0;
+  position: absolute;
+}
+
 .backdrop {
   inset: 0;
   position: absolute;
 }
 
 .backdrop img {
-  animation: heroReveal 1.5s var(--ease-out) both;
+  animation: heroReveal 1.4s var(--ease-out) both;
   filter: saturate(0.78) contrast(1.05);
   object-position: 50% 55%;
   transform: scale(1.025);
@@ -37,7 +42,6 @@
 }
 
 .content {
-  animation: contentReveal 1s 250ms var(--ease-out) both;
   display: grid;
   gap: 1.1rem;
   max-width: 44rem;
@@ -50,6 +54,12 @@
 .kicker {
   color: rgba(255, 255, 255, 0.82);
   margin: 0;
+  overflow: hidden;
+}
+
+.kicker > span {
+  animation: lineReveal 650ms 480ms var(--ease-out) both;
+  display: block;
 }
 
 .title {
@@ -59,6 +69,20 @@
   letter-spacing: -0.035em;
   line-height: 0.95;
   margin: 0;
+}
+
+.titleLine {
+  display: block;
+  overflow: hidden;
+}
+
+.titleLine > span {
+  animation: lineReveal 750ms 570ms var(--ease-out) both;
+  display: block;
+}
+
+.titleLine + .titleLine > span {
+  animation-delay: 660ms;
 }
 
 .scrollCue {
@@ -84,13 +108,13 @@
 }
 
 @keyframes heroReveal {
-  from { opacity: 0; transform: scale(1.08); }
-  to { opacity: 1; transform: scale(1.025); }
+  from { transform: scale(1.1); }
+  to { transform: scale(1.025); }
 }
 
-@keyframes contentReveal {
-  from { opacity: 0; transform: translateY(1.5rem); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes lineReveal {
+  from { transform: translate3d(0, 115%, 0); }
+  to { transform: translate3d(0, 0, 0); }
 }
 
 @keyframes pulseLine {
@@ -110,7 +134,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .backdrop img,
-  .content,
+  .kicker > span,
+  .titleLine > span,
   .scrollLine {
     animation: none;
   }

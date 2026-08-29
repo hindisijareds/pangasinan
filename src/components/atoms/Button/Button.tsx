@@ -1,5 +1,5 @@
-import Link from "next/link";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
+import { TransitionLink } from "@/components/motion/TransitionLink/TransitionLink";
 import styles from "./Button.module.css";
 
 type Variant = "primary" | "secondary" | "ghost";
@@ -30,12 +30,18 @@ function classNames(variant: Variant, iconOnly?: boolean, className?: string) {
 export function Button(props: ButtonProps | LinkButtonProps) {
   const { children, className, iconOnly, variant = "primary" } = props;
   const classes = classNames(variant, iconOnly, className);
+  const content = iconOnly ? children : (
+    <span className={styles.labelWindow}>
+      <span className={styles.labelPrimary}>{children}</span>
+      <span aria-hidden="true" className={styles.labelClone}>{children}</span>
+    </span>
+  );
 
   if ("href" in props && props.href) {
     return (
-      <Link aria-label={props["aria-label"]} className={classes} href={props.href}>
-        {children}
-      </Link>
+      <TransitionLink aria-label={props["aria-label"]} className={classes} href={props.href}>
+        {content}
+      </TransitionLink>
     );
   }
 
@@ -51,7 +57,7 @@ export function Button(props: ButtonProps | LinkButtonProps) {
       onClick={buttonProps.onClick}
       type={buttonProps.type ?? "button"}
     >
-      {children}
+      {content}
     </button>
   );
 }

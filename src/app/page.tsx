@@ -1,35 +1,40 @@
-import Link from "next/link";
 import { Button } from "@/components/atoms/Button/Button";
 import { Icon } from "@/components/atoms/Icon/Icon";
 import { ResponsiveImage } from "@/components/atoms/Image/ResponsiveImage";
 import { Typography } from "@/components/atoms/Typography/Typography";
 import { CinematicHero } from "@/components/sections/CinematicHero/CinematicHero";
+import { ExperienceCarousel, type ExperienceCarouselItem } from "@/components/sections/ExperienceCarousel/ExperienceCarousel";
 import { SiteFooter } from "@/components/sections/SiteFooter/SiteFooter";
+import { TransitionLink } from "@/components/motion/TransitionLink/TransitionLink";
 import styles from "./page.module.css";
 
-const experiences = [
+const experiences: ExperienceCarouselItem[] = [
   {
     title: "Island nature",
     place: "Alaminos City",
     image: "/images/hundred-islands.webp",
+    href: "/heritage",
     alt: "Tree-covered islands and blue water in Hundred Islands National Park",
   },
   {
     title: "Coastal days",
     place: "Patar, Bolinao",
     image: "/images/patar-beach.webp",
+    href: "/heritage",
     alt: "The open shoreline and sea at Patar Beach",
   },
   {
     title: "Living faith",
     place: "Manaoag",
     image: "/images/manaoag-church.webp",
+    href: "/heritage",
     alt: "The facade and bell tower of Manaoag Church",
   },
   {
     title: "Civic heritage",
     place: "Lingayen",
     image: "/images/provincial-capitol.webp",
+    href: "/heritage",
     alt: "Pangasinan Provincial Capitol beneath a blue sky",
   },
 ];
@@ -41,23 +46,24 @@ export default function HomePage() {
         <CinematicHero />
 
         <section aria-labelledby="province-story" className={styles.manifesto}>
-          <Typography as="h2" id="province-story" variant="heading">
+          <Typography as="h2" data-reveal="fade-up" id="province-story" variant="heading">
             Follow the salt air, cross the island waters, and discover a province
             shaped by nature, memory, and everyday life.
           </Typography>
         </section>
 
         <section aria-labelledby="coast-heading" className={styles.splitStory}>
-          <div className={styles.splitVisual}>
+          <div className={styles.splitVisual} data-reveal="clip">
             <ResponsiveImage
               alt="Sandy shore and clear blue water at Patar Beach in Bolinao"
               className={styles.portraitImage}
+              parallax={28}
               sizes="(max-width: 767px) 88vw, 43vw"
               src="/images/patar-beach.webp"
             />
             <span aria-hidden="true" className={styles.imageIndex}>01</span>
           </div>
-          <div className={styles.splitCopy}>
+          <div className={styles.splitCopy} data-delay="1" data-reveal="fade-up">
             <Typography variant="eyebrow">The western coast</Typography>
             <Typography as="h2" id="coast-heading" variant="heading">
               Room to breathe
@@ -74,7 +80,7 @@ export default function HomePage() {
         </section>
 
         <section aria-label="A journey across Pangasinan" className={styles.imageJourney}>
-          <div className={styles.journeyIntro}>
+          <div className={styles.journeyIntro} data-reveal="fade-up">
             <Typography variant="eyebrow">A province in many frames</Typography>
             <Typography as="h2" variant="heading">
               From quiet landmarks to wide horizons.
@@ -83,18 +89,26 @@ export default function HomePage() {
           <ResponsiveImage
             alt="Cape Bolinao Lighthouse framed by trees"
             className={`${styles.journeyImage} ${styles.journeyImageTall}`}
+            parallax={42}
+            reveal="clip"
             sizes="(max-width: 767px) 72vw, 31vw"
             src="/images/bolinao-lighthouse.webp"
           />
           <ResponsiveImage
             alt="Pangasinan Provincial Capitol in Lingayen"
             className={`${styles.journeyImage} ${styles.journeyImageSmall}`}
+            parallax={26}
+            reveal="clip"
+            revealDelay={1}
             sizes="(max-width: 767px) 56vw, 21vw"
             src="/images/provincial-capitol.webp"
           />
           <ResponsiveImage
             alt="Facade of Manaoag Church"
             className={`${styles.journeyImage} ${styles.journeyImageWide}`}
+            parallax={36}
+            reveal="clip"
+            revealDelay={2}
             sizes="(max-width: 767px) 72vw, 32vw"
             src="/images/manaoag-church.webp"
           />
@@ -105,10 +119,12 @@ export default function HomePage() {
             <ResponsiveImage
               alt="Boats and islands at Hundred Islands National Park"
               className={styles.seasonsImage}
+              parallax={28}
+              reveal="clip"
               sizes="(max-width: 767px) 100vw, 43vw"
               src="/images/hundred-islands.webp"
             />
-            <div className={styles.seasonsCopy}>
+            <div className={styles.seasonsCopy} data-delay="1" data-reveal="fade-up">
               <Typography variant="eyebrow">Made for unhurried days</Typography>
               <Typography as="h2" id="seasons-heading" variant="heading">
                 A different journey every season
@@ -126,7 +142,7 @@ export default function HomePage() {
         </section>
 
         <section aria-labelledby="heritage-heading" className={styles.heritageFeature}>
-          <div className={styles.heritageCopy}>
+          <div className={styles.heritageCopy} data-reveal="fade-up">
             <Typography variant="eyebrow">Heritage collection</Typography>
             <Typography as="h2" id="heritage-heading" variant="heading">
               Stories held by place
@@ -135,46 +151,33 @@ export default function HomePage() {
               Explore landscapes and landmarks that reveal the many sides of the province.
             </Typography>
             <nav aria-label="Featured heritage categories" className={styles.placeLinks}>
-              <Link href="/heritage">Island landscapes <Icon name="arrow-right" /></Link>
-              <Link href="/heritage">Coastal landmarks <Icon name="arrow-right" /></Link>
-              <Link href="/heritage">Faith &amp; tradition <Icon name="arrow-right" /></Link>
-              <Link href="/heritage">Civic heritage <Icon name="arrow-right" /></Link>
-              <Link href="/heritage">Outdoor escapes <Icon name="arrow-right" /></Link>
+              <TransitionLink href="/heritage">Island landscapes <Icon name="arrow-right" /></TransitionLink>
+              <TransitionLink href="/heritage">Coastal landmarks <Icon name="arrow-right" /></TransitionLink>
+              <TransitionLink href="/heritage">Faith &amp; tradition <Icon name="arrow-right" /></TransitionLink>
+              <TransitionLink href="/heritage">Civic heritage <Icon name="arrow-right" /></TransitionLink>
+              <TransitionLink href="/heritage">Outdoor escapes <Icon name="arrow-right" /></TransitionLink>
             </nav>
             <Button href="/heritage" variant="ghost">View all places</Button>
           </div>
           <ResponsiveImage
             alt="The Pangasinan Provincial Capitol, a civic landmark in Lingayen"
             className={styles.heritageImage}
+            parallax={24}
+            reveal="clip"
+            revealDelay={1}
             sizes="(max-width: 767px) 100vw, 48vw"
             src="/images/provincial-capitol.webp"
           />
         </section>
 
         <section aria-labelledby="experiences-heading" className={styles.experiences}>
-          <div className={styles.experiencesHeading}>
+          <div className={styles.experiencesHeading} data-reveal="fade-up">
             <Typography variant="eyebrow">Ways to experience Pangasinan</Typography>
             <Typography as="h2" id="experiences-heading" variant="heading">
               Find your way into the province
             </Typography>
           </div>
-          <div className={styles.experienceTrack}>
-            {experiences.map((experience, index) => (
-              <Link className={styles.experienceCard} href="/heritage" key={experience.title}>
-                <ResponsiveImage
-                  alt={experience.alt}
-                  className={styles.experienceImage}
-                  sizes="(max-width: 767px) 82vw, 36vw"
-                  src={experience.image}
-                />
-                <span className={styles.experienceNumber}>0{index + 1}</span>
-                <div className={styles.experienceMeta}>
-                  <Typography as="h3" variant="title">{experience.title}</Typography>
-                  <span>{experience.place}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <ExperienceCarousel items={experiences} />
         </section>
       </main>
       <SiteFooter />

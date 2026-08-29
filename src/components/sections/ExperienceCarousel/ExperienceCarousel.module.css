@@ -1,0 +1,114 @@
+.carousel {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.toolbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--content-max);
+  padding: 0 var(--page-gutter);
+  width: 100%;
+}
+
+.position {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.controls {
+  display: flex;
+  gap: 0.55rem;
+}
+
+.controls button {
+  border-color: color-mix(in srgb, var(--color-text-primary) 35%, transparent);
+  color: var(--color-text-primary);
+}
+
+.controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+.track {
+  display: flex;
+  gap: clamp(1rem, 2vw, 2rem);
+  overflow-x: auto;
+  padding: 0 max(var(--page-gutter), calc((100vw - min(78vw, 38rem)) / 2)) 2rem;
+  scroll-padding-inline: max(var(--page-gutter), calc((100vw - min(78vw, 38rem)) / 2));
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--color-accent) transparent;
+}
+
+.card {
+  display: grid;
+  flex: 0 0 min(78vw, 38rem);
+  grid-template-columns: auto 1fr;
+  opacity: 0.58;
+  position: relative;
+  scroll-snap-align: center;
+  transform: scale(0.9);
+  transition: opacity 600ms ease, transform 700ms var(--ease-out);
+}
+
+.card[data-active="true"] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.image {
+  aspect-ratio: 4 / 3;
+  grid-column: 1 / -1;
+}
+
+.image img {
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+}
+
+.card:hover .image img,
+.card:focus-visible .image img {
+  transform: scale(1.035);
+}
+
+.number {
+  font: 700 0.65rem/1 var(--font-sans);
+  letter-spacing: 0.13em;
+  padding-top: 1.3rem;
+}
+
+.meta {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1.1rem 0 0 1.5rem;
+}
+
+.meta h3 {
+  color: var(--color-accent);
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  font-weight: 300;
+  margin: 0;
+}
+
+.meta > span {
+  font-size: 0.68rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 47.99rem) {
+  .card {
+    opacity: 0.72;
+    transform: scale(0.94);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .image img {
+    transition: none;
+  }
+}

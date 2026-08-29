@@ -6,28 +6,31 @@ import styles from "./CinematicHero.module.css";
 export function CinematicHero() {
   return (
     <section aria-label="Welcome to Pangasinan" className={styles.hero}>
-      <ResponsiveImage
-        alt="Boats moving between the tree-covered islands of Hundred Islands National Park"
-        className={styles.backdrop}
-        fullBleed
-        priority
-        sizes="100vw"
-        src="/images/hundred-islands.webp"
-      />
+      <div className={styles.backdropMotion} data-parallax="22">
+        <ResponsiveImage
+          alt="Boats moving between the tree-covered islands of Hundred Islands National Park"
+          className={styles.backdrop}
+          fullBleed
+          priority
+          sizes="100vw"
+          src="/images/hundred-islands.webp"
+        />
+      </div>
       <div className={styles.shade} />
       <div aria-hidden="true" className={styles.grain} />
 
       <div className={styles.content}>
         <Typography className={styles.kicker} variant="eyebrow">
-          Heritage, coast &amp; culture
+          <span>Heritage, coast &amp; culture</span>
         </Typography>
         <Typography as="h1" className={styles.title} variant="heading">
-          Welcome to Pangasinan
+          <span className={styles.titleLine}><span>Welcome to</span></span>
+          <span className={styles.titleLine}><span>Pangasinan</span></span>
         </Typography>
       </div>
 
-      <Link className={styles.scrollCue} href="#province-story">
-        <span>Scroll down</span>
+      <Link aria-label="Scroll to the province story" className={styles.scrollCue} href="#province-story">
+        <span aria-hidden="true">Scroll down</span>
         <span aria-hidden="true" className={styles.scrollLine} />
       </Link>
     </section>

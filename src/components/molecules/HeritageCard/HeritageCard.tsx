@@ -12,7 +12,7 @@ interface HeritageCardProps {
 
 export function HeritageCard({ compact = false, headingLevel = "h3", priority = false, site }: HeritageCardProps) {
   return (
-    <article className={[styles.card, compact && styles.compact].filter(Boolean).join(" ")}>
+    <article className={[styles.card, compact && styles.compact].filter(Boolean).join(" ")} tabIndex={0}>
       {site.image ? (
         <ResponsiveImage
           alt={site.imageAlt}

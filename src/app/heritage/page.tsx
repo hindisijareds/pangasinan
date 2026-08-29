@@ -15,7 +15,7 @@ export default function HeritagePage() {
   return (
     <>
       <main className={styles.main} id="main-content">
-        <section className={styles.intro}>
+        <section className={styles.intro} data-reveal="fade-up">
           <div className={styles.introInner}>
             <Typography variant="eyebrow">Heritage collection</Typography>
             <Typography as="h1" variant="display">Explore Pangasinan</Typography>

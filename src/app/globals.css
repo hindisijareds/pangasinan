@@ -53,6 +53,48 @@ p {
   outline-offset: 3px;
 }
 
+html[data-motion="ready"] [data-reveal] {
+  transition:
+    opacity 650ms var(--ease-out) var(--reveal-delay, 0ms),
+    transform 650ms var(--ease-out) var(--reveal-delay, 0ms),
+    clip-path 750ms var(--ease-out) var(--reveal-delay, 0ms);
+  will-change: opacity, transform, clip-path;
+}
+
+html[data-motion="ready"] [data-reveal="fade-up"]:not([data-visible="true"]) {
+  opacity: 0;
+  transform: translate3d(0, 2rem, 0);
+}
+
+html[data-motion="ready"] [data-reveal="scale"]:not([data-visible="true"]) {
+  opacity: 0;
+  transform: scale(0.94);
+}
+
+html[data-motion="ready"] [data-reveal="clip"]:not([data-visible="true"]) {
+  clip-path: inset(8% 0 92% 0);
+}
+
+html[data-motion="ready"] [data-reveal="line"]:not([data-visible="true"]) {
+  clip-path: inset(0 100% 0 0);
+}
+
+html[data-motion="ready"] [data-visible="true"] {
+  clip-path: inset(0 0 0 0);
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+[data-delay="1"] { --reveal-delay: 80ms; }
+[data-delay="2"] { --reveal-delay: 160ms; }
+[data-delay="3"] { --reveal-delay: 240ms; }
+[data-delay="4"] { --reveal-delay: 320ms; }
+
+[data-parallax] {
+  transform: translate3d(0, var(--parallax-y, 0), 0);
+  will-change: transform;
+}
+
 .skipLink {
   background: var(--color-surface);
   border-radius: var(--radius-pill);
@@ -83,5 +125,12 @@ p {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal],
+  [data-parallax] {
+    clip-path: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

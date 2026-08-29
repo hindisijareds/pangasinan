@@ -7,11 +7,24 @@
 .image {
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 700ms var(--ease-out);
   width: 100%;
+}
+
+.frame[data-loaded="true"] .image {
+  opacity: 1;
 }
 
 .picture {
   display: block;
   height: 100%;
   width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    opacity: 1;
+    transition: none;
+  }
 }

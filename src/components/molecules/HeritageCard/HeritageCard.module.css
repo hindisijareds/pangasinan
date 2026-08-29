@@ -2,6 +2,12 @@
   display: grid;
   gap: 1rem;
   min-width: 0;
+  outline: 0;
+}
+
+.card:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 0.55rem;
 }
 
 .image,
@@ -10,12 +16,28 @@
   border-radius: var(--radius-card);
 }
 
+.image::after {
+  background: var(--color-deep);
+  content: "";
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 500ms ease;
+}
+
 .image img {
   transition: transform 500ms var(--ease-out);
 }
 
-.card:hover .image img {
-  transform: scale(1.035);
+.card:hover .image img,
+.card:focus-visible .image img {
+  transform: scale(1.055);
+}
+
+.card:hover .image::after,
+.card:focus-visible .image::after {
+  opacity: 0.15;
 }
 
 .placeholder {
@@ -79,6 +101,12 @@
 .content {
   display: grid;
   gap: 0.6rem;
+  transition: transform 500ms var(--ease-out);
+}
+
+.card:hover .content,
+.card:focus-visible .content {
+  transform: translate3d(0, -0.3rem, 0);
 }
 
 .description {
@@ -112,7 +140,15 @@
     transition: none;
   }
 
-  .card:hover .image img {
+  .image::after,
+  .content {
+    transition: none;
+  }
+
+  .card:hover .image img,
+  .card:focus-visible .image img,
+  .card:hover .content,
+  .card:focus-visible .content {
     transform: none;
   }
 }

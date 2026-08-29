@@ -3,18 +3,53 @@
   left: 0;
   padding: 2.25rem 3rem;
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
+  transform: translate3d(0, 0, 0);
+  transition: color 350ms ease, transform 450ms var(--ease-out);
   z-index: 50;
+}
+
+.header::before {
+  background: color-mix(in srgb, var(--color-background) 96%, transparent);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--color-border) 55%, transparent);
+  content: "";
+  height: 7.2rem;
+  inset: 0 0 auto;
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+  transition: transform 450ms var(--ease-out);
+  z-index: -1;
 }
 
 .homeHeader {
   color: var(--color-on-dark);
 }
 
-.homeHeader .bar {
-  max-width: none;
+.homeHeader::before {
+  transform: translate3d(0, -102%, 0);
+}
+
+.homeHeader[data-scrolled="true"] {
+  color: var(--color-text-primary);
+}
+
+.homeHeader[data-scrolled="true"]::before {
+  transform: translate3d(0, 0, 0);
+}
+
+.header[data-hidden="true"] {
+  transform: translate3d(0, -115%, 0);
+}
+
+.header[data-open="true"] {
+  color: var(--color-on-dark);
+  transform: translate3d(0, 0, 0);
+}
+
+.header[data-open="true"]::before {
+  transform: translate3d(0, -102%, 0);
 }
 
 .bar {
@@ -28,11 +63,8 @@
   position: relative;
 }
 
-.header:not(.homeHeader) .bar {
-  backdrop-filter: blur(16px);
-  background: color-mix(in srgb, var(--color-surface) 90%, transparent);
-  border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
-  padding: 0 0.7rem;
+.homeHeader .bar {
+  max-width: none;
 }
 
 .brand {
@@ -53,7 +85,13 @@
   font-size: 0.92rem;
   height: 2.15rem;
   justify-content: center;
+  transition: transform 400ms var(--ease-out);
   width: 2.15rem;
+}
+
+.brand:hover .brandMark,
+.brand:focus-visible .brandMark {
+  transform: rotate(8deg) scale(1.06);
 }
 
 .brandText {
@@ -81,7 +119,12 @@
   box-sizing: content-box;
   height: 1.15rem;
   padding: 0.7rem;
+  transition: transform 450ms var(--ease-out);
   width: 1.15rem;
+}
+
+.header[data-open="true"] .menuButton svg {
+  transform: rotate(90deg);
 }
 
 .bar .exploreButton {
@@ -96,20 +139,35 @@
   inset: 0;
   min-height: 100svh;
   overflow-y: auto;
-  padding: 8.5rem var(--page-gutter) 3rem;
-  pointer-events: auto;
+  padding: 9rem 3rem 3rem;
+  pointer-events: none;
   position: fixed;
+  transform: translate3d(0, -102%, 0);
+  transition: transform 700ms var(--ease-out), visibility 0s linear 700ms;
+  visibility: hidden;
   z-index: -1;
 }
 
-.mobilePanel[hidden] {
-  display: none;
+.mobilePanel[data-open="true"] {
+  pointer-events: auto;
+  transform: translate3d(0, 0, 0);
+  transition-delay: 0s;
+  visibility: visible;
 }
 
 .panelInner {
+  align-items: center;
   display: grid;
+  gap: clamp(3rem, 8vw, 8rem);
+  grid-template-columns: minmax(20rem, 0.9fr) minmax(24rem, 1.1fr);
   margin: 0 auto;
   max-width: var(--content-max);
+  min-height: calc(100svh - 12rem);
+}
+
+.panelContent {
+  align-content: center;
+  display: grid;
 }
 
 .panelEyebrow {
@@ -118,7 +176,15 @@
   font-weight: 700;
   letter-spacing: 0.16em;
   margin: 0 0 2.5rem;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 500ms ease 100ms, transform 500ms var(--ease-out) 100ms;
   text-transform: uppercase;
+}
+
+.mobilePanel[data-open="true"] .panelEyebrow {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .mobileNav {
@@ -126,21 +192,43 @@
   display: grid;
 }
 
+.navItem {
+  display: grid;
+}
+
 .mobileNav a {
-  align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.22);
   color: var(--color-on-dark);
-  display: flex;
-  font-family: var(--font-display);
-  font-size: clamp(2.2rem, 7vw, 5rem);
-  font-weight: 300;
-  gap: clamp(1rem, 3vw, 3rem);
-  letter-spacing: -0.025em;
-  min-height: clamp(5.5rem, 14vw, 9rem);
+  display: block;
+  min-height: clamp(5.5rem, 10vw, 8.5rem);
+  padding: 0;
   text-transform: none;
 }
 
-.mobileNav a span {
+.mobileNav a::after {
+  display: none;
+}
+
+.navLinkContent {
+  align-items: center;
+  display: flex;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  font-weight: 300;
+  gap: clamp(1rem, 3vw, 3rem);
+  letter-spacing: -0.025em;
+  min-height: inherit;
+  opacity: 0;
+  transform: translate3d(0, 2rem, 0);
+  transition: opacity 550ms ease var(--menu-delay), transform 550ms var(--ease-out) var(--menu-delay);
+}
+
+.mobilePanel[data-open="true"] .navLinkContent {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.navNumber {
   font-family: var(--font-sans);
   font-size: 0.65rem;
   letter-spacing: 0.14em;
@@ -151,11 +239,72 @@
   line-height: 1.65;
   margin: 3rem 0 0;
   max-width: 26rem;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 500ms ease 300ms, transform 500ms var(--ease-out) 300ms;
+}
+
+.mobilePanel[data-open="true"] .mobileNote {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.preview {
+  aspect-ratio: 16 / 11;
+  align-self: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.preview::after {
+  background: linear-gradient(180deg, transparent 52%, rgba(0, 31, 23, 0.72));
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+.previewImage {
+  inset: 0;
+  opacity: 0;
+  position: absolute;
+  transform: scale(1.08);
+  transition: opacity 650ms ease, transform 900ms var(--ease-out);
+}
+
+.previewActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.previewCaption {
+  bottom: 1.5rem;
+  display: grid;
+  gap: 0.35rem;
+  left: 1.5rem;
+  position: absolute;
+  z-index: 3;
+}
+
+.previewCaption span {
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.previewCaption strong {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 @media (max-width: 47.99rem) {
   .header {
     padding: 0.75rem 1rem;
+  }
+
+  .header::before {
+    height: 5rem;
   }
 
   .bar {
@@ -174,12 +323,39 @@
     width: 1rem;
   }
 
-  .menuButton span,
-  .exploreButton {
+  .menuButton > span > span > span,
+  .bar .exploreButton {
     display: none;
   }
 
   .brandText {
     font-size: 0.52rem;
+  }
+
+  .mobilePanel {
+    padding: 7rem var(--page-gutter) 2rem;
+  }
+
+  .panelInner {
+    display: block;
+    min-height: auto;
+  }
+
+  .preview {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .header::before,
+  .brandMark,
+  .bar .menuButton svg,
+  .mobilePanel,
+  .panelEyebrow,
+  .navLinkContent,
+  .mobileNote,
+  .previewImage {
+    transition: none;
   }
 }

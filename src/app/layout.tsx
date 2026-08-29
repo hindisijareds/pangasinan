@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { MotionProvider } from "@/components/motion/MotionProvider/MotionProvider";
 import { HeaderNavigation } from "@/components/organisms/HeaderNavigation/HeaderNavigation";
 import "./globals.css";
 
@@ -32,8 +33,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <a className="skipLink" href="#main-content">Skip to main content</a>
-        <HeaderNavigation />
-        {children}
+        <MotionProvider>
+          <HeaderNavigation />
+          {children}
+        </MotionProvider>
       </body>
     </html>
   );

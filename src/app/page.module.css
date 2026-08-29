@@ -48,7 +48,7 @@
   align-items: center;
   background: var(--color-surface);
   bottom: -1.3rem;
-  color: var(--color-accent);
+  color: #b63824;
   display: flex;
   font: 700 0.68rem/1 var(--font-sans);
   height: 4.3rem;
@@ -122,7 +122,7 @@
   margin: 0;
 }
 
-.journeyImage {
+.imageJourney .journeyImage {
   position: absolute;
 }
 
@@ -249,62 +249,6 @@
   margin: 0;
 }
 
-.experienceTrack {
-  display: flex;
-  gap: clamp(1rem, 2vw, 2rem);
-  overflow-x: auto;
-  padding: 0 max(var(--page-gutter), calc((100vw - var(--content-max)) / 2)) 2rem;
-  scroll-padding-left: var(--page-gutter);
-  scroll-snap-type: x mandatory;
-  scrollbar-color: var(--color-accent) transparent;
-}
-
-.experienceCard {
-  display: grid;
-  flex: 0 0 min(78vw, 33rem);
-  grid-template-columns: auto 1fr;
-  position: relative;
-  scroll-snap-align: center;
-}
-
-.experienceImage {
-  aspect-ratio: 4 / 3;
-  grid-column: 1 / -1;
-}
-
-.experienceImage img {
-  transition: transform 700ms var(--ease-out);
-}
-
-.experienceCard:hover .experienceImage img {
-  transform: scale(1.035);
-}
-
-.experienceNumber {
-  font: 700 0.65rem/1 var(--font-sans);
-  letter-spacing: 0.13em;
-  padding-top: 1.3rem;
-}
-
-.experienceMeta {
-  display: grid;
-  gap: 0.45rem;
-  padding: 1.1rem 0 0 1.5rem;
-}
-
-.experienceMeta h3 {
-  color: var(--color-accent);
-  font-size: clamp(1.7rem, 3vw, 2.4rem);
-  font-weight: 300;
-  margin: 0;
-}
-
-.experienceMeta span {
-  font-size: 0.68rem;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
 @media (max-width: 47.99rem) {
   .splitStory,
   .seasonsInner,
@@ -375,12 +319,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .experienceImage img,
   .placeLinks a {
     transition: none;
-  }
-
-  .experienceCard:hover .experienceImage img {
-    transform: none;
   }
 }

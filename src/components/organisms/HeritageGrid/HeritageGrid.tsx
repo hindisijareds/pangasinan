@@ -34,14 +34,16 @@ export function HeritageGrid({ sites }: HeritageGridProps) {
 
   return (
     <section aria-label="Heritage destinations" className={styles.explorer}>
-      <div className={styles.searchWrap}>
+      <div className={styles.searchWrap} data-reveal="fade-up">
         <SearchForm onSearch={setQuery} resultCount={filteredSites.length} value={query} />
       </div>
 
       {filteredSites.length > 0 ? (
         <div className={styles.grid} data-doc-component="heritage-grid">
           {filteredSites.map((site, index) => (
-            <HeritageCard headingLevel="h2" key={site.id} priority={index === 0} site={site} />
+            <div data-delay={Math.min(4, index % 3)} data-reveal="fade-up" key={site.id}>
+              <HeritageCard headingLevel="h2" priority={index === 0} site={site} />
+            </div>
           ))}
         </div>
       ) : (
