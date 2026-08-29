@@ -46,7 +46,7 @@ export function HeaderNavigation() {
 
   return (
     <header
-      className={[styles.header, isHome && !open ? styles.homeHeader : ""].filter(Boolean).join(" ")}
+      className={[styles.header, isHome ? styles.homeHeader : ""].filter(Boolean).join(" ")}
       data-doc-component="header-navigation"
     >
       <div className={styles.bar}>
