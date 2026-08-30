@@ -39,7 +39,7 @@ export function ResponsiveImage({
   const [loaded, setLoaded] = useState(priority);
   const fullSource = withBasePath(src);
   const smallSource = withBasePath(src.replace(/\.(webp|jpg|jpeg|png)$/, "-640.$1"));
-  const dimensions = imageDimensions[src] ?? { height: 900, smallWidth: 640, width: 1600 };
+  const dimensions = imageDimensions[src] ?? { height: 1440, smallWidth: 640, width: 1920 };
   const srcSet = `${smallSource} ${dimensions.smallWidth}w, ${fullSource} ${dimensions.width}w`;
 
   useEffect(() => {

@@ -4,6 +4,7 @@ import path from "node:path";
 
 const chrome = "C:/Program Files/Google/Chrome/Application/chrome.exe";
 const output = path.resolve("tmp/ui-verification");
+const origin = process.env.PREVIEW_ORIGIN ?? "http://127.0.0.1:3000";
 await mkdir(output, { recursive: true });
 
 const browser = await chromium.launch({ executablePath: chrome, headless: true });
@@ -46,7 +47,7 @@ const viewports = [
 for (const viewport of viewports) {
   await page.setViewportSize(viewport);
   for (const route of routes) {
-    const response = await page.goto(`http://127.0.0.1:3000${route}`, {
+    const response = await page.goto(`${origin}${route}`, {
       waitUntil: "domcontentloaded",
     });
     await page.waitForTimeout(250);
@@ -63,7 +64,7 @@ for (const viewport of viewports) {
 
 for (const [route, name] of screenshots) {
   await page.setViewportSize({ width: 1440, height: 1000 });
-  await page.goto(`http://127.0.0.1:3000${route}`, { waitUntil: "domcontentloaded" });
+  await page.goto(`${origin}${route}`, { waitUntil: "domcontentloaded" });
   await page.waitForTimeout(500);
   await page.evaluate(async () => {
     for (let top = 0; top < document.documentElement.scrollHeight; top += window.innerHeight * 0.75) {
@@ -77,7 +78,7 @@ for (const [route, name] of screenshots) {
 }
 
 await page.setViewportSize({ width: 390, height: 844 });
-await page.goto("http://127.0.0.1:3000/", { waitUntil: "domcontentloaded" });
+await page.goto(`${origin}/`, { waitUntil: "domcontentloaded" });
 await page.waitForTimeout(500);
 await page.evaluate(async () => {
   for (let top = 0; top < document.documentElement.scrollHeight; top += 350) {
@@ -89,7 +90,7 @@ await page.evaluate(async () => {
 await page.waitForTimeout(500);
 await page.screenshot({ path: path.join(output, "home-mobile.png"), fullPage: true });
 
-await page.goto("http://127.0.0.1:3000/heritage/", { waitUntil: "domcontentloaded" });
+await page.goto(`${origin}/heritage/`, { waitUntil: "domcontentloaded" });
 await page.waitForTimeout(500);
 const search = page.getByRole("searchbox", { name: /search/i });
 await search.fill("Bolinao");
@@ -109,6 +110,30 @@ if (naturalCount < 1 || naturalCount >= 12) {
 }
 await page.getByRole("button", { name: "All", exact: true }).click();
 
+const showMore = page.getByRole("button", { name: /show more/i });
+while (await showMore.isVisible().catch(() => false)) {
+  await showMore.click();
+}
+if ((await page.locator("article").count()) !== 41) {
+  throw new Error("The complete heritage collection should render 41 cards");
+}
+if ((await page.locator("article img").count()) !== 41) {
+  throw new Error("Every heritage card should contain a photograph");
+}
+await page.evaluate(async () => {
+  for (let top = 0; top < document.documentElement.scrollHeight; top += window.innerHeight * 0.75) {
+    window.scrollTo({ top, behavior: "instant" });
+    await new Promise((resolve) => window.setTimeout(resolve, 100));
+  }
+});
+await page.waitForTimeout(500);
+const brokenImages = await page.locator("article img").evaluateAll((images) =>
+  images.filter((image) => !image.complete || image.naturalWidth === 0).map((image) => image.alt),
+);
+if (brokenImages.length) {
+  throw new Error(`Heritage card images failed to load: ${brokenImages.join(", ")}`);
+}
+
 await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
 await page.waitForTimeout(300);
 await page.getByRole("button", { name: /open navigation/i }).click();
@@ -123,7 +148,7 @@ if ((await page.locator("#site-navigation").getAttribute("data-open")) !== "fals
 }
 
 await page.emulateMedia({ reducedMotion: "reduce" });
-await page.goto("http://127.0.0.1:3000/", { waitUntil: "domcontentloaded" });
+await page.goto(`${origin}/`, { waitUntil: "domcontentloaded" });
 await page.waitForTimeout(250);
 if ((await page.locator("[data-reveal]").first().evaluate((element) => getComputedStyle(element).opacity)) !== "1") {
   throw new Error("Reduced motion did not leave reveal content visible");

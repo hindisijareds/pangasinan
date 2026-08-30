@@ -1,4 +1,5 @@
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
+import path from "node:path";
 import vm from "node:vm";
 import ts from "typescript";
 
@@ -20,10 +21,23 @@ const invalidCoordinates = heritageSites.filter(({ coordinates }) => coordinates
   coordinates.lat < 15 || coordinates.lat > 17.5 ||
   coordinates.lng < 117 || coordinates.lng > 122.5
 ));
+const imageRecords = heritageSites.filter((site) => site.image);
+const missingImageFiles = [];
+for (const { image, name, slug } of imageRecords) {
+  const smallImage = image.replace(/\.(webp|jpg|jpeg|png)$/, "-640.$1");
+  for (const publicPath of [image, smallImage]) {
+    try {
+      await access(path.join("public", publicPath.replace(/^\/+/, "")));
+    } catch {
+      missingImageFiles.push({ name, path: publicPath, slug });
+    }
+  }
+}
 
 console.log(JSON.stringify({
   total: heritageSites.length,
-  imageRecords: heritageSites.filter((site) => site.image).map(({ name, image, slug }) => ({ name, image, slug })),
+  imageRecords: imageRecords.map(({ name, image, slug }) => ({ name, image, slug })),
+  missingImageFiles,
   featuredRecords: heritageSites.filter((site) => site.featured).map(({ name, slug }) => ({ name, slug })),
   classes: [...new Set(heritageSites.map((site) => site.heritageClass))].sort(),
   types: [...new Set(heritageSites.map((site) => site.heritageType))].sort(),
@@ -35,3 +49,5 @@ console.log(JSON.stringify({
   missingSources: heritageSites.filter((site) => !site.sourceUrl).map(({ name, slug }) => ({ name, slug })),
   veryShortSummaries: heritageSites.filter((site) => site.shortDescription.length < 40).map(({ name, shortDescription, slug }) => ({ name, shortDescription, slug })),
 }, null, 2));
+
+if (imageRecords.length !== heritageSites.length || missingImageFiles.length) process.exitCode = 1;

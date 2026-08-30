@@ -1,12 +1,17 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const projectRoot = process.cwd();
 const dataPath = path.join(projectRoot, "src/data/heritageSites.ts");
 const imageDirectory = path.join(projectRoot, "public/images/heritage");
-const manifestPath = path.join(projectRoot, "tmp/image-research/heritage-image-manifest.json");
+const manifestPath = path.join(projectRoot, "documentation/heritage-image-manifest.json");
 const userAgent = "PangasinanHeritageEducationalProject/1.0 (https://github.com/hindisijareds/pangasinan)";
 
+const expectedImageDirectory = path.join(projectRoot, "public/images/heritage");
+if (path.resolve(imageDirectory) !== path.resolve(expectedImageDirectory)) {
+  throw new Error(`Refusing to replace unexpected directory: ${imageDirectory}`);
+}
+await rm(imageDirectory, { force: true, recursive: true });
 await mkdir(imageDirectory, { recursive: true });
 await mkdir(path.dirname(manifestPath), { recursive: true });
 
@@ -22,7 +27,9 @@ const entries = [...dataSource.matchAll(entryPattern)].map((match) => {
   };
 });
 
-const missingEntries = entries.filter((entry) => entry.image === "null");
+const managedEntries = entries.filter(
+  (entry) => entry.image === "null" || entry.image.includes("/images/heritage/"),
+);
 const slugCounts = entries.reduce((counts, entry) => {
   counts.set(entry.slug, (counts.get(entry.slug) ?? 0) + 1);
   return counts;
@@ -69,7 +76,7 @@ const commonsThumbnail = async (width) => {
 };
 
 const records = [];
-for (const entry of missingEntries) {
+for (const entry of managedEntries) {
   const duplicateSuffix = (slugCounts.get(entry.slug) ?? 0) > 1
     ? `-${entry.externalId.slice(0, 8)}`
     : "";
@@ -87,8 +94,11 @@ for (const entry of missingEntries) {
     await writeFile(path.join(imageDirectory, `${fileBase}.jpg`), full.buffer);
     await writeFile(path.join(imageDirectory, `${fileBase}-640.jpg`), small.buffer);
     records.push({
+      creator: "Ramon FVelasquez",
       id: entry.externalId,
       image: `/images/heritage/${fileBase}.jpg`,
+      license: "CC BY-SA 3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0/",
       name: entry.name,
       original: fullInfo.url,
       source: fullInfo.descriptionurl,
@@ -106,12 +116,18 @@ for (const entry of missingEntries) {
     ?.replace(/\\+$/, "");
   if (!originalUrl) throw new Error(`Could not find an image for ${entry.name}`);
 
-  const [full, small] = await Promise.all([
-    fetchBuffer(awaranImageUrl(originalUrl, 1920, 85), "image/jpeg"),
-    fetchBuffer(awaranImageUrl(originalUrl, 640, 80), "image/jpeg"),
-  ]);
-  const extension = "jpg";
-  if (!full.contentType.includes("image/jpeg") || !small.contentType.includes("image/jpeg")) {
+  const full = await fetchBuffer(awaranImageUrl(originalUrl, 1920, 85), "image/webp");
+  const extension = full.contentType.includes("image/webp")
+    ? "webp"
+    : full.contentType.includes("image/jpeg")
+      ? "jpg"
+      : null;
+  if (!extension) {
+    throw new Error(`Unsupported full image type ${full.contentType} for ${entry.name}`);
+  }
+  const expectedType = extension === "webp" ? "image/webp" : "image/jpeg";
+  const small = await fetchBuffer(awaranImageUrl(originalUrl, 640, 79), expectedType);
+  if (!small.contentType.includes(expectedType)) {
     throw new Error(`Unsupported image types ${full.contentType}/${small.contentType} for ${entry.name}`);
   }
   await writeFile(path.join(imageDirectory, `${fileBase}.${extension}`), full.buffer);
@@ -119,12 +135,13 @@ for (const entry of missingEntries) {
   records.push({
     id: entry.externalId,
     image: `/images/heritage/${fileBase}.${extension}`,
+    license: "No explicit reuse license published by source",
     name: entry.name,
     original: originalUrl,
     source: "https://www.awaran.net/archive",
     sourceKind: "AWARAN Heritage Archive",
   });
-  console.log(`Downloaded ${records.length}/${missingEntries.length}: ${entry.name}`);
+  console.log(`Downloaded ${records.length}/${managedEntries.length}: ${entry.name}`);
 }
 
 await writeFile(manifestPath, `${JSON.stringify(records, null, 2)}\n`);
