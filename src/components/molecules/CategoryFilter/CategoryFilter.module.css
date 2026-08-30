@@ -1,0 +1,29 @@
+.filterGroup {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.filterBtn {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  background: var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.filterBtn.active {
+  background: var(--color-deep);
+  color: var(--color-on-dark);
+  border-color: var(--color-deep);
+}
+

@@ -1,9 +1,8 @@
-export type HeritageCategory =
-  | "Nature"
-  | "Built Heritage"
-  | "Faith & Heritage"
-  | "Civic Heritage"
-  | "Coast";
+export type HeritageClass =
+  | "Natural Heritage"
+  | "Immovable Heritage"
+  | "Intangible Heritage"
+  | string;
 
 export interface HeritageSite {
   id: string;
@@ -11,11 +10,17 @@ export interface HeritageSite {
   name: string;
   location: string;
   province: "Pangasinan";
-  category: HeritageCategory;
+  heritageClass: HeritageClass;
+  heritageType: string;
   shortDescription: string;
   description: string;
   image: string | null;
   imageAlt: string;
   featured: boolean;
   highlights: string[];
+  sourceUrl?: string;
+  coordinates?: {
+    lat: number;
+    lng: number;
+  };
 }

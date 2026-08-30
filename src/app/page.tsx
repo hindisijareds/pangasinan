@@ -47,34 +47,34 @@ export default function HomePage() {
 
         <section aria-labelledby="province-story" className={styles.manifesto}>
           <Typography as="h2" data-reveal="fade-up" id="province-story" variant="heading">
-            Follow the salt air, cross the island waters, and discover a province
-            shaped by nature, memory, and everyday life.
+            More than a destination.
+          </Typography>
+          <Typography data-reveal="fade-up" data-delay="1" variant="body" style={{ marginTop: '1rem', maxWidth: '60ch', marginInline: 'auto' }}>
+            Pangasinan is home to natural heritage, historical landmarks, coastal destinations, and important civic and religious sites that tell the story of a province rich in both nature and culture.
           </Typography>
         </section>
 
-        <section aria-labelledby="coast-heading" className={styles.splitStory}>
+        <section aria-labelledby="lighthouse-heading" className={styles.splitStory}>
           <div className={styles.splitVisual} data-reveal="clip">
             <ResponsiveImage
-              alt="Sandy shore and clear blue water at Patar Beach in Bolinao"
+              alt="Cape Bolinao Lighthouse framed by trees"
               className={styles.portraitImage}
               parallax={28}
               sizes="(max-width: 767px) 88vw, 43vw"
-              src="/images/patar-beach.webp"
+              src="/images/bolinao-lighthouse.webp"
             />
             <span aria-hidden="true" className={styles.imageIndex}>01</span>
           </div>
           <div className={styles.splitCopy} data-delay="1" data-reveal="fade-up">
-            <Typography variant="eyebrow">The western coast</Typography>
-            <Typography as="h2" id="coast-heading" variant="heading">
-              Room to breathe
+            <Typography variant="eyebrow">Immovable Heritage • Bolinao</Typography>
+            <Typography as="h2" id="lighthouse-heading" variant="heading">
+              Cape Bolinao Lighthouse
             </Typography>
             <Typography variant="body">
-              In Bolinao, warm light meets the West Philippine Sea. Beaches,
-              coves, and a historic lighthouse make the coast feel both open and
-              deeply rooted in place.
+              Cape Bolinao Lighthouse is one of the oldest operational lighthouses in the Philippines. Constructed during the Spanish colonial period in 1903, it stands on Punta Piedra Point overlooking the West Philippine Sea, guiding ships safely along the northwestern coast for more than a century.
             </Typography>
-            <Button href="/heritage" variant="ghost">
-              Explore the coast <Icon name="arrow-up-right" />
+            <Button href="/heritage/cape-bolinao-light-house" variant="ghost">
+              View Heritage <Icon name="arrow-up-right" />
             </Button>
           </div>
         </section>
@@ -151,11 +151,11 @@ export default function HomePage() {
               Explore landscapes and landmarks that reveal the many sides of the province.
             </Typography>
             <nav aria-label="Featured heritage categories" className={styles.placeLinks}>
-              <TransitionLink href="/heritage">Island landscapes <Icon name="arrow-right" /></TransitionLink>
-              <TransitionLink href="/heritage">Coastal landmarks <Icon name="arrow-right" /></TransitionLink>
-              <TransitionLink href="/heritage">Faith &amp; tradition <Icon name="arrow-right" /></TransitionLink>
-              <TransitionLink href="/heritage">Civic heritage <Icon name="arrow-right" /></TransitionLink>
-              <TransitionLink href="/heritage">Outdoor escapes <Icon name="arrow-right" /></TransitionLink>
+              <TransitionLink href="/heritage">Natural Heritage <Icon name="arrow-right" /></TransitionLink>
+              <TransitionLink href="/heritage">Immovable Heritage <Icon name="arrow-right" /></TransitionLink>
+              <TransitionLink href="/heritage">Body of Water <Icon name="arrow-right" /></TransitionLink>
+              <TransitionLink href="/heritage">Church <Icon name="arrow-right" /></TransitionLink>
+              <TransitionLink href="/heritage">Monument <Icon name="arrow-right" /></TransitionLink>
             </nav>
             <Button href="/heritage" variant="ghost">View all places</Button>
           </div>

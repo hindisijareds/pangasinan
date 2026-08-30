@@ -1,0 +1,130 @@
+.main {
+  padding-bottom: var(--section-space);
+}
+
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--page-gutter);
+  padding-top: calc(var(--page-gutter) + 4rem);
+}
+
+.heroVisual {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.heroVisual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.heroContent {
+  color: var(--color-on-dark);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tags {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: var(--content-max);
+  margin: var(--section-space) auto;
+  padding: 0 var(--page-gutter);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 280px 1fr;
+    gap: 5rem;
+  }
+}
+
+.sidebarHeading {
+  margin-bottom: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.infoItem dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.infoItem dd {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
+
+.sourceLink {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--color-accent);
+}
+
+.sourceLink:hover {
+  color: var(--color-accent-strong);
+}
+
+.bodyText {
+  margin-top: 1.5rem;
+  white-space: pre-wrap;
+}
+
+.related {
+  max-width: var(--content-max);
+  margin: var(--section-space) auto 0;
+  padding: 0 var(--page-gutter);
+}
+
+.relatedHeader {
+  margin-bottom: 3rem;
+}
+

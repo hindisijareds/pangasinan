@@ -1,0 +1,1329 @@
+{
+  "heritageItems": [
+    {
+      "id": "d839bb2a-5b06-4223-a35c-c7a49fa07f22",
+      "name": "Alaminos City Hall",
+      "description": "The seat of the local government of Alaminos City, located along Quezon Avenue in the city proper. It serves as the administrative center where government services, public programs, and official functions are conducted. The building is an important civic landmark that symbolizes local governance and the city's development.",
+      "commonUse": "Government administration, public service delivery, official meetings, civic events, and community programs.",
+      "peopleUsingTheProperty": "Local government officials, city employees, residents, researchers, visitors, and tourists seeking information and services.",
+      "latitude": 16.15589433076805,
+      "longitude": 119.9797013807009,
+      "municipalityId": "499effb1-1b95-47cf-990a-4f5129ba8c42",
+      "heritageTypeId": "6d31991e-a07e-47b1-b8ca-11e12cdefa27",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-25T02:11:34.802Z",
+      "updatedAt": "$D2026-06-25T02:11:34.802Z",
+      "municipality": {
+        "name": "ALAMINOS CITY",
+        "id": "499effb1-1b95-47cf-990a-4f5129ba8c42"
+      },
+      "heritageType": {
+        "name": "City Hall",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782353493052-t6nt2jbke9c.jpg"
+        }
+      ]
+    },
+    {
+      "id": "9cb1b9fb-235e-408f-a85f-d868146b8072",
+      "name": "Ancestral Houses",
+      "description": "The ancestral houses of Alaminos City are historic residential structures built by prominent families during the Spanish and American colonial periods. These houses showcase traditional Filipino architecture, featuring wooden materials, capiz shell windows, spacious interiors, and elevated designs adapted to the local climate. They reflect the cultural heritage, lifestyle, and craftsmanship of earlier generations in Alaminos.",
+      "commonUse": "Residential purposes, heritage tourism, cultural education, historical documentation, and family gatherings.",
+      "peopleUsingTheProperty": "Homeowners, descendants of original families, tourists, researchers, students, and local residents.",
+      "latitude": 16.15495656131081,
+      "longitude": 119.9788108873281,
+      "municipalityId": "499effb1-1b95-47cf-990a-4f5129ba8c42",
+      "heritageTypeId": "94e2c418-db81-435e-8eb3-03440844abe9",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-25T02:24:16.634Z",
+      "updatedAt": "$D2026-06-25T02:24:16.634Z",
+      "municipality": {
+        "name": "ALAMINOS CITY",
+        "id": "499effb1-1b95-47cf-990a-4f5129ba8c42"
+      },
+      "heritageType": {
+        "name": "Monument",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782354250917-lapnpmzz848.jpg"
+        }
+      ]
+    },
+    {
+      "id": "a7efc17f-60ce-4885-bb52-8ced31b52148",
+      "name": "Saint Joseph the Patriarch Cathedral Parish",
+      "description": "Saint Joseph the Patriarch Cathedral Parish is the principal Roman Catholic church in Alaminos City and serves as the seat of the Diocese of Alaminos. The cathedral is an important religious, cultural, and historical landmark that reflects the faith and heritage of the local community. Its architecture and long-standing role in the city make it a significant heritage site.",
+      "commonUse": "Religious worship, prayer, weddings, baptisms, confirmations, community gatherings, and religious celebrations.",
+      "peopleUsingTheProperty": "Pilgrims, tourists, local worshippers, clergy, church workers, and religious organizations.",
+      "latitude": 16.15547169081504,
+      "longitude": 119.9785404751837,
+      "municipalityId": "499effb1-1b95-47cf-990a-4f5129ba8c42",
+      "heritageTypeId": "2c3a140d-69cb-4075-85b2-5fbe0bd7d25a",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-25T02:33:26.674Z",
+      "updatedAt": "$D2026-06-25T02:33:26.674Z",
+      "municipality": {
+        "name": "ALAMINOS CITY",
+        "id": "499effb1-1b95-47cf-990a-4f5129ba8c42"
+      },
+      "heritageType": {
+        "name": "Church",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782354799718-ovfbz7a157e.jpg"
+        }
+      ]
+    },
+    {
+      "id": "a54d5f9e-f300-4840-bd98-e620e0e105d2",
+      "name": "Spirit of '96 Monument",
+      "description": "The Spirit of '96 Monument is a historical landmark in Alaminos City that commemorates the bravery, patriotism, and sacrifices of local heroes who participated in the Philippine Revolution of 1896. The monument serves as a reminder of the city's contribution to the struggle for Philippine independence and stands as a symbol of national pride and historical remembrance.",
+      "commonUse": "Historical commemoration, educational tours, cultural activities, sightseeing, and civic ceremonies.",
+      "peopleUsingTheProperty": "Tourists, students, researchers, local residents, historians, and government officials.",
+      "latitude": 16.15650650727321,
+      "longitude": 119.9796283639017,
+      "municipalityId": "499effb1-1b95-47cf-990a-4f5129ba8c42",
+      "heritageTypeId": "94e2c418-db81-435e-8eb3-03440844abe9",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-25T02:39:00.078Z",
+      "updatedAt": "$D2026-06-25T02:39:00.078Z",
+      "municipality": {
+        "name": "ALAMINOS CITY",
+        "id": "499effb1-1b95-47cf-990a-4f5129ba8c42"
+      },
+      "heritageType": {
+        "name": "Monument",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782355131565-gr8hv8aabkp.jpg"
+        }
+      ]
+    },
+    {
+      "id": "a5f67228-c549-4b64-9f12-d7edd38e7e30",
+      "name": "Hundred Island",
+      "description": "Hundred Islands National Park is the first national park in the Philippines and one of the most famous tourist destinations in Pangasinan. It consists of more than one hundred islands and islets scattered across the Lingayen Gulf. The park is known for its limestone formations, crystal-clear waters, diverse marine life, caves, beaches, and scenic landscapes, making it an important natural and cultural heritage site.",
+      "commonUse": "Tourism, sightseeing, island hopping, swimming, boating, camping, educational tours, and environmental conservation activities.",
+      "peopleUsingTheProperty": "Tourists, local residents, researchers, students, environmentalists, and government agencies.",
+      "latitude": 16.21285627559769,
+      "longitude": 120.0452260440258,
+      "municipalityId": "499effb1-1b95-47cf-990a-4f5129ba8c42",
+      "heritageTypeId": "7b196c40-4318-4213-8e65-b96f91609e0d",
+      "star_count": 1,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-25T02:28:48.930Z",
+      "updatedAt": "$D2026-06-25T14:51:17.562Z",
+      "municipality": {
+        "name": "ALAMINOS CITY",
+        "id": "499effb1-1b95-47cf-990a-4f5129ba8c42"
+      },
+      "heritageType": {
+        "name": "Body of Water",
+        "code": "NATURAL_HERITAGE"
+      },
+      "stars": [
+        {
+          "userId": "kp_09f5696660fb402b9a32672aa91d8879"
+        }
+      ],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782354525581-3firctzouh8.jpg"
+        }
+      ]
+    },
+    {
+      "id": "19d43a63-a223-4682-a2ee-31ff64dd7e65",
+      "name": "Asingan Public Plaza",
+      "description": "The Asingan Public Plaza serves as the heart of community life, providing an open space for various social, cultural, and recreational activities. Surrounded by significant landmarks such as the municipal hall, church, and local markets, the plaza naturally becomes a gathering spot for residents and visitors. \n",
+      "commonUse": "Cultural Events, Sports Activities, Community Gatherings, Educational Programs",
+      "peopleUsingTheProperty": "Tourists",
+      "latitude": 16.00396705782559,
+      "longitude": 120.6689830315796,
+      "municipalityId": "a0e7d033-84e8-40c9-b0b3-fd363efac323",
+      "heritageTypeId": "c6eb863a-10ec-4002-acdb-cc7a7f5c07a2",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-26T12:57:37.234Z",
+      "updatedAt": "$D2026-06-28T09:34:52.591Z",
+      "municipality": {
+        "name": "ASINGAN",
+        "id": "a0e7d033-84e8-40c9-b0b3-fd363efac323"
+      },
+      "heritageType": {
+        "name": "Park/Plaza",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782478656868-h8x11duz2e8.jpg"
+        }
+      ]
+    },
+    {
+      "id": "c4d77926-3bf4-46a5-af15-39a1b48859fa",
+      "name": "Nuestra Se\u00f1ora de Purificacion Parish",
+      "description": "The Binmaley Catholic Church, officially known as the Nuestra Se\u00f1ora De Purificacion was founded on 1627 and was built by the Dominican fathers for seven years. It is also reckoned as the date of the town\u2019s foundation.",
+      "commonUse": "Religious Services, Community Gatherings, Religious Celebrations, Tourism",
+      "peopleUsingTheProperty": "Pilgrims, Tourists, Local Workshippers",
+      "latitude": 16.03007,
+      "longitude": 120.26868,
+      "municipalityId": "9ca8185e-cb0d-4426-98fd-dd834110909f",
+      "heritageTypeId": "2c3a140d-69cb-4075-85b2-5fbe0bd7d25a",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-28T08:31:52.730Z",
+      "updatedAt": "$D2026-06-28T12:50:24.399Z",
+      "municipality": {
+        "name": "BINMALEY",
+        "id": "9ca8185e-cb0d-4426-98fd-dd834110909f"
+      },
+      "heritageType": {
+        "name": "Church",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782635508411-opgh1xim16.jpg"
+        }
+      ]
+    },
+    {
+      "id": "890fb96c-2503-4338-9d3d-7b7127d66c23",
+      "name": "Monument of Dr. Jose Rizal",
+      "description": "The monument was built as a tribute to our national hero, a Filipino nationalist ad polymath during the tail end of the Spanish Regime.",
+      "commonUse": "Commemoration, Cultural Significance, and Historical Landmarks",
+      "peopleUsingTheProperty": "Tourist, Researchers",
+      "latitude": 16.00386113951379,
+      "longitude": 120.6694679183794,
+      "municipalityId": "a0e7d033-84e8-40c9-b0b3-fd363efac323",
+      "heritageTypeId": "94e2c418-db81-435e-8eb3-03440844abe9",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-26T12:29:34.393Z",
+      "updatedAt": "$D2026-06-28T09:15:30.861Z",
+      "municipality": {
+        "name": "ASINGAN",
+        "id": "a0e7d033-84e8-40c9-b0b3-fd363efac323"
+      },
+      "heritageType": {
+        "name": "Monument",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782476972540-rkjlljasjtm.jpg"
+        }
+      ]
+    },
+    {
+      "id": "5749b89e-76bd-43a7-89dd-c78a7be236dd",
+      "name": "Ancestral Houses of Asingan",
+      "description": "The ancestral houses scattered throughout Asingan serve as enduring symbols of the town\u2019s colonial past and cultural evolution. Constructed during the late 19th to early 20th centuries, these residences exhibit traditional Spanish-Filipino architectural styles, characterized by capiz shell windows, intricate wooden balustrades, and elevated structures designed for ventilation and flood protection. ",
+      "commonUse": "Commemoration, Cultural Significance, and Historical Landmarks",
+      "peopleUsingTheProperty": "Tourists",
+      "latitude": 16.018,
+      "longitude": 20.6665,
+      "municipalityId": "a0e7d033-84e8-40c9-b0b3-fd363efac323",
+      "heritageTypeId": "c6eb863a-10ec-4002-acdb-cc7a7f5c07a2",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-26T12:52:59.078Z",
+      "updatedAt": "$D2026-06-28T09:17:39.730Z",
+      "municipality": {
+        "name": "ASINGAN",
+        "id": "a0e7d033-84e8-40c9-b0b3-fd363efac323"
+      },
+      "heritageType": {
+        "name": "Park/Plaza",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782478377818-l7n74iylm2.jpg"
+        }
+      ]
+    },
+    {
+      "id": "8d57ab0a-36f8-41e6-a36d-0f4de047261d",
+      "name": "St. Louis Bertrand Parish Church",
+      "description": "The St. Louis Bertrand Parish Church, located in Asingan, Pangasinan, stands as a testament to the town\u2019s deep-rooted Catholic faith. Established during the Spanish colonial period, this church has been a spiritual center for the community for centuries.",
+      "commonUse": "Religious Services, Community Gatherings, Religious Celebrations, Tourism",
+      "peopleUsingTheProperty": "Pilgrims, local work shippers, tourists ",
+      "latitude": 16.017,
+      "longitude": 120.6785,
+      "municipalityId": "a0e7d033-84e8-40c9-b0b3-fd363efac323",
+      "heritageTypeId": "2c3a140d-69cb-4075-85b2-5fbe0bd7d25a",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-26T12:45:15.800Z",
+      "updatedAt": "$D2026-06-28T09:21:30.011Z",
+      "municipality": {
+        "name": "ASINGAN",
+        "id": "a0e7d033-84e8-40c9-b0b3-fd363efac323"
+      },
+      "heritageType": {
+        "name": "Church",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782477913660-3jw92bkzd6f.jpg"
+        }
+      ]
+    },
+    {
+      "id": "36d67b7f-8995-437f-9b8e-c407c82eb770",
+      "name": "Parish Church of Our Lady of Lourdes Salasa",
+      "description": "Old architectural design reflecting Spanish Colonial Revival Architectural Style. Its plastered brick fa\u00e7ade was inspired by Mexican style. The pediment is flat-topped and decorated with massive pinnacles. The octagonal window, together with the semicircular door and windows, accentuates the plastered finish wall, its square pilaster reaching up to the roof are also decorated with pinnacles.  In March 2020, the face or front of the church was constructed and finished last November 2021. On top of the building are image of Our Lady of Lourdes and two angels and inaugurated last December 2021.",
+      "commonUse": "Religious Services, Community Gatherings, Religious Celebrations, Tourism",
+      "peopleUsingTheProperty": "Pilgrims, Tourists, Local Workshippers",
+      "latitude": 15.9822,
+      "longitude": 120.2183,
+      "municipalityId": "9570e8d6-0e2d-4d23-802c-c2e58fc96533",
+      "heritageTypeId": "2c3a140d-69cb-4075-85b2-5fbe0bd7d25a",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-28T08:40:56.948Z",
+      "updatedAt": "$D2026-06-28T08:40:56.948Z",
+      "municipality": {
+        "name": "BUGALLON",
+        "id": "9570e8d6-0e2d-4d23-802c-c2e58fc96533"
+      },
+      "heritageType": {
+        "name": "Church",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782636054933-f4sdkuz2728.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ee1a85cd-8a89-421b-aeb9-3aabcf72ed2f",
+      "name": "Saint Isidore the Farmer Parish Church",
+      "description": "Saint Isidore the Farmer Parish Church, located in Poblacion, Burgos, Pangasinan, Philippines, is a historic Roman Catholic church established in 1755 by Dominican priest Fr. Antonio Ruiz. The church is dedicated to St. Isidore the Farmer, the patron saint of Madrid and farmers, reflecting the town's agricultural roots. ",
+      "commonUse": "Religious Services, Community Gatherings, Religious Celebrations, Tourism",
+      "peopleUsingTheProperty": "Pilgrims, Tourists, Local Workshippers",
+      "latitude": 16.0597275,
+      "longitude": 119.8646693,
+      "municipalityId": "9b74ebae-fdc8-4c98-bb44-fe4fa11c4779",
+      "heritageTypeId": "2c3a140d-69cb-4075-85b2-5fbe0bd7d25a",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-28T08:50:04.538Z",
+      "updatedAt": "$D2026-06-28T08:50:04.538Z",
+      "municipality": {
+        "name": "BURGOS",
+        "id": "9b74ebae-fdc8-4c98-bb44-fe4fa11c4779"
+      },
+      "heritageType": {
+        "name": "Church",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782636597698-9kgneodp2v4.png"
+        }
+      ]
+    },
+    {
+      "id": "3bc30bf5-7643-45ca-a0d5-84cc72d87f57",
+      "name": "Anda Bridge",
+      "description": "Anda Bridge is a vital transportation structure connecting Alaminos City to the municipality of Anda, Pangasinan. It has played a significant role in improving access between the mainland and the island municipality, contributing to economic growth, tourism, and the movement of people and goods. The bridge is recognized as an important infrastructure landmark in the province.",
+      "commonUse": "Transportation, tourism, commuting, trade, sightseeing, and photography.",
+      "peopleUsingTheProperty": "Local residents, commuters, tourists, business owners, delivery personnel, and government agencies.",
+      "latitude": 16.29229551718368,
+      "longitude": 119.9153862573561,
+      "municipalityId": "3a8d8941-39cb-4197-8f93-bfd4b07e9732",
+      "heritageTypeId": "94e2c418-db81-435e-8eb3-03440844abe9",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T08:50:09.087Z",
+      "updatedAt": "$D2026-06-28T08:50:09.087Z",
+      "municipality": {
+        "name": "ANDA",
+        "id": "3a8d8941-39cb-4197-8f93-bfd4b07e9732"
+      },
+      "heritageType": {
+        "name": "Monument",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782636605699-6gz1qeir53g.jpg"
+        }
+      ]
+    },
+    {
+      "id": "c25d49cf-9ba8-4e82-9f92-345341172d42",
+      "name": "Bani Monument",
+      "description": "The Bani Historical Marker is a monument and historical marker that commemorates the founding and rich history of the Municipality of Bani, Pangasinan. Installed by the National Historical Institute (now the National Historical Commission of the Philippines), it recognizes Bani's establishment, its transfer to its present site, and the sacrifices of its people during the Philippine Revolution.",
+      "commonUse": "Historical commemoration, educational tours, civic ceremonies, sightseeing, and cultural activities.",
+      "peopleUsingTheProperty": "Local residents, tourists, students, researchers, historians, and government officials.",
+      "latitude": 16.18440223686138,
+      "longitude": 119.8606548441941,
+      "municipalityId": "c5d3a7c8-bda2-4453-b481-883a9ad3f2b3",
+      "heritageTypeId": "94e2c418-db81-435e-8eb3-03440844abe9",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T08:55:43.500Z",
+      "updatedAt": "$D2026-06-28T08:55:43.500Z",
+      "municipality": {
+        "name": "BANI",
+        "id": "c5d3a7c8-bda2-4453-b481-883a9ad3f2b3"
+      },
+      "heritageType": {
+        "name": "Monument",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782636942011-bea92pl9mb8.jpg"
+        }
+      ]
+    },
+    {
+      "id": "1bb0100d-3d31-4e40-8707-b5acd99bc44d",
+      "name": "Bani Municipal Hall",
+      "description": "Bani Municipal Hall is the seat of the local government of the Municipality of Bani, Pangasinan. It serves as the center of governance where public services, administrative functions, and municipal programs are carried out. The building is an important civic landmark that reflects the municipality's history and development since its establishment in 1769.",
+      "commonUse": "Government administration, public service delivery, official meetings, civil registration, business permit processing, and community programs.",
+      "peopleUsingTheProperty": "Municipal officials, government employees, local residents, business owners, students, researchers, and visitors.",
+      "latitude": 16.1837765845125,
+      "longitude": 119.861859138373,
+      "municipalityId": "c5d3a7c8-bda2-4453-b481-883a9ad3f2b3",
+      "heritageTypeId": "6d31991e-a07e-47b1-b8ca-11e12cdefa27",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T08:58:15.885Z",
+      "updatedAt": "$D2026-06-28T08:58:15.885Z",
+      "municipality": {
+        "name": "BANI",
+        "id": "c5d3a7c8-bda2-4453-b481-883a9ad3f2b3"
+      },
+      "heritageType": {
+        "name": "City Hall",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782637094286-x5n006268xk.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cab1e464-57da-4fa0-b1e1-ebe476b0b2aa",
+      "name": "Parish of Our Lady of the Assumption",
+      "description": "The Immaculate Conception Parish Church is the main Roman Catholic church of Bani, Pangasinan. It serves as the spiritual center of the municipality and is under the Diocese of Alaminos. The church is an important religious, cultural, and historical landmark where generations of Bani residents have gathered for worship and community celebrations.",
+      "commonUse": "Religious worship, prayer, Mass celebrations, weddings, baptisms, confirmations, funerals, parish activities, and religious festivals.",
+      "peopleUsingTheProperty": "Pilgrims, local worshippers, tourists, clergy, church workers, students, and researchers.",
+      "latitude": 16.18533205563009,
+      "longitude": 119.8607895944822,
+      "municipalityId": "c5d3a7c8-bda2-4453-b481-883a9ad3f2b3",
+      "heritageTypeId": "2c3a140d-69cb-4075-85b2-5fbe0bd7d25a",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:06:23.878Z",
+      "updatedAt": "$D2026-06-28T09:06:23.878Z",
+      "municipality": {
+        "name": "BANI",
+        "id": "c5d3a7c8-bda2-4453-b481-883a9ad3f2b3"
+      },
+      "heritageType": {
+        "name": "Church",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782637582272-2d1k265zxc8.jpg"
+        }
+      ]
+    },
+    {
+      "id": "67383c1f-fc6b-4f56-b890-9f58d2e3def4",
+      "name": "Immaculate Conception Parish Church",
+      "description": "The Immaculate Conception Parish Church is the principal Roman Catholic church in the Municipality of Bani, Pangasinan. Dedicated to the Immaculate Conception, the church has long served as the spiritual center of the community and belongs to the Diocese of Alaminos. It is one of the municipality's most important religious and cultural landmarks.",
+      "commonUse": "Religious worship, prayer, Mass celebrations, weddings, baptisms, confirmations, funerals, parish activities, and religious festivals.",
+      "peopleUsingTheProperty": "Pilgrims, local worshippers, tourists, clergy, church workers, students, and researchers.",
+      "latitude": 16.1833011993382,
+      "longitude": 119.8613103248804,
+      "municipalityId": "c5d3a7c8-bda2-4453-b481-883a9ad3f2b3",
+      "heritageTypeId": "2c3a140d-69cb-4075-85b2-5fbe0bd7d25a",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:08:51.129Z",
+      "updatedAt": "$D2026-06-28T09:08:51.129Z",
+      "municipality": {
+        "name": "BANI",
+        "id": "c5d3a7c8-bda2-4453-b481-883a9ad3f2b3"
+      },
+      "heritageType": {
+        "name": "Church",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782637729265-hbi1x5f79io.jpg"
+        }
+      ]
+    },
+    {
+      "id": "f0846d55-00e4-434f-b4c9-6199a30d1f8d",
+      "name": "Our Lady of Purification Parish Church",
+      "description": "The Our Lady of Purification Parish Church is one of the oldest Roman Catholic churches in Pangasinan. Established in 1627, it serves as the spiritual center of Binmaley and belongs to the Archdiocese of Lingayen\u2013Dagupan. The church is renowned for its centuries-old history, religious significance, and colonial architecture, making it one of the municipality's most important cultural and historical landmarks.",
+      "commonUse": "Religious worship, prayer, Holy Mass, weddings, baptisms, confirmations, funerals, parish activities, pilgrimages, and religious festivals.",
+      "peopleUsingTheProperty": "Pilgrims, local worshippers, tourists, clergy, church workers, students, researchers, and historians.",
+      "latitude": 16.02976332485874,
+      "longitude": 120.2687749960418,
+      "municipalityId": "9ca8185e-cb0d-4426-98fd-dd834110909f",
+      "heritageTypeId": "2c3a140d-69cb-4075-85b2-5fbe0bd7d25a",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:11:47.231Z",
+      "updatedAt": "$D2026-06-28T09:11:47.231Z",
+      "municipality": {
+        "name": "BINMALEY",
+        "id": "9ca8185e-cb0d-4426-98fd-dd834110909f"
+      },
+      "heritageType": {
+        "name": "Church",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782637904463-d43aexmz79s.jpg"
+        }
+      ]
+    },
+    {
+      "id": "7b7df6b8-d24d-469e-ab86-ffb649431d59",
+      "name": "The Monument of the Unknown Soldier",
+      "description": "A tribute to the unknown soldiers who died in the battlefields during the World War I and II for the sake of freedom and democracy. The monument is constructed under the administration of Mayor Leonardo Carbonnel in 1965.",
+      "commonUse": "Commemoration, Cultural Significance, and Historical Landmarks",
+      "peopleUsingTheProperty": "Tourist, Researchers",
+      "latitude": 16.00335129672092,
+      "longitude": 120.6687803008737,
+      "municipalityId": "a0e7d033-84e8-40c9-b0b3-fd363efac323",
+      "heritageTypeId": "94e2c418-db81-435e-8eb3-03440844abe9",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-26T12:22:03.695Z",
+      "updatedAt": "$D2026-06-28T09:12:09.289Z",
+      "municipality": {
+        "name": "ASINGAN",
+        "id": "a0e7d033-84e8-40c9-b0b3-fd363efac323"
+      },
+      "heritageType": {
+        "name": "Monument",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782476518297-ksqp79pc82h.JPG"
+        }
+      ]
+    },
+    {
+      "id": "d7e0354d-68de-4a81-afc4-d3d9fd5a93a9",
+      "name": "Bolinao Municipal Hall",
+      "description": "Bolinao Municipal Hall is the seat of the local government of the Municipality of Bolinao, Pangasinan. It serves as the center of governance where public services, administrative functions, and municipal development programs are carried out. As one of the municipality's most recognizable civic landmarks, it reflects Bolinao's rich history and continuing progress.",
+      "commonUse": "Government administration, public service delivery, civil registration, business permit processing, official meetings, and community programs.",
+      "peopleUsingTheProperty": "Municipal officials, government employees, local residents, business owners, tourists, students, and researchers.",
+      "latitude": 16.38837232784937,
+      "longitude": 119.8929171574217,
+      "municipalityId": "aac72d6b-6f56-4d69-af2f-107f233f66e5",
+      "heritageTypeId": "6d31991e-a07e-47b1-b8ca-11e12cdefa27",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:15:19.209Z",
+      "updatedAt": "$D2026-06-28T09:15:19.209Z",
+      "municipality": {
+        "name": "BOLINAO",
+        "id": "aac72d6b-6f56-4d69-af2f-107f233f66e5"
+      },
+      "heritageType": {
+        "name": "City Hall",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782638114915-qw88vadwvr.jpg"
+        }
+      ]
+    },
+    {
+      "id": "13d555c7-ec94-42b6-9806-4ee76dc1748c",
+      "name": "Major Jose Torres Bugallon Monument",
+      "description": "The Major Jose Torres Bugallon Monument is a historical landmark located in Bugallon, Pangasinan. It honors Major Jose Torres Bugallon, a Filipino military officer and national hero who fought during the Philippine Revolution and the Philippine-American War. The monument commemorates his courage and patriotism and serves as a reminder of his contributions to the country's struggle for independence. The municipality itself was renamed from Salasa to Bugallon in 1921 in his honor.",
+      "commonUse": "Historical commemoration, educational tours, civic ceremonies, sightseeing, photography, and cultural activities.",
+      "peopleUsingTheProperty": "Tourists, students, historians, researchers, local residents, government officials, and veterans.",
+      "latitude": 15.95405968470893,
+      "longitude": 120.2169880383686,
+      "municipalityId": "9570e8d6-0e2d-4d23-802c-c2e58fc96533",
+      "heritageTypeId": "94e2c418-db81-435e-8eb3-03440844abe9",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:34:16.767Z",
+      "updatedAt": "$D2026-06-28T09:34:16.767Z",
+      "municipality": {
+        "name": "BUGALLON",
+        "id": "9570e8d6-0e2d-4d23-802c-c2e58fc96533"
+      },
+      "heritageType": {
+        "name": "Monument",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782639253134-625q6puzuxp.jpg"
+        }
+      ]
+    },
+    {
+      "id": "146cbe10-6f7d-4dd8-9be7-920cad472c79",
+      "name": "Governor Aguedo F. Agbayani Monument",
+      "description": "The Governor Aguedo F. Agbayani Monument is a historical monument located within the Governor Aguedo F. Agbayani Park in Lingayen, Pangasinan. It honors the legacy of Governor Aguedo F. Agbayani, the longest-serving governor of Pangasinan, who served the province for a total of 17 years and contributed significantly to its development. The monument stands as a symbol of dedicated public service and leadership.",
+      "commonUse": "Historical commemoration, educational tours, sightseeing, photography, civic ceremonies, and cultural activities.",
+      "peopleUsingTheProperty": "Tourists, students, researchers, historians, local residents, government officials, and visitors.",
+      "latitude": 16.0323330325228,
+      "longitude": 120.2318442140793,
+      "municipalityId": "77e11a26-4189-4bfc-965f-f23a2a193f72",
+      "heritageTypeId": "94e2c418-db81-435e-8eb3-03440844abe9",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:44:45.492Z",
+      "updatedAt": "$D2026-06-28T09:44:45.492Z",
+      "municipality": {
+        "name": "LINGAYEN",
+        "id": "77e11a26-4189-4bfc-965f-f23a2a193f72"
+      },
+      "heritageType": {
+        "name": "Monument",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782639881742-svd1w3xhk3.jpg"
+        }
+      ]
+    },
+    {
+      "id": "1c977a4c-e970-4362-b3e8-09ea4a7f3e31",
+      "name": "Giant Clam Capital",
+      "description": "The Giant Clam Garden in Bolinao, Pangasinan is a marine conservation and research site dedicated to the protection, propagation, and restoration of giant clams (Tridacna species). Managed by the University of the Philippines Marine Science Institute, it has earned Bolinao the title \"Giant Clam Capital of the Philippines\" because of its successful giant clam conservation and breeding programs.",
+      "commonUse": "Marine conservation, environmental education, ecotourism, scientific research, snorkeling, and sightseeing.",
+      "peopleUsingTheProperty": "Tourists, students, researchers, environmentalists, divers, local residents, and government agencies.",
+      "latitude": 16.37644234224313,
+      "longitude": 119.8932279662986,
+      "municipalityId": "aac72d6b-6f56-4d69-af2f-107f233f66e5",
+      "heritageTypeId": "c6eb863a-10ec-4002-acdb-cc7a7f5c07a2",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:19:27.576Z",
+      "updatedAt": "$D2026-06-28T09:19:27.576Z",
+      "municipality": {
+        "name": "BOLINAO",
+        "id": "aac72d6b-6f56-4d69-af2f-107f233f66e5"
+      },
+      "heritageType": {
+        "name": "Park/Plaza",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782638359665-8l3epcrlbnx.jpg"
+        }
+      ]
+    },
+    {
+      "id": "a016da41-a40f-4a45-9a1f-69f73de024b8",
+      "name": "Cape Bolinao Light House",
+      "description": "Cape Bolinao Lighthouse is one of the oldest operational lighthouses in the Philippines. Constructed during the Spanish colonial period in 1903, it stands on Punta Piedra Point overlooking the West Philippine Sea. The lighthouse has guided ships safely along the northwestern coast of Luzon for more than a century and is one of Bolinao's most recognizable historical landmarks.",
+      "commonUse": "Navigation, heritage tourism, sightseeing, photography, historical education, and cultural visits.",
+      "peopleUsingTheProperty": "Tourists, local residents, researchers, historians, photographers, students, and maritime personnel.",
+      "latitude": 16.30718395055141,
+      "longitude": 119.7856077718089,
+      "municipalityId": "aac72d6b-6f56-4d69-af2f-107f233f66e5",
+      "heritageTypeId": "94e2c418-db81-435e-8eb3-03440844abe9",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:22:08.503Z",
+      "updatedAt": "$D2026-06-28T09:22:08.503Z",
+      "municipality": {
+        "name": "BOLINAO",
+        "id": "aac72d6b-6f56-4d69-af2f-107f233f66e5"
+      },
+      "heritageType": {
+        "name": "Monument",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782638524670-4j7kzy6esgi.jpg"
+        }
+      ]
+    },
+    {
+      "id": "8633d7f2-aa4f-4ae5-80b0-c8176f9f10d2",
+      "name": "Bugallon Municipal Hall",
+      "description": "Bugallon Municipal Hall is the seat of the local government of the Municipality of Bugallon, Pangasinan. It serves as the center of governance where public services, administrative functions, and municipal development programs are carried out. As one of the municipality's prominent civic landmarks, it symbolizes the community's commitment to public service and local development.",
+      "commonUse": "Government administration, public service delivery, civil registration, business permit processing, official meetings, and community programs. ",
+      "peopleUsingTheProperty": "Municipal officials, government employees, local residents, business owners, students, researchers, and visitors.",
+      "latitude": 15.95461969362725,
+      "longitude": 120.2174291960404,
+      "municipalityId": "9570e8d6-0e2d-4d23-802c-c2e58fc96533",
+      "heritageTypeId": "6d31991e-a07e-47b1-b8ca-11e12cdefa27",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:27:27.542Z",
+      "updatedAt": "$D2026-06-28T09:27:27.542Z",
+      "municipality": {
+        "name": "BUGALLON",
+        "id": "9570e8d6-0e2d-4d23-802c-c2e58fc96533"
+      },
+      "heritageType": {
+        "name": "City Hall",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782638845643-w3wy0chr6c9.jpg"
+        }
+      ]
+    },
+    {
+      "id": "317484e5-4fae-4ec9-aa5b-906552058055",
+      "name": "Our Lady of Lourdes Parish Church",
+      "description": "Our Lady of Lourdes Parish Church is the principal Roman Catholic church in Bugallon, Pangasinan. It serves as the spiritual center of the municipality and is under the Archdiocese of Lingayen\u2013Dagupan. The church is an important religious, cultural, and historical landmark where generations of Bugallon residents have gathered for worship, sacraments, and community celebrations.",
+      "commonUse": "Religious worship, Holy Mass, prayer, weddings, baptisms, confirmations, funerals, parish activities, pilgrimages, and religious festivals.",
+      "peopleUsingTheProperty": "Pilgrims, local worshippers, tourists, clergy, church workers, students, researchers, and historians.",
+      "latitude": 15.97977762747534,
+      "longitude": 120.2192104095333,
+      "municipalityId": "9570e8d6-0e2d-4d23-802c-c2e58fc96533",
+      "heritageTypeId": "2c3a140d-69cb-4075-85b2-5fbe0bd7d25a",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:40:40.879Z",
+      "updatedAt": "$D2026-06-28T09:40:40.879Z",
+      "municipality": {
+        "name": "BUGALLON",
+        "id": "9570e8d6-0e2d-4d23-802c-c2e58fc96533"
+      },
+      "heritageType": {
+        "name": "Church",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782639637385-4ifu9354z9a.jpg"
+        }
+      ]
+    },
+    {
+      "id": "f5a58ba1-4315-4f86-a0f5-4fa81822ae1c",
+      "name": "Pangasinan Provincial Capitol building",
+      "description": "The Pangasinan Provincial Capitol Building, located in Lingayen, serves as the official seat of the Provincial Government of Pangasinan. Constructed between 1917 and 1918 and designed by architect Ralph Harrington Doane in the French Neoclassical style, it is recognized as one of the Eight Architectural Treasures of the Philippines. In 2018, it was also declared a cultural heritage site by the Provincial Government of Pangasinan.",
+      "commonUse": "Provincial government administration, public service delivery, official ceremonies, tourism, educational visits, and civic events.",
+      "peopleUsingTheProperty": "Provincial government officials, employees, local residents, tourists, students, researchers, historians, and visitors.",
+      "latitude": 16.03364026501991,
+      "longitude": 120.2320385206387,
+      "municipalityId": "77e11a26-4189-4bfc-965f-f23a2a193f72",
+      "heritageTypeId": "6d31991e-a07e-47b1-b8ca-11e12cdefa27",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:48:00.896Z",
+      "updatedAt": "$D2026-06-28T09:48:00.896Z",
+      "municipality": {
+        "name": "LINGAYEN",
+        "id": "77e11a26-4189-4bfc-965f-f23a2a193f72"
+      },
+      "heritageType": {
+        "name": "City Hall",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782640078657-5a7gd5qwxf8.jpg"
+        }
+      ]
+    },
+    {
+      "id": "667f11c7-3a30-4184-bc48-c1476cd54c8a",
+      "name": "Urbiztondo People's Park",
+      "description": "Urbiztondo People's Park is the main public park and municipal plaza of Urbiztondo, Pangasinan. It serves as a recreational, cultural, and civic space where residents and visitors gather for leisure, community events, and official celebrations. In 2021, the municipal plaza was officially named Urbiztondo People's Park and designated as the municipality's Freedom Park.",
+      "commonUse": "Recreation, community gatherings, civic ceremonies, cultural events, exercise, family outings, and public celebrations.",
+      "peopleUsingTheProperty": "Local residents, tourists, students, families, government officials, athletes, and visitors.",
+      "latitude": 15.82235899547353,
+      "longitude": 120.3290492518585,
+      "municipalityId": "4b1d90f0-6407-4df1-9c21-7fbb1b7ed6ca",
+      "heritageTypeId": "c6eb863a-10ec-4002-acdb-cc7a7f5c07a2",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:59:23.170Z",
+      "updatedAt": "$D2026-06-28T09:59:23.170Z",
+      "municipality": {
+        "name": "URBIZTONDO",
+        "id": "4b1d90f0-6407-4df1-9c21-7fbb1b7ed6ca"
+      },
+      "heritageType": {
+        "name": "Park/Plaza",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782640761124-up00e49wtih.jpg"
+        }
+      ]
+    },
+    {
+      "id": "83f566f3-94fb-4fef-97d8-3d36f22d6b0b",
+      "name": "St. Pius V Parish Church",
+      "description": "St. Pius V Parish Church is the principal Roman Catholic church of Urbiztondo, Pangasinan. Established in 1852, it belongs to the Archdiocese of Lingayen\u2013Dagupan and has served as the spiritual center of the municipality for more than a century. The church is recognized for its religious, historical, and cultural significance to the people of Urbiztondo.",
+      "commonUse": "Religious worship, Holy Mass, prayer, weddings, baptisms, confirmations, funerals, parish activities, pilgrimages, and religious festivals.",
+      "peopleUsingTheProperty": "Pilgrims, local worshippers, tourists, clergy, church workers, students, researchers, and historians. ",
+      "latitude": 15.82086046792771,
+      "longitude": 120.3292787752948,
+      "municipalityId": "4b1d90f0-6407-4df1-9c21-7fbb1b7ed6ca",
+      "heritageTypeId": "2c3a140d-69cb-4075-85b2-5fbe0bd7d25a",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T10:02:21.128Z",
+      "updatedAt": "$D2026-06-28T10:02:21.128Z",
+      "municipality": {
+        "name": "URBIZTONDO",
+        "id": "4b1d90f0-6407-4df1-9c21-7fbb1b7ed6ca"
+      },
+      "heritageType": {
+        "name": "Church",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782640937018-6cmd2x4tc0x.jpg"
+        }
+      ]
+    },
+    {
+      "id": "93b8c4af-993a-4aec-b841-37a1196284ab",
+      "name": "St. James the Great Parish Church",
+      "description": "St. James the Great Parish Church is one of the oldest Roman Catholic churches in Pangasinan. Founded in 1609 by the Augustinian missionaries, it serves as the spiritual center of Bolinao and is under the Diocese of Alaminos. The church is known for its Spanish colonial architecture, coral stone walls, and rich historical and religious significance, making it one of the municipality's most treasured heritage landmarks.",
+      "commonUse": "Religious worship, Holy Mass, prayer, weddings, baptisms, confirmations, funerals, parish activities, pilgrimages, and religious festivals.",
+      "peopleUsingTheProperty": "Pilgrims, local worshippers, tourists, clergy, church workers, students, researchers, and historians.",
+      "latitude": 16.38863765603323,
+      "longitude": 119.893591867213,
+      "municipalityId": "aac72d6b-6f56-4d69-af2f-107f233f66e5",
+      "heritageTypeId": "2c3a140d-69cb-4075-85b2-5fbe0bd7d25a",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:25:11.209Z",
+      "updatedAt": "$D2026-06-28T09:25:11.209Z",
+      "municipality": {
+        "name": "BOLINAO",
+        "id": "aac72d6b-6f56-4d69-af2f-107f233f66e5"
+      },
+      "heritageType": {
+        "name": "Church",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782638709726-ndqbunmrt9k.jpg"
+        }
+      ]
+    },
+    {
+      "id": "66af6a48-8e1e-4103-8ad0-bd88e388e842",
+      "name": "Giant Farmer Monument",
+      "description": "The Giant Farmer Monument is a prominent landmark in Bugallon, Pangasinan, dedicated to the hardworking farmers who have contributed to the municipality's agricultural development. The monument symbolizes the importance of farming as the backbone of Bugallon's economy and recognizes the dedication and resilience of local farmers in sustaining food production and community growth.",
+      "commonUse": "Historical commemoration, sightseeing, photography, educational tours, civic ceremonies, and cultural activities.",
+      "peopleUsingTheProperty": "Local residents, tourists, students, researchers, farmers, government officials, and historians.",
+      "latitude": 15.95284902342544,
+      "longitude": 120.2143585785903,
+      "municipalityId": "9570e8d6-0e2d-4d23-802c-c2e58fc96533",
+      "heritageTypeId": "94e2c418-db81-435e-8eb3-03440844abe9",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:32:09.535Z",
+      "updatedAt": "$D2026-06-28T09:32:09.535Z",
+      "municipality": {
+        "name": "BUGALLON",
+        "id": "9570e8d6-0e2d-4d23-802c-c2e58fc96533"
+      },
+      "heritageType": {
+        "name": "Monument",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782639123725-41nzuvn5zxh.jpg"
+        }
+      ]
+    },
+    {
+      "id": "6de54630-ae9b-4fef-8ad8-0e56a85b9007",
+      "name": "Urduja House",
+      "description": "Urduja House is the official residence of the Governor of Pangasinan, located within the Pangasinan Provincial Capitol Complex in Lingayen. Built in 1953, it was originally called Urduja Palace and was named after the legendary Princess Urduja of Pangasinan. Today, it serves as the governor's residence, a ceremonial reception hall, and a guesthouse for visiting dignitaries.",
+      "commonUse": "Official residence of the provincial governor, ceremonial receptions, official meetings, hosting dignitaries, and heritage tourism.",
+      "peopleUsingTheProperty": "Provincial government officials, visiting dignitaries, tourists, students, researchers, historians, and local residents.",
+      "latitude": 16.03459680750371,
+      "longitude": 120.2323085095343,
+      "municipalityId": "77e11a26-4189-4bfc-965f-f23a2a193f72",
+      "heritageTypeId": "6d31991e-a07e-47b1-b8ca-11e12cdefa27",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:52:40.636Z",
+      "updatedAt": "$D2026-06-28T09:52:40.636Z",
+      "municipality": {
+        "name": "LINGAYEN",
+        "id": "77e11a26-4189-4bfc-965f-f23a2a193f72"
+      },
+      "heritageType": {
+        "name": "City Hall",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782640358680-7mzeclleqgs.jpg"
+        }
+      ]
+    },
+    {
+      "id": "8094c052-ccd8-40b7-939c-db6b3af2e659",
+      "name": "Mangatarem Municipal Hall",
+      "description": "Mangatarem Municipal Hall is the seat of the local government of the Municipality of Mangatarem, Pangasinan. It serves as the center of governance where public services, administrative functions, and municipal development programs are carried out. As one of the municipality's most important civic landmarks, it represents the town's commitment to public service and community development.",
+      "commonUse": "Government administration, public service delivery, civil registration, business permit processing, official meetings, disaster response coordination, and community programs.",
+      "peopleUsingTheProperty": "Municipal officials, government employees, local residents, business owners, students, researchers, and visitors.",
+      "latitude": 15.79054543069677,
+      "longitude": 120.2933848230222,
+      "municipalityId": "e90f3649-2915-4dd9-b5ee-20ecdfe2bf2d",
+      "heritageTypeId": "6d31991e-a07e-47b1-b8ca-11e12cdefa27",
+      "star_count": 0,
+      "createdById": "kp_7c9002589c7146caae646f2c64cf7b3b",
+      "createdAt": "$D2026-06-28T09:56:14.735Z",
+      "updatedAt": "$D2026-06-28T09:56:14.735Z",
+      "municipality": {
+        "name": "MANGATAREM",
+        "id": "e90f3649-2915-4dd9-b5ee-20ecdfe2bf2d"
+      },
+      "heritageType": {
+        "name": "City Hall",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Rolando",
+        "id": "kp_7c9002589c7146caae646f2c64cf7b3b"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782640570903-wgwc4hft3ab.jpg"
+        }
+      ]
+    },
+    {
+      "id": "3bd8823d-9cb1-481a-8a7f-65762ad398ef",
+      "name": "Binmaley Beach",
+      "description": "Binmaley Beach is easily accessible and is considered to be one of the cleanest and most scenic beaches in Pangasinan. Aside from swimming, visitors can also take motorboat rides being offered by local fishermen who rent out their boats for such tourist activities. Visitors can also try surfing or simply swim in the usually calm waters of the beach.\n",
+      "commonUse": "Swimming, surfing, motorboat rides, sightseeing",
+      "peopleUsingTheProperty": "Local residents, tourists, surfers, and local fishermen",
+      "latitude": 16.04646946721024,
+      "longitude": 120.2692323845435,
+      "municipalityId": "9ca8185e-cb0d-4426-98fd-dd834110909f",
+      "heritageTypeId": "7b196c40-4318-4213-8e65-b96f91609e0d",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-28T12:26:14.395Z",
+      "updatedAt": "$D2026-06-28T12:26:14.395Z",
+      "municipality": {
+        "name": "BINMALEY",
+        "id": "9ca8185e-cb0d-4426-98fd-dd834110909f"
+      },
+      "heritageType": {
+        "name": "Body of Water",
+        "code": "NATURAL_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782649570033-8iieza6mtwa.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ad09e990-0606-43b7-b371-d8eebaf03aed",
+      "name": "Our Lady of Purification Parish Church",
+      "description": "One of the oldest churches in Pangasinan, the Our Lady of Purification Parish Church has been standing in Binmaley since 1627. The church was first managed by the Dominicans until 1898 before it was taken over by the Diocesan clergy until 1932. The compound is spacious so that anyone could take long walks and appreciate the solemn heritage that the mere existence of the church exudes.",
+      "commonUse": "Catholic worship, religious ceremonies, pilgrimage, and heritage tourism.",
+      "peopleUsingTheProperty": "Parishioners, Catholic pilgrims, tourists, local residents, clergy, and history enthusiasts.",
+      "latitude": 16.03219688216353,
+      "longitude": 120.2690324910068,
+      "municipalityId": "9ca8185e-cb0d-4426-98fd-dd834110909f",
+      "heritageTypeId": "2c3a140d-69cb-4075-85b2-5fbe0bd7d25a",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-28T12:45:21.856Z",
+      "updatedAt": "$D2026-06-28T12:45:21.856Z",
+      "municipality": {
+        "name": "BINMALEY",
+        "id": "9ca8185e-cb0d-4426-98fd-dd834110909f"
+      },
+      "heritageType": {
+        "name": "Church",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782650717581-rjn1m02gpd.webp"
+        }
+      ]
+    },
+    {
+      "id": "c818ae85-16ef-4ed6-846b-cd103f4ca8b3",
+      "name": "Tondaligan Beach",
+      "description": "Tondaligan Beach in Dagupan City is one of the most visited places in the area. Families and barkadas usually find themselves at this beach for timeless bonding and memory-making, with the beach\u2019s vast area a perfect backdrop for tons of Instagram-worthy pictures. There are shower rooms and cottages for rent as well, and a number of accommodation establishments within the vicinity for those who plan to stay longer.",
+      "commonUse": "Swimming, outings, picnics, sightseeing, photography",
+      "peopleUsingTheProperty": "Local residents, domestic and foreign tourists, families, groups of friends, beachgoers, and photographers.",
+      "latitude": 16.08487139049389,
+      "longitude": 120.346559298831,
+      "municipalityId": "529e3fe9-431d-4725-9c56-c6b135c0c194",
+      "heritageTypeId": "7b196c40-4318-4213-8e65-b96f91609e0d",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-28T12:56:43.835Z",
+      "updatedAt": "$D2026-06-28T12:56:43.835Z",
+      "municipality": {
+        "name": "DAGUPAN CITY",
+        "id": "529e3fe9-431d-4725-9c56-c6b135c0c194"
+      },
+      "heritageType": {
+        "name": "Body of Water",
+        "code": "NATURAL_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782651401298-thp61665wff.jpg"
+        }
+      ]
+    },
+    {
+      "id": "0f7a0727-2837-4c8d-be68-a48796a4c806",
+      "name": "Maranum Falls",
+      "description": "Maranum Falls, also known as Batchelor Falls, is a prominent natural attraction located in Barangay Batchelor East, Natividad, Pangasinan. The name \"Maranum\" translates to \"many waters\" in the Pangasinan language, aptly describing the falls' consistent flow, even during the dry season. ",
+      "commonUse": "Sightseeing, swimming, nature appreciation, eco-tourism, and recreational activities.",
+      "peopleUsingTheProperty": "Local residents, domestic tourists, nature enthusiasts, hikers, photographers, and families.",
+      "latitude": 16.07005,
+      "longitude": 120.84351,
+      "municipalityId": "971d5674-0536-430d-a7b6-21ead73d61dc",
+      "heritageTypeId": "7b196c40-4318-4213-8e65-b96f91609e0d",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-28T13:10:34.162Z",
+      "updatedAt": "$D2026-06-28T13:10:34.162Z",
+      "municipality": {
+        "name": "NATIVIDAD",
+        "id": "971d5674-0536-430d-a7b6-21ead73d61dc"
+      },
+      "heritageType": {
+        "name": "Body of Water",
+        "code": "NATURAL_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782652226595-82rsz4jiven.jpg"
+        }
+      ]
+    },
+    {
+      "id": "6b5b8327-ad29-4c43-a9d2-8ca1b1ba8d65",
+      "name": "Dipalo River",
+      "description": "The Dipalo River in San Quintin, Pangasinan, is a natural wonder that offers a serene escape for visitors. The river is known for its crystalline waters sourced from the Caraballo Mountains, providing a refreshing contrast to the surrounding lowlands. It is a popular spot for picnics, swimming, and hiking, with designated areas for resting and picnicking along the riverbanks. ",
+      "commonUse": "Swimming, picnics, hiking, nature appreciation, and eco-tourism.",
+      "peopleUsingTheProperty": "Local residents, domestic tourists, families, hikers, nature enthusiasts, and photographers.",
+      "latitude": 15.99920462192912,
+      "longitude": 120.8210212702702,
+      "municipalityId": "082f4782-d673-46ab-b450-fea78337827c",
+      "heritageTypeId": "7b196c40-4318-4213-8e65-b96f91609e0d",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-28T13:18:50.822Z",
+      "updatedAt": "$D2026-06-28T13:18:50.822Z",
+      "municipality": {
+        "name": "SAN QUINTIN",
+        "id": "082f4782-d673-46ab-b450-fea78337827c"
+      },
+      "heritageType": {
+        "name": "Body of Water",
+        "code": "NATURAL_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782652729345-mkwq5m4q2x.jpg"
+        }
+      ]
+    },
+    {
+      "id": "13f47b82-3f85-4f39-a9af-83011ba8df27",
+      "name": "Metamorphosis",
+      "description": "Located in Urdaneta City is a monument of a giant carabao known as the \u201cMetamorphosis.\u201d Unveiled to the public in 2011, it is a cast bronze statue of a carabao, the city\u2019s official seal, and has a backdrop of granite wall tempered with cascading man-made waterfall.",
+      "commonUse": "Cultural landmark, tourist attraction, public art monument, and venue for sightseeing and photography.",
+      "peopleUsingTheProperty": "Local residents, domestic and foreign tourists, students, history enthusiasts, and photographers.",
+      "latitude": 15.97591944637971,
+      "longitude": 120.5704987095305,
+      "municipalityId": "493cf7fb-2b65-47aa-9581-33e56b1a6863",
+      "heritageTypeId": "94e2c418-db81-435e-8eb3-03440844abe9",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-29T10:53:58.343Z",
+      "updatedAt": "$D2026-06-29T10:53:58.343Z",
+      "municipality": {
+        "name": "URDANETA CITY",
+        "id": "493cf7fb-2b65-47aa-9581-33e56b1a6863"
+      },
+      "heritageType": {
+        "name": "Monument",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782730435759-neqo7kprwv.webp"
+        }
+      ]
+    },
+    {
+      "id": "56fafe40-560f-462d-ad1f-17ea3628d87e",
+      "name": "Urdaneta Park Landmark Monument",
+      "description": "Aside from the \u201cMetamorphosis,\u201d a giant carabao monument, Urdaneta City boasts of another monument designed and created by four national artists, the \u201cUrdaneta Park Landmark Monument.\u201d\nUnveiled in the year 2009, the monument is dedicated to Fray Andres de Urdaneta from whom the city was possibly named after. The event also marked the culmination of the 500th birth anniversary of Fray Urdaneta who accompanied the Loa\u00edsa expedition to the Spice Islands.",
+      "commonUse": "Historical landmark, tourist attraction, educational site, and venue for sightseeing and photography.",
+      "peopleUsingTheProperty": "Local residents, domestic and foreign tourists, students, historians, researchers, and photographers.",
+      "latitude": 16.00418577499201,
+      "longitude": 120.5762380672025,
+      "municipalityId": "493cf7fb-2b65-47aa-9581-33e56b1a6863",
+      "heritageTypeId": "94e2c418-db81-435e-8eb3-03440844abe9",
+      "star_count": 0,
+      "createdById": "kp_a9e8c37e0f8a46239a8d037e32144032",
+      "createdAt": "$D2026-06-29T11:06:05.695Z",
+      "updatedAt": "$D2026-06-29T11:06:05.695Z",
+      "municipality": {
+        "name": "URDANETA CITY",
+        "id": "493cf7fb-2b65-47aa-9581-33e56b1a6863"
+      },
+      "heritageType": {
+        "name": "Monument",
+        "code": "IMMOVABLE_HERITAGE"
+      },
+      "stars": [],
+      "createdBy": {
+        "firstName": "Angel",
+        "id": "kp_a9e8c37e0f8a46239a8d037e32144032"
+      },
+      "heritageImages": [
+        {
+          "url": "https://byzmwkzxkkgclkmupvoq.supabase.co/storage/v1/object/public/heritage-images/1782731161849-31d8nca0si8.webp"
+        }
+      ]
+    }
+  ],
+  "currentUserId": null
+}

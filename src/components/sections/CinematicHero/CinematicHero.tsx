@@ -21,11 +21,11 @@ export function CinematicHero() {
 
       <div className={styles.content}>
         <Typography className={styles.kicker} variant="eyebrow">
-          <span>Heritage, coast &amp; culture</span>
+          <span>PANGASINAN / PHILIPPINES</span>
         </Typography>
         <Typography as="h1" className={styles.title} variant="heading">
-          <span className={styles.titleLine}><span>Welcome to</span></span>
-          <span className={styles.titleLine}><span>Pangasinan</span></span>
+          <span className={styles.titleLine}><span>Stories shaped by</span></span>
+          <span className={styles.titleLine}><span>land, culture &amp; sea.</span></span>
         </Typography>
       </div>
 

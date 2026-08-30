@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { Button } from "@/components/atoms/Button/Button";
 import { HeritageCard } from "@/components/molecules/HeritageCard/HeritageCard";
 import { SearchForm } from "@/components/molecules/SearchForm/SearchForm";
+import { CategoryFilter } from "@/components/molecules/CategoryFilter/CategoryFilter";
 import type { HeritageSite } from "@/types/heritage";
 import styles from "./HeritageGrid.module.css";
 
@@ -13,16 +14,28 @@ interface HeritageGridProps {
 
 export function HeritageGrid({ sites }: HeritageGridProps) {
   const [query, setQuery] = useState("");
-  const filteredSites = useMemo(() => {
-    const term = query.trim().toLocaleLowerCase();
-    if (!term) return sites;
+  const [activeCategory, setActiveCategory] = useState("All");
 
-    return sites.filter((site) =>
+  const categories = useMemo(() => {
+    const classes = new Set(sites.map((s) => s.heritageClass));
+    return Array.from(classes).sort();
+  }, [sites]);
+
+  const filteredSites = useMemo(() => {
+    let filtered = sites;
+    if (activeCategory !== "All") {
+      filtered = filtered.filter((site) => site.heritageClass === activeCategory);
+    }
+    const term = query.trim().toLocaleLowerCase();
+    if (!term) return filtered;
+
+    return filtered.filter((site) =>
       [
         site.name,
         site.location,
         site.province,
-        site.category,
+        site.heritageClass,
+        site.heritageType,
         site.shortDescription,
         ...site.highlights,
       ]
@@ -30,12 +43,17 @@ export function HeritageGrid({ sites }: HeritageGridProps) {
         .toLocaleLowerCase()
         .includes(term),
     );
-  }, [query, sites]);
+  }, [query, sites, activeCategory]);
 
   return (
     <section aria-label="Heritage destinations" className={styles.explorer}>
       <div className={styles.searchWrap} data-reveal="fade-up">
         <SearchForm onSearch={setQuery} resultCount={filteredSites.length} value={query} />
+        <CategoryFilter
+          activeCategory={activeCategory}
+          categories={categories}
+          onSelect={setActiveCategory}
+        />
       </div>
 
       {filteredSites.length > 0 ? (

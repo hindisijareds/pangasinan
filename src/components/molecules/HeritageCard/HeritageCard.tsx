@@ -1,5 +1,7 @@
 import { ResponsiveImage } from "@/components/atoms/Image/ResponsiveImage";
 import { Typography } from "@/components/atoms/Typography/Typography";
+import { Button } from "@/components/atoms/Button/Button";
+import { Icon } from "@/components/atoms/Icon/Icon";
 import type { HeritageSite } from "@/types/heritage";
 import styles from "./HeritageCard.module.css";
 
@@ -34,7 +36,8 @@ export function HeritageCard({ compact = false, headingLevel = "h3", priority = 
       <div className={styles.content}>
         <div className={styles.meta}>
           <span>{site.location}</span>
-          <span>{site.category}</span>
+          <span>{site.heritageClass}</span>
+          <span>{site.heritageType}</span>
         </div>
         <Typography as={headingLevel} variant="title">
           {site.name}
@@ -51,6 +54,11 @@ export function HeritageCard({ compact = false, headingLevel = "h3", priority = 
             ))}
           </ul>
         )}
+        <div style={{ marginTop: '1rem' }}>
+          <Button href={`/heritage/${site.slug}`} variant="ghost">
+            View Details <Icon name="arrow-right" />
+          </Button>
+        </div>
       </div>
     </article>
   );
