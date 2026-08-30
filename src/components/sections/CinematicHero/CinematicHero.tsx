@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ResponsiveImage } from "@/components/atoms/Image/ResponsiveImage";
-import { Typography } from "@/components/atoms/Typography/Typography";
 import styles from "./CinematicHero.module.css";
 
 export function CinematicHero() {
@@ -8,23 +7,24 @@ export function CinematicHero() {
     <section aria-label="Welcome to Pangasinan" className={styles.hero}>
       <div className={styles.contentLeft}>
         <div className={styles.headerMeta}>
-          <Typography className={styles.kicker} variant="eyebrow">
-            <span>01 / DISCOVER</span><br/>
+          <span className={styles.kicker}>
             <span>PANGASINAN / PHILIPPINES</span>
-          </Typography>
+          </span>
         </div>
         
-        <Typography as="h1" className={styles.title} variant="display">
-          <span className={styles.titleLine}><span>STORIES</span></span>
-          <span className={styles.titleLine}><span>SHAPED BY</span></span>
-          <span className={styles.titleLine}><span>LAND,</span></span>
-          <span className={styles.titleLine}><span>CULTURE</span></span>
-          <span className={styles.titleLine}><span>&amp; SEA.</span></span>
-        </Typography>
+        <h1 className={styles.title}>
+          <span className={styles.titleLine}>Discover</span>
+          <span className={styles.titleLine}>Pangasinan</span>
+          <span className={styles.titleLine}>through its</span>
+          <span className={styles.titleLine}><em className={styles.italicText}>stories.</em></span>
+        </h1>
+
+        <p className={styles.supportText}>
+          An exploration of landscapes, culture, heritage, and the communities that shape them.
+        </p>
 
         <Link aria-label="Scroll to the province story" className={styles.scrollCue} href="#province-story">
-          <span aria-hidden="true">Scroll down</span>
-          <span aria-hidden="true" className={styles.scrollLine} />
+          Explore Heritage ↗
         </Link>
       </div>
 
@@ -33,13 +33,20 @@ export function CinematicHero() {
           <ResponsiveImage
             alt="Hundred Islands National Park"
             className={styles.backdrop}
-            fullBleed
             priority
-            sizes="(max-width: 767px) 100vw, 50vw"
+            sizes="(max-width: 767px) 100vw, 45vw"
             src="/images/hundred-islands.webp"
           />
+          <div className={styles.handwrittenAnnotation}>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className={styles.annotationArrow}>
+              <path d="M5 5Q20 15 35 35M20 35H35V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <div className={styles.annotationText}>
+              <span>HUNDRED ISLANDS, ALAMINOS</span>
+              <span className={styles.coords}>16.155° N, 119.981° E</span>
+            </div>
+          </div>
         </div>
-        <div aria-hidden="true" className={styles.grain} />
       </div>
     </section>
   );

@@ -1,20 +1,22 @@
 /* Typography Utilities */
-.indexNum, .manifestoNum, .previewNum {
+.indexNum, .previewNum {
   font-family: var(--font-sans);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.15em;
-  color: var(--color-accent);
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
-/* 02 MANIFESTO */
-.manifesto {
+/* 02 THE PROVINCE */
+.intro {
   background: var(--color-background);
   color: var(--color-foreground);
   padding: var(--section-space) var(--page-gutter);
 }
 
-.manifestoGrid {
+.introGrid {
   max-width: var(--content-max);
   margin: 0 auto;
   display: grid;
@@ -22,115 +24,158 @@
 }
 
 @media (min-width: 48rem) {
-  .manifestoGrid {
+  .introGrid {
     grid-template-columns: repeat(12, 1fr);
     align-items: start;
     gap: 2rem;
   }
-  .manifestoHeader {
+  .introMeta {
     grid-column: 1 / 4;
-    display: flex;
-    gap: 2rem;
   }
-  .manifestoStatement {
-    grid-column: 4 / 11;
+  .introStatement {
+    grid-column: 4 / 9;
   }
-  .manifestoSupport {
-    grid-column: 8 / 12;
-    margin-top: 2rem;
+  .introSupport {
+    grid-column: 9 / 13;
   }
 }
 
-.manifestoEyebrow {
-  writing-mode: horizontal-tb;
+.introEyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+  margin: 0;
 }
 
-@media (min-width: 48rem) {
-  .manifestoEyebrow {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    margin-top: 0.25rem;
-  }
-}
-
-.manifestoStatement {
+.introStatement {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-size: clamp(2rem, 4vw, 3.25rem);
   line-height: 1.1;
   font-weight: 400;
-  letter-spacing: -0.02em;
   color: var(--color-foreground);
+  letter-spacing: -0.01em;
 }
 
-.manifestoSupport {
+.introSupport {
+  font-family: var(--font-sans);
   font-size: 1.125rem;
   line-height: 1.6;
   color: var(--color-text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
+.introSupport p { margin: 0; }
 
 
 /* 03 CAPE BOLINAO */
-.splitStory {
-  background: var(--color-surface);
-  padding: var(--section-space) 0;
+.bolinaoFeature {
+  background: var(--color-background);
+  padding: var(--section-space) 0 var(--section-space) var(--page-gutter);
+  display: flex;
+  flex-direction: column;
   position: relative;
-  overflow: hidden;
 }
 
-.splitVisual {
+@media (min-width: 60rem) {
+  .bolinaoFeature {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+  }
+}
+
+.bolinaoVisual {
   width: 100%;
 }
 
-.portraitImage {
-  aspect-ratio: 16 / 9;
+@media (min-width: 60rem) {
+  .bolinaoVisual {
+    flex: 0 0 65vw;
+  }
 }
 
-@media (min-width: 48rem) {
-  .splitStory {
-    display: flex;
-    align-items: center;
-    padding: var(--section-space) 0 var(--section-space) var(--page-gutter);
+.bolinaoImage {
+  aspect-ratio: 4 / 3;
+}
+@media (min-width: 60rem) {
+  .bolinaoImage {
+    aspect-ratio: 3 / 2;
   }
-  
-  .splitVisual {
-    flex: 0 0 60%;
-    max-width: 65vw;
-  }
-  
-  .portraitImage {
-    aspect-ratio: 4 / 3;
-  }
-  
-  .splitCopy {
+}
+
+.bolinaoCopy {
+  padding: 3rem var(--page-gutter) 0 0;
+  position: relative;
+  z-index: 2;
+  margin-top: -15vw;
+  width: 90%;
+  background: var(--color-background);
+}
+
+@media (min-width: 60rem) {
+  .bolinaoCopy {
+    margin-top: 0;
+    margin-right: -10vw;
+    padding: 3rem 4rem 3rem 0;
+    width: auto;
     flex: 1;
-    padding: 0 var(--page-gutter) 0 clamp(2rem, 5vw, 5rem);
-    position: relative;
-    z-index: 2;
-    margin-left: -5vw;
   }
 }
 
-.splitMeta {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+.bolinaoMeta {
+  margin-bottom: 2rem;
 }
 
-.splitHeading {
+.metaEyebrow, .metaCategory {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+}
+.metaCategory {
+  display: block;
+  margin-bottom: 2rem;
+  color: var(--color-accent);
+}
+
+.bolinaoHeading {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 7vw, 6.5rem);
-  line-height: 0.9;
-  letter-spacing: -0.02em;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  font-weight: 400;
   color: var(--color-foreground);
-  margin-bottom: 2rem;
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.01em;
 }
 
-.splitDesc {
+.bolinaoDesc {
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.6;
   color: var(--color-text-secondary);
-  max-width: 32rem;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
+  max-width: 28rem;
+  margin: 0 0 2.5rem;
+}
+
+.bolinaoAction {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-foreground);
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px solid var(--color-foreground);
+  padding-bottom: 0.2rem;
+  transition: opacity 250ms ease;
+}
+
+.bolinaoAction:hover {
+  opacity: 0.6;
 }
 
 
@@ -186,10 +231,12 @@
 
 .journeyHeading {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1;
+  font-weight: 400;
   color: var(--color-foreground);
-  margin-top: 1rem;
+  margin: 0;
+  letter-spacing: -0.01em;
 }
 
 
@@ -221,17 +268,22 @@
 }
 
 .seasonsEyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
   color: var(--color-surface);
-  letter-spacing: 0.2em;
   margin-bottom: 2rem;
   display: block;
 }
 
 .seasonsHeading {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 7vw, 6.5rem);
+  font-size: clamp(3rem, 6vw, 4.5rem);
   line-height: 0.95;
+  font-weight: 400;
   color: var(--color-on-dark);
+  margin: 0;
 }
 
 
@@ -256,7 +308,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1rem;
-  padding: clamp(2rem, 5vw, 4rem) 0;
+  padding: clamp(2rem, 5vw, 3rem) 0;
   border-bottom: 1px solid var(--color-border);
   position: relative;
   text-decoration: none;
@@ -265,7 +317,7 @@
 }
 
 .previewItem:hover {
-  padding-left: 2rem;
+  padding-left: 1.5rem;
 }
 
 @media (min-width: 48rem) {
@@ -276,17 +328,18 @@
 }
 
 .previewNum {
-  font-size: 1.25rem;
-  color: var(--color-text-muted);
+  font-size: 1.125rem;
+  margin: 0;
 }
 
 .previewTitle {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-size: clamp(2rem, 4vw, 3.5rem);
   color: var(--color-foreground);
   margin: 0;
   font-weight: 400;
   transition: color 300ms ease;
+  letter-spacing: -0.01em;
 }
 
 .previewItem:hover .previewTitle {
@@ -296,6 +349,7 @@
 .previewLoc {
   font-family: var(--font-sans);
   font-size: 0.75rem;
+  font-weight: 500;
   letter-spacing: 0.15em;
   color: var(--color-text-secondary);
 }
@@ -305,13 +359,13 @@
   right: 15vw;
   top: 50%;
   transform: translateY(-50%) scale(0.95) rotate(2deg);
-  width: 25vw;
+  width: 20vw;
   aspect-ratio: 4 / 3;
   opacity: 0;
   pointer-events: none;
   transition: all 500ms var(--ease-out);
   z-index: 5;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   display: none;
 }
 
@@ -342,16 +396,17 @@
 
 .experiencesHeading {
   text-align: center;
-  margin-bottom: clamp(4rem, 8vw, 6rem);
+  margin-bottom: clamp(3rem, 6vw, 5rem);
   padding: 0 var(--page-gutter);
 }
 
 .experiencesTitle {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   color: var(--color-foreground);
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 0;
   line-height: 1;
+  font-weight: 400;
 }
 
 @media (prefers-reduced-motion: reduce) {

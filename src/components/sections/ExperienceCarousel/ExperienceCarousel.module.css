@@ -16,7 +16,7 @@
 .position {
   font-family: var(--font-sans);
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.15em;
   color: var(--color-text-muted);
 }
@@ -30,7 +30,7 @@
   border: 1px solid var(--color-border);
   color: var(--color-text-primary);
   border-radius: 0;
-  transition: background 300ms ease, color 300ms ease;
+  transition: background 250ms ease, color 250ms ease;
 }
 
 .controls button:hover:not(:disabled) {
@@ -47,38 +47,32 @@
   display: flex;
   gap: clamp(2rem, 5vw, 6rem);
   overflow-x: auto;
-  padding: 0 max(var(--page-gutter), calc((100vw - min(85vw, 60rem)) / 2)) 4rem;
-  scroll-padding-inline: max(var(--page-gutter), calc((100vw - min(85vw, 60rem)) / 2));
+  padding: 0 max(var(--page-gutter), calc((100vw - min(85vw, 65rem)) / 2)) 4rem;
+  scroll-padding-inline: max(var(--page-gutter), calc((100vw - min(85vw, 65rem)) / 2));
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }
 .track::-webkit-scrollbar { display: none; }
 
 .card {
-  display: grid;
-  flex: 0 0 min(85vw, 60rem);
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 min(85vw, 65rem);
   position: relative;
   scroll-snap-align: center;
   transition: opacity 600ms ease;
   text-decoration: none;
 }
 
-@media (min-width: 48rem) {
-  .card {
-    grid-template-columns: minmax(0, 1fr) 20rem;
-    gap: 4rem;
-    align-items: center;
-  }
-}
-
 .card[data-active="false"] {
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .image {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 10;
   width: 100%;
+  overflow: hidden;
+  background: var(--color-image-placeholder);
 }
 
 @media (min-width: 48rem) {
@@ -99,30 +93,28 @@
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
-}
-
-@media (min-width: 48rem) {
-  .meta {
-    padding-top: 0;
-  }
+  align-items: center;
+  text-align: center;
 }
 
 .number {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 500;
   letter-spacing: 0.15em;
   color: var(--color-accent);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .meta h3 {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  line-height: 0.9;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
   color: var(--color-foreground);
-  margin: 0 0 1.5rem;
+  margin: 0 0 1rem;
   font-weight: 400;
   transition: color 300ms ease;
+  letter-spacing: -0.01em;
 }
 
 .card:hover .meta h3 {
@@ -132,6 +124,7 @@
 .meta > span {
   font-family: var(--font-sans);
   font-size: 0.75rem;
+  font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-text-secondary);

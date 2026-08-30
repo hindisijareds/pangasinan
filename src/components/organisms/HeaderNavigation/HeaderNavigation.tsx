@@ -112,21 +112,28 @@ export function HeaderNavigation() {
         </TransitionLink>
 
         <nav className={styles.desktopNav}>
-          <TransitionLink href="/" className={pathname === "/" ? styles.activeLink : ""}>DISCOVER</TransitionLink>
-          <TransitionLink href="/heritage" className={pathname === "/heritage" ? styles.activeLink : ""}>HERITAGE</TransitionLink>
+          <TransitionLink href="/" className={pathname === "/" ? styles.activeLink : ""}>Discover</TransitionLink>
+          <TransitionLink href="/heritage" className={pathname === "/heritage" ? styles.activeLink : ""}>Heritage</TransitionLink>
+          <TransitionLink href="/culture" className={pathname === "/culture" ? styles.activeLink : ""}>Culture</TransitionLink>
+          <TransitionLink href="/about" className={pathname === "/about" ? styles.activeLink : ""}>About</TransitionLink>
         </nav>
 
-        <button
-          aria-controls="site-navigation"
-          aria-expanded={open}
-          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-          className={styles.menuToggle}
-          id="menu-toggle"
-          onClick={() => setOpen((value) => !value)}
-          type="button"
-        >
-          <span>{open ? "CLOSE" : "MENU"}</span>
-        </button>
+        <div className={styles.rightActions}>
+          <TransitionLink href="/heritage" className={styles.exploreLink}>
+            Explore Pangasinan ↗
+          </TransitionLink>
+          <button
+            aria-controls="site-navigation"
+            aria-expanded={open}
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+            className={styles.menuToggle}
+            id="menu-toggle"
+            onClick={() => setOpen((value) => !value)}
+            type="button"
+          >
+            <span>{open ? "CLOSE" : "MENU"}</span>
+          </button>
+        </div>
       </div>
 
       <div
