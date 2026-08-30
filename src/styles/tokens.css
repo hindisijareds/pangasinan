@@ -1,29 +1,29 @@
 :root {
   /* ── Color Palette ────────────────────────────── */
-  --color-background: #F4F0E7; /* Salt Paper */
-  --color-surface: #E2D8C8;    /* Soft Surface */
-  --color-surface-secondary: #EBE5DA; /* Secondary Background */
-  --color-foreground: #171814; /* Primary Text */
-  --color-text-primary: #171814;
-  --color-text-secondary: #62625B;
-  --color-text-muted: rgba(23, 24, 20, 0.5); /* Derived */
+  --color-background: #F5F1E8; /* Paper */
+  --color-surface: #ECE6DA;    /* Soft Paper */
+  --color-surface-secondary: #D8CCB8; /* Sand */
+  --color-foreground: #181915; /* Primary Text */
+  --color-text-primary: #181915;
+  --color-text-secondary: #65655D;
+  --color-text-muted: rgba(24, 25, 21, 0.5); /* Derived */
   
-  --color-accent: #A65F48; /* Terracotta */
-  --color-accent-strong: #884936; /* Dark Terracotta */
-  --color-accent-contrast: #F4F0E7;
+  --color-accent: #A45F46; /* Terracotta */
+  --color-accent-strong: #735748; /* Warm Brown */
+  --color-accent-contrast: #FAFAF7; /* White */
   
-  --color-deep: #24382E; /* Deep Heritage Green */
-  --color-on-dark: #F4F0E7;
+  --color-deep: #20362B; /* Deep Heritage Green */
+  --color-on-dark: #FAFAF7;
   
-  --color-border: rgba(23, 24, 20, 0.12);
-  --color-focus: #24382E;
+  --color-border: rgba(24, 25, 21, 0.12);
+  --color-focus: #20362B;
   --color-overlay: rgba(23, 24, 20, 0.6);
-  --color-image-placeholder: #EBE5DA;
+  --color-image-placeholder: #ECE6DA;
   
-  --color-sea: #24382E;
-  --color-leaf: #192A22; /* Hover Green */
-  --color-earth: #A65F48;
-  --color-sun: #CDBB9E; /* Warm Sand */
+  --color-sea: #17271F; /* Dark Green */
+  --color-leaf: #20362B; /* Deep Heritage Green */
+  --color-earth: #A45F46;
+  --color-sun: #D8CCB8; /* Sand */
 
   /* ── Typography ───────────────────────────────── */
   --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
@@ -34,10 +34,10 @@
   --radius-card: 0px;
   --radius-pill: 9999px;
   
-  --content-max: 90rem;
-  --page-gutter: clamp(1.25rem, 4vw, 3rem);
-  --section-space: clamp(4rem, 6vw, 6rem);
-  --section-space-large: clamp(5rem, 8vw, 8rem);
+  --content-max: 1440px;
+  --reading-width: 760px;
+  --page-gutter: clamp(20px, 4vw, 64px);
+  --section-gap: clamp(64px, 8vw, 120px);
   
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-snap: cubic-bezier(0.22, 1, 0.36, 1);

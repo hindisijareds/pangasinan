@@ -13,14 +13,13 @@ export function CinematicHero() {
         </div>
         
         <h1 className={styles.title} data-reveal="fade-up" data-delay="1">
-          <span className={styles.titleLine}>Discover</span>
-          <span className={styles.titleLine}>Pangasinan</span>
-          <span className={styles.titleLine}>through its</span>
-          <span className={styles.titleLine}><em className={styles.italicText}>stories.</em></span>
+          <span className={styles.titleLine}>Where land,</span>
+          <span className={styles.titleLine}>water and memory</span>
+          <span className={styles.titleLine}><em className={styles.italicText}>meet.</em></span>
         </h1>
 
         <p className={styles.supportText} data-reveal="fade-up" data-delay="2">
-          An exploration of landscapes, culture, heritage, and the communities that shape them.
+          Pangasinan is a province shaped by islands, coastlines, historic churches, landmarks, towns, traditions, and generations of local life.
         </p>
 
         <Link aria-label="Scroll to the province story" className={styles.scrollCue} href="#province-story">

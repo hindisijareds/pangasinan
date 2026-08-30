@@ -8,35 +8,34 @@ export function SiteFooter() {
       <div className={styles.inner}>
         <div className={styles.brandBlock} data-reveal="fade-up">
           <span aria-hidden="true" className={styles.mark}>P</span>
-          <Typography as="h2" variant="heading">Pangasinan</Typography>
+          <Typography as="h2" variant="heading">PANGASINAN</Typography>
           <Typography variant="body">
-            A digital journey through a province of islands, landmarks, living faith, and coastal light.
+            Stories of land,<br />
+            water,<br />
+            faith,<br />
+            history,<br />
+            and people.
           </Typography>
         </div>
 
         <div className={styles.linkGroup} data-delay="1" data-reveal="fade-up">
-          <h3>Discover</h3>
+          <h3>DISCOVER</h3>
           <TransitionLink href="/">Home</TransitionLink>
-          <TransitionLink href="/heritage">Heritage sites</TransitionLink>
-          <TransitionLink href="/design-system">Design system</TransitionLink>
+          <TransitionLink href="/heritage">Heritage</TransitionLink>
+          <TransitionLink href="/about">About Pangasinan</TransitionLink>
         </div>
 
         <div className={styles.linkGroup} data-delay="2" data-reveal="fade-up">
-          <h3>Featured places</h3>
-          <TransitionLink href="/heritage">Hundred Islands</TransitionLink>
-          <TransitionLink href="/heritage">Bolinao</TransitionLink>
-          <TransitionLink href="/heritage">Manaoag</TransitionLink>
-          <TransitionLink href="/heritage">Lingayen</TransitionLink>
-        </div>
-
-        <div className={styles.linkGroup} data-delay="3" data-reveal="fade-up">
-          <h3>Visit thoughtfully</h3>
-          <p>Confirm current access, local guidance, and visitor conditions before travel.</p>
+          <h3>FEATURED</h3>
+          <TransitionLink href="/heritage/hundred-islands-national-park">Hundred Islands</TransitionLink>
+          <TransitionLink href="/heritage/cape-bolinao-lighthouse">Bolinao</TransitionLink>
+          <TransitionLink href="/heritage/manaoag-church">Manaoag</TransitionLink>
+          <TransitionLink href="/heritage/provincial-capitol">Lingayen</TransitionLink>
         </div>
 
         <div className={styles.bottom} data-reveal="line">
-          <p>Elective 4 · Special Topics in IT · University project</p>
-          <p>Photography credits and licenses are listed in IMAGE-CREDITS.md.</p>
+          <p>Pangasinan Heritage Digital Showcase</p>
+          <p>Academic digital heritage project.</p>
         </div>
       </div>
     </footer>

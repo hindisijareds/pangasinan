@@ -10,15 +10,21 @@ import styles from "./HeaderNavigation.module.css";
 const items = [
   {
     href: "/",
-    label: "Discover Pangasinan",
+    label: "Discover",
     image: "/images/hundred-islands.jpg",
     imageAlt: "Hundred Islands National Park",
   },
   {
     href: "/heritage",
-    label: "Heritage collection",
+    label: "Heritage",
     image: "/images/provincial-capitol.jpg",
     imageAlt: "Pangasinan Provincial Capitol",
+  },
+  {
+    href: "/about",
+    label: "About",
+    image: "/images/bolinao-lighthouse.jpg",
+    imageAlt: "Cape Bolinao Lighthouse",
   },
 ];
 
@@ -114,6 +120,7 @@ export function HeaderNavigation() {
         <nav className={styles.desktopNav}>
           <TransitionLink href="/" className={pathname === "/" ? styles.activeLink : ""}>Discover</TransitionLink>
           <TransitionLink href="/heritage" className={pathname === "/heritage" ? styles.activeLink : ""}>Heritage</TransitionLink>
+          <TransitionLink href="/about" className={pathname === "/about" ? styles.activeLink : ""}>About</TransitionLink>
         </nav>
 
         <div className={styles.rightActions}>

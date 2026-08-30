@@ -5,22 +5,56 @@
 
 .intro {
   padding: clamp(3rem, 8vw, 7rem) var(--page-gutter) clamp(3rem, 7vw, 5rem);
+  min-height: 380px;
+  max-height: 520px;
+  display: flex;
+  align-items: center;
 }
 
 .introInner {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.25rem;
   margin: 0 auto;
   max-width: var(--content-max);
+  width: 100%;
 }
 
-.intro h1 {
+.introEyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+}
+
+.introTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  color: var(--color-foreground);
+  margin: 0;
   max-width: 64rem;
 }
 
-.intro p {
+.introSupport {
   margin: 0;
   max-width: 42rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.countText {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-foreground);
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  width: max-content;
 }
 
 .collection {

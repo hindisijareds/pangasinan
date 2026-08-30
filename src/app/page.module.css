@@ -302,126 +302,133 @@
 }
 
 
-/* 06 HERITAGE PREVIEW */
-.heritagePreview {
-  background: var(--color-background);
-  padding: var(--section-space) var(--page-gutter);
-}
-
-.previewHeader {
-  margin-bottom: clamp(3rem, 8vw, 6rem);
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: 2rem;
-}
-
-.previewList {
-  display: flex;
-  flex-direction: column;
-}
-
-.previewItem {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
-  padding: clamp(2rem, 5vw, 3rem) 0;
-  border-bottom: 1px solid var(--color-border);
-  position: relative;
-  text-decoration: none;
-  align-items: center;
-  transition: padding-left 400ms var(--ease-out);
-}
-
-.previewItem:hover {
-  padding-left: 1.5rem;
-}
-
-@media (min-width: 48rem) {
-  .previewItem {
-    grid-template-columns: auto 1fr auto;
-    gap: 4rem;
-  }
-}
-
-.previewNum {
-  font-size: 1.125rem;
-  margin: 0;
-}
-
-.previewTitle {
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3.5vw, 3rem);
-  color: var(--color-foreground);
-  margin: 0;
-  font-weight: 400;
-  transition: color 300ms ease;
-  letter-spacing: -0.01em;
-}
-
-.previewItem:hover .previewTitle {
-  color: var(--color-accent);
-}
-
-.previewLoc {
+/* MANY FRAMES CAPTION */
+.journeyCaption {
+  display: block;
+  margin-top: 0.75rem;
   font-family: var(--font-sans);
   font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   color: var(--color-text-secondary);
+  line-height: 1.4;
 }
 
-.previewImageReveal {
-  position: absolute;
-  right: 15vw;
-  top: 50%;
-  transform: translateY(-50%) scale(0.95) rotate(2deg);
-  width: 20vw;
-  aspect-ratio: 4 / 3;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 500ms var(--ease-out);
-  z-index: 5;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-  display: none;
+/* 05 HERITAGE CATEGORIES */
+.seasons {
+  background: var(--color-deep);
+  color: var(--color-on-dark);
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
 }
-
-@media (min-width: 48rem) {
-  .previewImageReveal {
-    display: block;
+@media (min-width: 60rem) {
+  .seasons {
+    flex-direction: row;
+    align-items: center;
   }
 }
-
-.previewItem:hover .previewImageReveal {
-  opacity: 1;
-  transform: translateY(-50%) scale(1) rotate(0);
+.seasonsImageWrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
-
-.previewFooter {
-  margin-top: 4rem;
+@media (min-width: 60rem) {
+  .seasonsImageWrapper {
+    flex: 1;
+    aspect-ratio: 1;
+    max-height: none;
+  }
+}
+.seasonsImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.seasonsCopy {
+  padding: clamp(4rem, 10vw, 8rem) var(--page-gutter);
+  flex: 1;
+}
+.seasonsHeading {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  line-height: 0.95;
+  font-weight: 400;
+  color: var(--color-on-dark);
+  margin: 0 0 3rem 0;
+}
+.categoryLinks {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.categoryLink {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  color: var(--color-on-dark);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(250, 250, 247, 0.3);
+  padding-bottom: 0.5rem;
+  transition: opacity 300ms ease;
+  width: max-content;
+}
+.categoryLink:hover {
+  opacity: 0.6;
 }
 
-
-/* 07 EXPERIENCES */
+/* 06 FEATURED JOURNEYS */
 .experiences {
-  background: var(--color-surface);
+  background: var(--color-background);
   padding: var(--section-space) 0;
   overflow: hidden;
 }
-
 .experiencesHeading {
-  text-align: center;
-  margin-bottom: clamp(3rem, 6vw, 5rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
   padding: 0 var(--page-gutter);
 }
-
 .experiencesTitle {
+  display: none;
+}
+
+/* 07 EXPLORE CTA */
+.exploreCta {
+  padding: var(--section-space) var(--page-gutter);
+  background: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  text-align: center;
+}
+@media (min-width: 60rem) {
+  .exploreCta {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+}
+.exploreCtaTitle {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  color: var(--color-foreground);
-  margin: 1.5rem 0 0;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1;
   font-weight: 400;
+  margin-bottom: 2.5rem;
+  color: var(--color-foreground);
+}
+.exploreCtaContent {
+  flex: 1;
+}
+.exploreCtaImage {
+  flex: 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.exploreCtaImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/atoms/Button/Button";
-import { Icon } from "@/components/atoms/Icon/Icon";
+
 import { ResponsiveImage } from "@/components/atoms/Image/ResponsiveImage";
 import { CinematicHero } from "@/components/sections/CinematicHero/CinematicHero";
 import { ExperienceCarousel, type ExperienceCarouselItem } from "@/components/sections/ExperienceCarousel/ExperienceCarousel";
@@ -48,8 +48,8 @@ export default function HomePage() {
         <section aria-labelledby="province-story" className={styles.intro}>
           <div className={styles.introGrid}>
             <div className={styles.introMeta} data-reveal="fade-up">
-              <span className={styles.indexNum}>02</span>
-              <h2 id="province-story" className={styles.introEyebrow}>THE PROVINCE</h2>
+              <span className={styles.indexNum}>01</span>
+              <h2 id="province-story" className={styles.introEyebrow}>DISCOVER PANGASINAN</h2>
             </div>
             <div className={styles.introStatement} data-reveal="fade-up" data-delay="1">
               More than a destination.
@@ -62,7 +62,6 @@ export default function HomePage() {
         </section>
 
         {/* SECTION 03 — CAPE BOLINAO */}
-        {/* SECTION 03 — CAPE BOLINAO */}
         <section aria-labelledby="lighthouse-heading" className={styles.bolinaoFeature}>
           <div className={styles.bolinaoVisual} data-reveal="clip">
             <ResponsiveImage
@@ -74,47 +73,48 @@ export default function HomePage() {
           </div>
           <div className={styles.bolinaoCopy} data-delay="1" data-reveal="fade-up">
             <div className={styles.bolinaoMeta}>
-              <span className={styles.indexNum}>03</span>
-              <span className={styles.metaEyebrow}>BOLINAO</span>
+              <span className={styles.indexNum}>02</span>
+              <span className={styles.metaEyebrow}>IMMOVABLE HERITAGE</span>
             </div>
+            <span className={styles.metaCategory}>BOLINAO</span>
             <h2 id="lighthouse-heading" className={styles.bolinaoHeading}>
               Cape Bolinao<br />Lighthouse
             </h2>
-            <span className={styles.metaCategory}>IMMOVABLE HERITAGE</span>
             <p className={styles.bolinaoDesc}>
               Constructed during the Spanish colonial period in 1903, it stands on Punta Piedra Point overlooking the West Philippine Sea, guiding ships safely along the northwestern coast for more than a century.
             </p>
             <Link href="/heritage/cape-bolinao-light-house" className={styles.bolinaoAction}>
-              Explore ↗
+              View Heritage →
             </Link>
           </div>
         </section>
 
         {/* SECTION 04 — MANY FRAMES */}
-        {/* SECTION 04 — MANY FRAMES */}
         <section aria-label="A journey across Pangasinan" className={styles.imageJourney}>
           <div className={styles.journeyIntro} data-reveal="fade-up">
-            <span className={styles.indexNum}>04</span>
             <h2 className={styles.journeyHeading}>A province<br />in many frames.</h2>
           </div>
           
           <div className={styles.journeyImage1} data-reveal="clip">
             <ResponsiveImage alt="Cape Bolinao Lighthouse" sizes="(max-width: 767px) 100vw, 30vw" src="/images/bolinao-lighthouse.jpg" />
+            <span className={styles.journeyCaption}>BOLINAO<br/>Cape Bolinao Lighthouse</span>
           </div>
           <div className={styles.journeyImage2} data-reveal="clip" data-delay="1">
             <ResponsiveImage alt="Hundred Islands" sizes="(max-width: 767px) 100vw, 50vw" src="/images/hundred-islands.jpg" />
+            <span className={styles.journeyCaption}>ALAMINOS<br/>Hundred Islands</span>
           </div>
           <div className={styles.journeyImage3} data-reveal="clip" data-delay="2">
             <ResponsiveImage alt="Pangasinan Provincial Capitol" sizes="(max-width: 767px) 100vw, 25vw" src="/images/provincial-capitol.jpg" />
+            <span className={styles.journeyCaption}>LINGAYEN<br/>Provincial Capitol</span>
           </div>
           <div className={styles.journeyImage4} data-reveal="clip" data-delay="3">
             <ResponsiveImage alt="Manaoag Church" sizes="(max-width: 767px) 100vw, 40vw" src="/images/manaoag-church.jpg" />
+            <span className={styles.journeyCaption}>MANAOAG<br/>Manaoag Church</span>
           </div>
         </section>
 
-        {/* SECTION 05 — UNHURRIED DAYS */}
-        {/* SECTION 05 — UNHURRIED DAYS */}
-        <section aria-labelledby="seasons-heading" className={styles.seasons}>
+        {/* SECTION 05 — HERITAGE CATEGORIES */}
+        <section aria-labelledby="heritage-categories-heading" className={styles.seasons}>
           <div className={styles.seasonsImageWrapper} data-reveal="clip">
             <ResponsiveImage
               alt="Boats and islands at Hundred Islands National Park"
@@ -124,62 +124,38 @@ export default function HomePage() {
             />
           </div>
           <div className={styles.seasonsCopy} data-delay="1" data-reveal="fade-up">
-            <span className={styles.seasonsEyebrow}>MADE FOR UNHURRIED DAYS</span>
-            <h2 id="seasons-heading" className={styles.seasonsHeading}>
-              A different journey every season.
+            <h2 id="heritage-categories-heading" className={styles.seasonsHeading}>
+              Stories shaped<br />by centuries.
             </h2>
+            <div className={styles.categoryLinks}>
+              <Link href="/heritage" className={styles.categoryLink}>Natural Heritage</Link>
+              <Link href="/heritage" className={styles.categoryLink}>Immovable Heritage</Link>
+              <Link href="/heritage" className={styles.categoryLink}>Religious Heritage</Link>
+              <Link href="/heritage" className={styles.categoryLink}>Bodies of Water</Link>
+              <Link href="/heritage" className={styles.categoryLink}>Historic Landmarks</Link>
+            </div>
           </div>
         </section>
 
-        {/* SECTION 06 — HERITAGE PREVIEW */}
-        <section aria-labelledby="heritage-heading" className={styles.heritagePreview}>
-          <div className={styles.previewHeader} data-reveal="fade-up">
-            <span className={styles.indexNum}>06 / HERITAGE COLLECTION</span>
-          </div>
-          
-          <div className={styles.previewList}>
-            <Link href="/heritage" className={styles.previewItem} data-reveal="fade-up">
-              <span className={styles.previewNum}>01</span>
-              <h3 className={styles.previewTitle}>Hundred Islands</h3>
-              <span className={styles.previewLoc}>ALAMINOS CITY</span>
-              <div className={styles.previewImageReveal}>
-                 <ResponsiveImage alt="Hundred Islands" sizes="30vw" src="/images/hundred-islands.jpg" />
-              </div>
-            </Link>
-            
-            <Link href="/heritage/cape-bolinao-light-house" className={styles.previewItem} data-reveal="fade-up" data-delay="1">
-              <span className={styles.previewNum}>02</span>
-              <h3 className={styles.previewTitle}>Cape Bolinao Lighthouse</h3>
-              <span className={styles.previewLoc}>BOLINAO</span>
-              <div className={styles.previewImageReveal}>
-                 <ResponsiveImage alt="Cape Bolinao Lighthouse" sizes="30vw" src="/images/bolinao-lighthouse.jpg" />
-              </div>
-            </Link>
-            
-            <Link href="/heritage" className={styles.previewItem} data-reveal="fade-up" data-delay="2">
-              <span className={styles.previewNum}>03</span>
-              <h3 className={styles.previewTitle}>Manaoag Church</h3>
-              <span className={styles.previewLoc}>MANAOAG</span>
-              <div className={styles.previewImageReveal}>
-                 <ResponsiveImage alt="Manaoag Church" sizes="30vw" src="/images/manaoag-church.jpg" />
-              </div>
-            </Link>
-          </div>
-          
-          <div className={styles.previewFooter} data-reveal="fade-up">
-             <Button href="/heritage" variant="ghost">View the collection <Icon name="arrow-right" /></Button>
-          </div>
-        </section>
-
-        {/* SECTION 07 — EXPERIENCE PANGASINAN */}
+        {/* SECTION 06 — FEATURED JOURNEYS */}
         <section aria-labelledby="experiences-heading" className={styles.experiences}>
           <div className={styles.experiencesHeading} data-reveal="fade-up">
-            <span className={styles.indexNum}>07 / EXPERIENCE PANGASINAN</span>
-            <h2 id="experiences-heading" className={styles.experiencesTitle}>
-              Find your way into the province.
-            </h2>
+            <span className={styles.indexNum}>03 / FEATURED JOURNEYS</span>
           </div>
           <ExperienceCarousel items={experiences} />
+        </section>
+
+        {/* SECTION 07 — EXPLORE CTA */}
+        <section aria-labelledby="explore-heading" className={styles.exploreCta}>
+          <div className={styles.exploreCtaContent} data-reveal="fade-up">
+            <h2 id="explore-heading" className={styles.exploreCtaTitle}>
+              41 places.<br />One province.<br />Countless stories.
+            </h2>
+            <Button href="/heritage" variant="primary">Explore Pangasinan Heritage →</Button>
+          </div>
+          <div className={styles.exploreCtaImage} data-reveal="clip" data-delay="1">
+             <ResponsiveImage alt="Lingayen Gulf view" sizes="100vw" src="/images/patar-beach.jpg" />
+          </div>
         </section>
       </main>
       <SiteFooter />
