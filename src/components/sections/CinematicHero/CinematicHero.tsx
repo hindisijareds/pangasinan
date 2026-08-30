@@ -6,20 +6,20 @@ export function CinematicHero() {
   return (
     <section aria-label="Welcome to Pangasinan" className={styles.hero}>
       <div className={styles.contentLeft}>
-        <div className={styles.headerMeta}>
+        <div className={styles.headerMeta} data-reveal="fade-up">
           <span className={styles.kicker}>
             <span>PANGASINAN / PHILIPPINES</span>
           </span>
         </div>
         
-        <h1 className={styles.title}>
+        <h1 className={styles.title} data-reveal="fade-up" data-delay="1">
           <span className={styles.titleLine}>Discover</span>
           <span className={styles.titleLine}>Pangasinan</span>
           <span className={styles.titleLine}>through its</span>
           <span className={styles.titleLine}><em className={styles.italicText}>stories.</em></span>
         </h1>
 
-        <p className={styles.supportText}>
+        <p className={styles.supportText} data-reveal="fade-up" data-delay="2">
           An exploration of landscapes, culture, heritage, and the communities that shape them.
         </p>
 
@@ -29,7 +29,7 @@ export function CinematicHero() {
       </div>
 
       <div className={styles.contentRight}>
-        <div className={styles.imageWrapper}>
+        <div className={styles.imageWrapper} data-reveal="clip" data-delay="3">
           <ResponsiveImage
             alt="Hundred Islands National Park"
             className={styles.backdrop}
@@ -37,7 +37,7 @@ export function CinematicHero() {
             sizes="(max-width: 767px) 100vw, 45vw"
             src="/images/hundred-islands.webp"
           />
-          <div className={styles.handwrittenAnnotation}>
+          <div className={styles.handwrittenAnnotation} data-reveal="fade-up" data-delay="4">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className={styles.annotationArrow}>
               <path d="M5 5Q20 15 35 35M20 35H35V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
