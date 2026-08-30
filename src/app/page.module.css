@@ -95,6 +95,7 @@
 @media (min-width: 60rem) {
   .bolinaoVisual {
     flex: 0 0 55vw;
+  }
 }
 
 .bolinaoImage {
@@ -104,6 +105,7 @@
   .bolinaoImage {
     aspect-ratio: 16 / 9;
   }
+}
 
 .bolinaoCopy {
   padding: 3rem var(--page-gutter) 0 0;
