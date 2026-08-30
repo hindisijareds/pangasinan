@@ -60,7 +60,7 @@ export function HeritageGrid({ sites }: HeritageGridProps) {
         <div className={styles.grid} data-doc-component="heritage-grid">
           {filteredSites.map((site, index) => (
             <div data-delay={Math.min(4, index % 3)} data-reveal="fade-up" key={site.id}>
-              <HeritageCard headingLevel="h2" priority={index === 0} site={site} />
+              <HeritageCard headingLevel="h2" priority={index === 0} site={site} index={index} />
             </div>
           ))}
         </div>

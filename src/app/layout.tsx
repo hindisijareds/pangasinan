@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { MotionProvider } from "@/components/motion/MotionProvider/MotionProvider";
 import { HeaderNavigation } from "@/components/organisms/HeaderNavigation/HeaderNavigation";
 import "./globals.css";
+import "../styles/gold.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.github.io"),

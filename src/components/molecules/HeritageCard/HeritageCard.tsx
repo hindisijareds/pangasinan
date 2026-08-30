@@ -10,11 +10,17 @@ interface HeritageCardProps {
   headingLevel?: "h2" | "h3";
   priority?: boolean;
   site: HeritageSite;
+  index?: number;
 }
 
-export function HeritageCard({ compact = false, headingLevel = "h3", priority = false, site }: HeritageCardProps) {
+export function HeritageCard({ compact = false, headingLevel = "h3", priority = false, site, index }: HeritageCardProps) {
   return (
     <article className={[styles.card, compact && styles.compact].filter(Boolean).join(" ")} tabIndex={0}>
+      <div className={styles.metaTop}>
+        {index !== undefined && <span className={styles.indexNum}>{(index + 1).toString().padStart(2, '0')}</span>}
+        <span className={styles.locationLabel}>{site.location}</span>
+      </div>
+
       {site.image ? (
         <ResponsiveImage
           alt={site.imageAlt}
@@ -34,29 +40,20 @@ export function HeritageCard({ compact = false, headingLevel = "h3", priority = 
       )}
 
       <div className={styles.content}>
-        <div className={styles.meta}>
-          <span>{site.location}</span>
-          <span>{site.heritageClass}</span>
-          <span>{site.heritageType}</span>
-        </div>
         <Typography as={headingLevel} variant="title">
           {site.name}
         </Typography>
+        <div className={styles.metaBottom}>
+          <span>{site.heritageClass}</span>
+          <span>{site.heritageType}</span>
+        </div>
         <Typography className={styles.description} variant="small">
           {site.shortDescription}
         </Typography>
-        {!compact && (
-          <ul aria-label={`${site.name} highlights`} className={styles.highlights}>
-            {site.highlights.map((highlight) => (
-              <li className={styles.highlight} key={highlight}>
-                {highlight}
-              </li>
-            ))}
-          </ul>
-        )}
-        <div style={{ marginTop: '1rem' }}>
-          <Button href={`/heritage/${site.slug}`} variant="ghost">
-            View Details <Icon name="arrow-right" />
+        
+        <div className={styles.actionWrap}>
+          <Button href={`/heritage/${site.slug}`} variant="ghost" className={styles.exploreBtn}>
+            Explore <Icon name="arrow-right" />
           </Button>
         </div>
       </div>

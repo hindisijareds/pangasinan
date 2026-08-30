@@ -82,20 +82,49 @@
   z-index: 1;
 }
 
-.meta {
+.metaTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.indexNum {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.locationLabel {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.metaBottom {
   align-items: center;
   color: var(--color-text-secondary);
   display: flex;
-  font-size: 0.72rem;
-  font-weight: 750;
+  font-size: 0.65rem;
+  font-weight: 500;
   gap: 0.5rem;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.meta span + span::before {
-  content: "•";
+.metaBottom span + span::before {
+  content: "/";
   margin-right: 0.5rem;
+  opacity: 0.5;
+}
+
+.actionWrap {
+  margin-top: 1rem;
 }
 
 .content {

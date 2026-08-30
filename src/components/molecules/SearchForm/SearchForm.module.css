@@ -13,26 +13,25 @@
 
 .field {
   align-items: center;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
+  border-bottom: 2px solid var(--color-border);
   display: flex;
-  gap: 0.7rem;
-  min-height: 3.3rem;
-  padding: 0 1rem;
-  transition: border-color 150ms ease, box-shadow 150ms ease;
+  gap: 1rem;
+  min-height: 4rem;
+  padding: 0 0.5rem;
+  transition: border-color 300ms var(--ease-snap);
 }
 
 .field:focus-within {
-  border-color: var(--color-focus);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-focus) 22%, transparent);
+  border-color: var(--color-accent);
 }
 
 .input {
   background: transparent;
   border: 0;
   color: var(--color-text-primary);
-  font: 500 1rem/1.2 var(--font-sans);
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-style: italic;
   min-width: 0;
   outline: 0;
   padding: 0.95rem 0;

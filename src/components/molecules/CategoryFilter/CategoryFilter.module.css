@@ -6,24 +6,25 @@
 }
 
 .filterBtn {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-secondary);
-  border-radius: var(--radius-pill);
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  border-bottom: 2px solid transparent;
+  padding: 0.5rem 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s var(--ease-snap);
 }
 
 .filterBtn:hover {
-  background: var(--color-border);
   color: var(--color-text-primary);
 }
 
 .filterBtn.active {
-  background: var(--color-deep);
-  color: var(--color-on-dark);
-  border-color: var(--color-deep);
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
 }
 
