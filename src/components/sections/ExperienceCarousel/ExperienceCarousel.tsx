@@ -110,7 +110,7 @@ export function ExperienceCarousel({ items }: Readonly<{ items: ExperienceCarous
             <div className={styles.image}>
               <ResponsiveImage
                 alt={item.alt}
-                sizes="(max-width: 767px) 85vw, 60vw"
+                sizes="(max-width: 767px) 86vw, (max-width: 1099px) 46vw, 30vw"
                 src={item.image}
               />
             </div>

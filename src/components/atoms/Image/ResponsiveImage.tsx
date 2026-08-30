@@ -16,6 +16,14 @@ interface ResponsiveImageProps {
   src: string;
 }
 
+const imageDimensions: Record<string, { height: number; smallWidth: number; width: number }> = {
+  "/images/bolinao-lighthouse.webp": { height: 1280, smallWidth: 427, width: 854 },
+  "/images/hundred-islands.webp": { height: 960, smallWidth: 640, width: 1280 },
+  "/images/manaoag-church.webp": { height: 742, smallWidth: 640, width: 960 },
+  "/images/patar-beach.webp": { height: 960, smallWidth: 640, width: 1280 },
+  "/images/provincial-capitol.webp": { height: 852, smallWidth: 640, width: 1280 },
+};
+
 export function ResponsiveImage({
   alt,
   className,
@@ -31,9 +39,8 @@ export function ResponsiveImage({
   const [loaded, setLoaded] = useState(priority);
   const fullSource = withBasePath(src);
   const smallSource = withBasePath(src.replace(/\.(webp|jpg|jpeg|png)$/, "-640.$1"));
-  
-  // Provide the browser with the available static variants so it can choose optimally
-  const srcSet = `${smallSource} 640w, ${fullSource} 1600w`;
+  const dimensions = imageDimensions[src] ?? { height: 900, smallWidth: 640, width: 1600 };
+  const srcSet = `${smallSource} ${dimensions.smallWidth}w, ${fullSource} ${dimensions.width}w`;
 
   useEffect(() => {
     if (image.current?.complete) setLoaded(true);
@@ -52,14 +59,16 @@ export function ResponsiveImage({
         <img
           alt={alt}
           className={[styles.image, imageClassName].filter(Boolean).join(" ")}
-          decoding={priority ? "sync" : "async"}
+          decoding="async"
           fetchPriority={priority ? "high" : "auto"}
+          height={dimensions.height}
           loading={priority ? "eager" : "lazy"}
           onLoad={() => setLoaded(true)}
           ref={image}
           sizes={sizes}
-          src={smallSource}
+          src={fullSource}
           srcSet={srcSet}
+          width={dimensions.width}
         />
       </picture>
     </div>

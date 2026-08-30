@@ -4,12 +4,13 @@ import { Icon } from "@/components/atoms/Icon/Icon";
 import styles from "./SearchForm.module.css";
 
 interface SearchFormProps {
+  onClear: () => void;
   onSearch: (value: string) => void;
   resultCount: number;
   value: string;
 }
 
-export function SearchForm({ onSearch, resultCount, value }: SearchFormProps) {
+export function SearchForm({ onClear, onSearch, resultCount, value }: SearchFormProps) {
   return (
     <form className={styles.form} data-doc-component="search-form" onSubmit={(event) => event.preventDefault()} role="search">
       <label className={styles.label} htmlFor="heritage-search">
@@ -23,13 +24,18 @@ export function SearchForm({ onSearch, resultCount, value }: SearchFormProps) {
           className={styles.input}
           id="heritage-search"
           onChange={(event) => onSearch(event.target.value)}
-          placeholder="Try Bolinao, nature, or lighthouse"
+          placeholder="Search places, towns, or heritage types..."
           type="search"
           value={value}
         />
+        {value && (
+          <button aria-label="Clear search" className={styles.clear} onClick={onClear} type="button">
+            <Icon name="close" />
+          </button>
+        )}
       </div>
       <p aria-live="polite" className={styles.hint} id="heritage-search-status">
-        {resultCount} {resultCount === 1 ? "destination" : "destinations"} shown
+        {resultCount} {resultCount === 1 ? "place" : "places"} found
       </p>
     </form>
   );

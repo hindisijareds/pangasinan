@@ -10,20 +10,20 @@ import styles from "./HeaderNavigation.module.css";
 const items = [
   {
     href: "/",
-    label: "Discover",
-    image: "/images/hundred-islands.jpg",
+    label: "Home",
+    image: "/images/hundred-islands.webp",
     imageAlt: "Hundred Islands National Park",
   },
   {
     href: "/heritage",
     label: "Heritage",
-    image: "/images/provincial-capitol.jpg",
+    image: "/images/provincial-capitol.webp",
     imageAlt: "Pangasinan Provincial Capitol",
   },
   {
     href: "/about",
     label: "About",
-    image: "/images/bolinao-lighthouse.jpg",
+    image: "/images/bolinao-lighthouse.webp",
     imageAlt: "Cape Bolinao Lighthouse",
   },
 ];
@@ -117,9 +117,9 @@ export function HeaderNavigation() {
           <span className={styles.brandText}>PANGASINAN</span>
         </TransitionLink>
 
-        <nav className={styles.desktopNav}>
-          <TransitionLink href="/" className={pathname === "/" ? styles.activeLink : ""}>Discover</TransitionLink>
-          <TransitionLink href="/heritage" className={pathname === "/heritage" ? styles.activeLink : ""}>Heritage</TransitionLink>
+        <nav aria-label="Primary navigation" className={styles.desktopNav}>
+          <TransitionLink href="/" className={pathname === "/" ? styles.activeLink : ""}>Home</TransitionLink>
+          <TransitionLink href="/heritage" className={pathname.startsWith("/heritage") ? styles.activeLink : ""}>Heritage</TransitionLink>
           <TransitionLink href="/about" className={pathname === "/about" ? styles.activeLink : ""}>About</TransitionLink>
         </nav>
 

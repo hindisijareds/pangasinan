@@ -53,7 +53,12 @@ export function HeritageGrid({ sites }: HeritageGridProps) {
   return (
     <section aria-label="Heritage destinations" className={styles.explorer}>
       <div className={styles.searchWrap} data-reveal="fade-up">
-        <SearchForm onSearch={setQuery} resultCount={filteredSites.length} value={query} />
+        <SearchForm
+          onClear={() => setQuery("")}
+          onSearch={setQuery}
+          resultCount={filteredSites.length}
+          value={query}
+        />
         <CategoryFilter
           activeCategory={activeCategory}
           categories={categories}
@@ -65,7 +70,7 @@ export function HeritageGrid({ sites }: HeritageGridProps) {
         <div className={styles.resultsWrap}>
           <div className={styles.grid} data-doc-component="heritage-grid">
             {filteredSites.slice(0, visibleCount).map((site, index) => (
-              <div data-delay={Math.min(4, index % 3)} data-reveal="fade-up" key={site.id}>
+              <div key={site.id}>
                 <HeritageCard headingLevel="h2" priority={index === 0} site={site} index={index} />
               </div>
             ))}
@@ -80,10 +85,10 @@ export function HeritageGrid({ sites }: HeritageGridProps) {
         </div>
       ) : (
         <div className={styles.empty} role="status">
-          <h2>No destinations match “{query}”</h2>
-          <p>Try a place such as Bolinao, a category such as Nature, or clear the search to see the full collection.</p>
-          <Button onClick={() => setQuery("")} type="button" variant="secondary">
-            Clear search
+          <h2>No heritage places match your search.</h2>
+          <p>Try another place, town, or heritage type, or clear the filters to see the complete archive.</p>
+          <Button onClick={() => { setQuery(""); setActiveCategory("All"); }} type="button" variant="secondary">
+            Clear filters
           </Button>
         </div>
       )}

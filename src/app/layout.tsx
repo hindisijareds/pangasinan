@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Outfit, Playfair_Display, Caveat } from "next/font/google";
+import { Outfit, Playfair_Display } from "next/font/google";
 import { MotionProvider } from "@/components/motion/MotionProvider/MotionProvider";
 import { HeaderNavigation } from "@/components/organisms/HeaderNavigation/HeaderNavigation";
 import "./globals.css";
@@ -14,12 +14,6 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   style: ["normal", "italic"],
   variable: "--font-playfair",
-  display: "swap",
-});
-
-const caveat = Caveat({
-  subsets: ["latin"],
-  variable: "--font-caveat",
   display: "swap",
 });
 
@@ -50,7 +44,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${playfair.variable} ${caveat.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${playfair.variable}`}>
       <body>
         <a className="skipLink" href="#main-content">Skip to main content</a>
         <MotionProvider>

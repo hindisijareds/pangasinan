@@ -10,6 +10,6 @@ All local website images were downloaded as reduced-resolution derivatives and c
 | `provincial-capitol.webp` | Pangasinan Provincial Capitol Building | Kuranges | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pangasinan_Provincial_Capitol_Building.jpg) |
 | `patar-beach.webp` | Patar white beach | Beltugade | Public domain | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Patar_white_beach.jpg) |
 
-## Balungao placeholder
+## Records without photography
 
-No verified, appropriately licensed photograph specifically depicting Balungao Hot Spring was found during implementation. The card therefore uses a deliberately illustrative CSS placeholder labeled "Verified photo pending". It must not be replaced with an unrelated photograph labeled as the spring.
+No verified, appropriately licensed photograph specifically depicting Balungao Hot Spring was found during implementation. It and other records without a verified local asset use typography-led archive cards. They must not be paired with unrelated photographs.

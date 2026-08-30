@@ -10,6 +10,7 @@ html {
   background: var(--color-background);
   color-scheme: light;
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -27,7 +28,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(250, 235, 215, 0.4) 0%, transparent 70%);
+  background: radial-gradient(circle at 20% 0%, rgba(216, 204, 184, 0.28) 0%, transparent 52%);
   pointer-events: none;
   z-index: -1;
 }
@@ -61,8 +62,20 @@ svg {
 h1,
 h2,
 h3,
+h4,
 p {
   margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 ::selection {
@@ -127,7 +140,7 @@ html[data-motion="ready"] [data-visible="true"] {
   position: fixed;
   top: 0;
   transform: translateY(-150%);
-  transition: transform 120ms ease;
+  transition: transform 180ms var(--ease-out);
   z-index: 100;
 }
 

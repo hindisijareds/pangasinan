@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { ResponsiveImage } from "@/components/atoms/Image/ResponsiveImage";
 import { heritageSites } from "@/data/heritageSites";
 import { SiteFooter } from "@/components/sections/SiteFooter/SiteFooter";
-import { HeritageGrid } from "@/components/organisms/HeritageGrid/HeritageGrid";
+import { RelatedHeritage } from "@/components/organisms/RelatedHeritage/RelatedHeritage";
 import { Icon } from "@/components/atoms/Icon/Icon";
 import { Button } from "@/components/atoms/Button/Button";
 import styles from "./detail.module.css";
@@ -25,7 +25,7 @@ export function generateMetadata({ params }: Params): Metadata {
   if (!site) return {};
 
   return {
-    title: `${site.name} | Pangasinan Heritage Digital Showcase`,
+    title: site.name,
     description: site.shortDescription,
   };
 }
@@ -44,7 +44,9 @@ export default function HeritageDetailPage({ params }: Params) {
   const relatedSites = [...sameLocation, ...sameType].slice(0, 3);
   
   // Determine correct heading based on what was actually found
-  const relatedHeading = sameLocation.length > 0 ? `More from ${site.location}` : "You may also like";
+  const relatedHeading = relatedSites.length > 0 && relatedSites.every((item) => item.location === site.location)
+    ? `More from ${site.location}`
+    : "You may also like";
 
   return (
     <>
@@ -73,7 +75,7 @@ export default function HeritageDetailPage({ params }: Params) {
         ) : (
           <section className={styles.heroTypeB} data-reveal="fade-up">
             <div className={styles.heroContentB}>
-              <span className={styles.indexNumB}>0{heritageSites.findIndex(s => s.id === site.id) + 1}</span>
+              <span className={styles.indexNumB}>{String(heritageSites.findIndex(s => s.id === site.id) + 1).padStart(2, "0")}</span>
               <span className={styles.eyebrowB}>{site.location} / PANGASINAN</span>
               <h1 className={styles.titleB}>{site.name}</h1>
               <span className={styles.tagsB}>
@@ -136,7 +138,7 @@ export default function HeritageDetailPage({ params }: Params) {
               <span className={styles.relatedEyebrow}>Continue Exploring</span>
               <h2 className={styles.relatedHeading}>{relatedHeading}</h2>
             </div>
-            <HeritageGrid sites={relatedSites} />
+            <RelatedHeritage sites={relatedSites} />
           </section>
         )}
       </main>
@@ -144,4 +146,3 @@ export default function HeritageDetailPage({ params }: Params) {
     </>
   );
 }
-

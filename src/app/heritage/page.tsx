@@ -22,7 +22,7 @@ export default function HeritagePage() {
             <Typography variant="body" className={styles.introSupport}>
               Browse and discover natural heritage, immovable heritage, historic landmarks, and bodies of water across the province.
             </Typography>
-            <span className={styles.countText}>41 documented places</span>
+            <span className={styles.countText}>{heritageSites.length} documented places</span>
           </div>
         </section>
         <div className={styles.collection}>

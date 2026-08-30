@@ -27,10 +27,10 @@ export function SiteFooter() {
 
         <div className={styles.linkGroup} data-delay="2" data-reveal="fade-up">
           <h3>FEATURED</h3>
-          <TransitionLink href="/heritage/hundred-islands-national-park">Hundred Islands</TransitionLink>
-          <TransitionLink href="/heritage/cape-bolinao-lighthouse">Bolinao</TransitionLink>
-          <TransitionLink href="/heritage/manaoag-church">Manaoag</TransitionLink>
-          <TransitionLink href="/heritage/provincial-capitol">Lingayen</TransitionLink>
+          <TransitionLink href="/heritage/hundred-island">Hundred Islands</TransitionLink>
+          <TransitionLink href="/heritage/cape-bolinao-light-house">Cape Bolinao</TransitionLink>
+          <TransitionLink href="/heritage/pangasinan-provincial-capitol-building">Provincial Capitol</TransitionLink>
+          <TransitionLink href="/heritage/balungao-hot-spring">Balungao</TransitionLink>
         </div>
 
         <div className={styles.bottom} data-reveal="line">

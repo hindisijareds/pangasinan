@@ -4,6 +4,9 @@
 
 - `/`: statically generated editorial home page with one small client-side cinematic controller and an accessible carousel.
 - `/heritage`: statically generated page shell with a focused client-side search/filter island.
+- `/heritage/[slug]`: statically generated detail views for every unique dataset slug.
+- `/about`: statically generated editorial story about the province and the archive.
+- `/design-system`: unlisted production-component documentation.
 
 ## Data flow
 
@@ -13,12 +16,12 @@
 
 - Atoms: Button, Typography, Icon, ResponsiveImage, and semantic color tokens.
 - Molecules: HeritageCard, SearchForm, NavigationItem.
-- Organisms: HeritageGrid, HeaderNavigation.
+- Organisms: HeritageGrid, RelatedHeritage, HeaderNavigation.
 - Sections: CinematicHero, HeritageCarousel, SiteFooter.
 
 ## Client boundaries
 
-Only interaction controllers use `"use client"`: HeaderNavigation, CinematicHero, HeritageCarousel, HeritageGrid, and SearchForm. Layout, pages, content, cards, typography, imagery, and footer remain statically rendered.
+Only interaction controllers use `"use client"`: HeaderNavigation, MotionProvider, TransitionLink, ExperienceCarousel, HeritageCarousel, HeritageGrid, SearchForm, and ResponsiveImage. Layout, pages, content, cards, typography, and footer remain statically rendered.
 
 ## Responsive and accessibility strategy
 

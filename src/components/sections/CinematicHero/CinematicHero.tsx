@@ -19,11 +19,11 @@ export function CinematicHero() {
         </h1>
 
         <p className={styles.supportText} data-reveal="fade-up" data-delay="2">
-          Pangasinan is a province shaped by islands, coastlines, historic churches, landmarks, towns, traditions, and generations of local life.
+          Islands, coastlines, churches, and towns hold the stories of a province shaped by water, faith, and local life.
         </p>
 
-        <Link aria-label="Scroll to the province story" className={styles.scrollCue} href="#province-story">
-          Explore Heritage ↗
+        <Link className={styles.scrollCue} href="/heritage">
+          Explore Heritage →
         </Link>
       </div>
 
@@ -34,15 +34,15 @@ export function CinematicHero() {
             className={styles.backdrop}
             priority
             sizes="(max-width: 767px) 100vw, 45vw"
-            src="/images/hundred-islands.jpg"
+            src="/images/hundred-islands.webp"
           />
           <div className={styles.handwrittenAnnotation} data-reveal="fade-up" data-delay="4">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className={styles.annotationArrow}>
               <path d="M5 5Q20 15 35 35M20 35H35V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <div className={styles.annotationText}>
-              <span>HUNDRED ISLANDS, ALAMINOS</span>
-              <span className={styles.coords}>16.155° N, 119.981° E</span>
+              <span>HUNDRED ISLANDS / ALAMINOS</span>
+              <span className={styles.coords}>NATURAL HERITAGE</span>
             </div>
           </div>
         </div>

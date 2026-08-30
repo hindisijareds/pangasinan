@@ -1,113 +1,108 @@
 .card {
   display: grid;
-  gap: 1rem;
+  gap: 1.1rem;
   min-width: 0;
-  outline: 0;
   position: relative;
 }
 
-.card:focus-visible {
-  outline: 3px solid var(--color-focus);
-  outline-offset: 0.55rem;
+.card:focus-within {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 0.5rem;
 }
 
-/* ──────────────── TYPE A (IMAGE) ──────────────── */
-.typeA .imageWrap {
-  aspect-ratio: 3 / 4;
-  border-radius: var(--radius-card);
-  position: relative;
-  overflow: hidden;
-  background: var(--color-image-placeholder);
-}
-
-.typeA.compact .imageWrap {
+.imageWrap {
   aspect-ratio: 4 / 3;
+  background: var(--color-image-placeholder);
+  overflow: hidden;
+  position: relative;
 }
 
-.typeA .imageWrap::after {
+.imageWrap::after {
   background: var(--color-deep);
   content: "";
   inset: 0;
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  transition: opacity 500ms ease;
+  transition: opacity 450ms var(--ease-out);
 }
 
-.typeA .imageWrap img {
-  transition: transform 500ms var(--ease-out);
+.imageWrap img {
+  transition: transform 650ms var(--ease-out);
 }
 
 .typeA:hover .imageWrap img,
-.typeA:focus-visible .imageWrap img {
-  transform: scale(1.055);
+.typeA:focus-within .imageWrap img {
+  transform: scale(1.035);
 }
 
 .typeA:hover .imageWrap::after,
-.typeA:focus-visible .imageWrap::after {
-  opacity: 0.15;
+.typeA:focus-within .imageWrap::after {
+  opacity: 0.1;
 }
 
-.typeA .content {
+.content,
+.contentB {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
-.metaTop {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.metaTop,
+.metaTopB {
+  align-items: flex-start;
   border-bottom: 1px solid var(--color-border);
-  padding-bottom: 0.75rem;
-  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.8rem;
 }
 
-.indexNum {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  color: var(--color-accent);
-  font-weight: 500;
-  letter-spacing: 0.15em;
-}
-
-.locationLabel {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  color: var(--color-text-muted);
+.indexNum,
+.locationLabel,
+.classLabel,
+.typeLabel {
+  font-size: 0.66rem;
+  font-weight: 650;
+  letter-spacing: 0.13em;
+  line-height: 1.45;
   text-transform: uppercase;
 }
 
+.indexNum {
+  color: var(--color-accent);
+}
+
+.locationLabel,
+.classLabel,
+.typeLabel {
+  color: var(--color-text-muted);
+}
+
 .title {
-  font-family: var(--font-display);
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
-  font-weight: 400;
   color: var(--color-foreground);
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
   margin: 0;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
 }
 
 .metaBottom {
   display: flex;
   gap: 0.75rem;
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  color: var(--color-text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
 }
 
 .description {
-  font-size: 1rem;
-  line-height: 1.6;
   color: var(--color-text-secondary);
-  margin: 0 0 1rem;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  font-size: 0.96rem;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-height: 1.62;
+  margin: 0 0 0.6rem;
   overflow: hidden;
 }
 
@@ -116,95 +111,86 @@
 }
 
 .exploreBtn {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid currentColor;
   color: var(--color-foreground);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-bottom: 1px solid var(--color-foreground);
-  padding-bottom: 0.2rem;
-  transition: opacity 250ms ease, gap 250ms ease;
-  background: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  cursor: pointer;
-  padding-left: 0;
-  padding-right: 0;
+  font-size: 0.68rem;
+  gap: 0.45rem;
+  letter-spacing: 0.13em;
+  min-height: 2.75rem;
+  padding: 0.75rem 0;
 }
 
 .exploreBtn:hover,
 .card:hover .exploreBtn {
-  opacity: 0.6;
-  gap: 0.75rem;
+  box-shadow: none;
+  color: var(--color-accent);
+  transform: translateX(0.2rem);
 }
 
-/* ──────────────── TYPE B (NO IMAGE) ──────────────── */
 .typeB {
-  background: var(--color-surface);
+  background:
+    linear-gradient(135deg, rgba(164, 95, 70, 0.05), transparent 42%),
+    var(--color-background);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
-  padding: 2rem;
-  transition: background 250ms ease;
+  min-height: 24rem;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  transition: background-color 350ms var(--ease-out), border-color 350ms var(--ease-out), transform 350ms var(--ease-out);
+}
+
+.typeB::after {
+  border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent);
+  content: "";
+  height: 1.75rem;
+  pointer-events: none;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  transform: rotate(45deg);
+  width: 1.75rem;
 }
 
 .typeB:hover {
-  background: var(--color-surface-secondary);
+  background-color: var(--color-surface);
+  border-color: color-mix(in srgb, var(--color-accent) 42%, var(--color-border));
+  transform: translateY(-0.25rem);
 }
 
 .contentB {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   height: 100%;
 }
 
 .metaTopB {
-  display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  gap: 1rem;
-  border-bottom: 1px solid var(--color-border);
-  padding-bottom: 1rem;
-  margin-bottom: 0.5rem;
+  padding-right: 2.5rem;
 }
 
 .labelsB {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 0.25rem;
 }
 
-.classLabel,
-.typeLabel {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  color: var(--color-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+.typeB .description {
+  margin-bottom: 1.25rem;
 }
 
-.typeB .description {
-  margin-bottom: 1.5rem;
+.compact .title {
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .typeA .imageWrap img {
+  .imageWrap img,
+  .imageWrap::after,
+  .typeB {
     transition: none;
   }
 
-  .typeA .imageWrap::after,
-  .content {
-    transition: none;
-  }
-
-  .card:focus-visible .image img,
-  .card:hover .content,
-  .card:focus-visible .content {
+  .typeA:hover .imageWrap img,
+  .exploreBtn:hover,
+  .card:hover .exploreBtn,
+  .typeB:hover {
     transform: none;
   }
 }

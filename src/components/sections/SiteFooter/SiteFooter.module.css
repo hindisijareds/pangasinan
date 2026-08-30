@@ -1,13 +1,13 @@
 .footer {
-  background: var(--color-deep);
+  background: var(--color-deep-dark);
   color: var(--color-on-dark);
-  padding: clamp(5rem, 10vw, 9rem) var(--page-gutter) 2rem;
+  padding: clamp(4rem, 7vw, 6.5rem) var(--page-gutter) 2rem;
 }
 
 .inner {
   display: grid;
   gap: clamp(3rem, 6vw, 6rem) clamp(2rem, 5vw, 5rem);
-  grid-template-columns: minmax(16rem, 1.7fr) repeat(3, minmax(8rem, 0.7fr));
+  grid-template-columns: minmax(16rem, 1.7fr) repeat(2, minmax(8rem, 0.7fr));
   margin: 0 auto;
   max-width: var(--content-max);
 }
@@ -64,11 +64,12 @@
 .linkGroup a {
   color: rgba(255, 255, 255, 0.68);
   font-size: 0.78rem;
-  transition: color 160ms ease;
+  transition: color 200ms var(--ease-out), transform 200ms var(--ease-out);
 }
 
 .linkGroup a:hover {
   color: #fff;
+  transform: translateX(0.2rem);
 }
 
 .bottom {

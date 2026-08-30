@@ -18,7 +18,7 @@ export default function AboutPage() {
         <section className={styles.hero} data-reveal="clip">
           <div className={styles.heroVisual}>
             <ResponsiveImage
-              src="/images/hundred-islands.jpg"
+              src="/images/hundred-islands.webp"
               alt="Hundred Islands National Park view"
               className={styles.heroImage}
               priority
@@ -28,7 +28,7 @@ export default function AboutPage() {
           </div>
           <div className={styles.heroContent} data-reveal="fade-up" data-delay="1">
             <span className={styles.heroEyebrow}>ABOUT THE PROVINCE</span>
-            <h1 className={styles.heroTitle}>Pangasinan, shaped by land and water.</h1>
+            <h1 className={styles.heroTitle}>Pangasinan,<br />shaped by land<br />and water.</h1>
           </div>
         </section>
 
@@ -37,11 +37,11 @@ export default function AboutPage() {
           <div className={styles.columns}>
             <div>
               <span className={styles.sectionEyebrow}>IDENTITY & GEOGRAPHY</span>
-              <h2 className={styles.sectionTitle}>A province defined by its coast and plains.</h2>
+              <h2 className={styles.sectionTitle}>A province read through its places.</h2>
             </div>
             <div className={styles.bodyText}>
-              <p>Pangasinan translates to &quot;place of salt-making,&quot; derived from &quot;asin&quot; (salt). This name speaks to its enduring connection to the sea, where for centuries coastal communities have worked the water.</p>
-              <p>Yet it is equally a province of vast agricultural plains, winding rivers, and historic towns. The identity of Pangasinan is drawn from this balance of coastal vibrancy and quiet inland tradition.</p>
+              <p>The project&apos;s 41 records move across cities and municipalities, from Alaminos and Bolinao to Lingayen, Dagupan, Urdaneta, and communities farther inland.</p>
+              <p>Together they form a portrait of Pangasinan through islands, beaches, rivers, civic buildings, churches, plazas, monuments, and the local communities that care for them.</p>
             </div>
           </div>
         </section>
@@ -49,12 +49,12 @@ export default function AboutPage() {
         {/* LAND + WATER */}
         <section className={styles.splitSection} data-reveal="fade-up">
           <div className={styles.splitImageWrap} data-reveal="clip">
-            <ResponsiveImage src="/images/patar-beach.jpg" alt="Patar Beach coastline" className={styles.splitImage} sizes="(max-width: 60rem) 100vw, 50vw" />
+            <ResponsiveImage src="/images/patar-beach.webp" alt="Patar Beach coastline" className={styles.splitImage} sizes="(max-width: 60rem) 100vw, 50vw" />
           </div>
           <div className={styles.bodyText}>
             <h2 className={styles.sectionTitle}>Between land and water.</h2>
-            <p>The western coastline faces the West Philippine Sea, offering rugged shores, lighthouses, and island networks. This geography naturally fostered maritime trade and coastal living.</p>
-            <p>Inland, the Agno River winds through the province, supporting agriculture and shaping the layout of municipalities and historic centers.</p>
+            <p>Water is a recurring presence across the collection. It appears in the islands of Alaminos, the shores of Bolinao and Binmaley, and river and waterfall records from San Quintin and Natividad.</p>
+            <p>These natural places sit alongside the province&apos;s built heritage, revealing how landscape and settlement are documented together.</p>
           </div>
         </section>
 
@@ -62,13 +62,13 @@ export default function AboutPage() {
         <section className={styles.asymmetricGrid} data-reveal="fade-up">
           <div className={styles.bodyText}>
             <h2 className={styles.sectionTitle}>Stories built across generations.</h2>
-            <p>The built environment of Pangasinan serves as a visible record of its history. From Spanish-era brick churches to American-period civic structures, the province preserves an architectural timeline.</p>
+            <p>Churches, municipal halls, plazas, monuments, and the Provincial Capitol give the archive a second rhythm: places shaped by faith, public life, memory, and civic identity.</p>
           </div>
           <div className={styles.asymImage1} data-reveal="clip">
-            <ResponsiveImage src="/images/provincial-capitol.jpg" alt="Pangasinan Provincial Capitol" className={styles.splitImage} sizes="(max-width: 60rem) 100vw, 40vw" />
+            <ResponsiveImage src="/images/provincial-capitol.webp" alt="Pangasinan Provincial Capitol" className={styles.splitImage} sizes="(max-width: 60rem) 100vw, 40vw" />
           </div>
           <div className={styles.asymImage2} data-reveal="clip" data-delay="1">
-            <ResponsiveImage src="/images/manaoag-church.jpg" alt="Manaoag Church" className={styles.splitImage} sizes="(max-width: 60rem) 100vw, 30vw" />
+            <ResponsiveImage src="/images/manaoag-church.webp" alt="Manaoag Church" className={styles.splitImage} sizes="(max-width: 60rem) 100vw, 30vw" />
           </div>
         </section>
 
@@ -78,19 +78,19 @@ export default function AboutPage() {
           <div className={styles.typesGrid}>
             <div className={styles.typeBlock}>
               <h3 className={styles.typeTitle}>Natural Heritage</h3>
-              <p className={styles.bodyText}>Landscapes, islands, and ecological areas that shape the environmental character of the province.</p>
+              <p className={styles.bodyText}>The collection&apos;s islands, beaches, rivers, waterfalls, and spring areas.</p>
             </div>
             <div className={styles.typeBlock}>
               <h3 className={styles.typeTitle}>Immovable Heritage</h3>
-              <p className={styles.bodyText}>Historic structures, ruins, and monuments that represent the built history of local communities.</p>
+              <p className={styles.bodyText}>The archive&apos;s buildings, plazas, churches, monuments, bridges, and civic places.</p>
             </div>
             <div className={styles.typeBlock}>
-              <h3 className={styles.typeTitle}>Religious Heritage</h3>
-              <p className={styles.bodyText}>Churches, basilicas, and sites of faith that reflect centuries of religious devotion.</p>
+              <h3 className={styles.typeTitle}>Churches &amp; Faith</h3>
+              <p className={styles.bodyText}>Religious sites are organized as a heritage type within the immovable collection.</p>
             </div>
             <div className={styles.typeBlock}>
-              <h3 className={styles.typeTitle}>Historic Landmarks</h3>
-              <p className={styles.bodyText}>Civic centers and locations significant to local and national history.</p>
+              <h3 className={styles.typeTitle}>Civic &amp; Historic Places</h3>
+              <p className={styles.bodyText}>Municipal halls, parks, plazas, and monuments record public memory and local identity.</p>
             </div>
           </div>
         </section>
@@ -111,7 +111,7 @@ export default function AboutPage() {
         <section className={styles.ctaSection} data-reveal="clip">
           <div className={styles.heroVisual}>
             <ResponsiveImage
-              src="/images/bolinao-lighthouse.jpg"
+              src="/images/bolinao-lighthouse.webp"
               alt="Cape Bolinao Lighthouse"
               className={styles.heroImage}
               sizes="100vw"

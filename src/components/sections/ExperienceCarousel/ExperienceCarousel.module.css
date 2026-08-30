@@ -1,6 +1,6 @@
 .carousel {
   display: grid;
-  gap: 3rem;
+  gap: 1.5rem;
 }
 
 .toolbar {
@@ -30,7 +30,7 @@
   border: 1px solid var(--color-border);
   color: var(--color-text-primary);
   border-radius: 0;
-  transition: background 250ms ease, color 250ms ease;
+  transition: background 250ms var(--ease-out), color 250ms var(--ease-out);
 }
 
 .controls button:hover:not(:disabled) {
@@ -45,10 +45,10 @@
 
 .track {
   display: flex;
-  gap: clamp(2rem, 5vw, 6rem);
+  gap: clamp(1rem, 2vw, 1.75rem);
   overflow-x: auto;
-  padding: 0 max(var(--page-gutter), calc((100vw - min(85vw, 50rem)) / 2)) 4rem;
-  scroll-padding-inline: max(var(--page-gutter), calc((100vw - min(85vw, 50rem)) / 2));
+  padding: 0 max(var(--page-gutter), calc((100vw - var(--content-max)) / 2 + var(--page-gutter))) 2rem;
+  scroll-padding-inline: max(var(--page-gutter), calc((100vw - var(--content-max)) / 2 + var(--page-gutter)));
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }
@@ -57,34 +57,27 @@
 .card {
   display: flex;
   flex-direction: column;
-  flex: 0 0 min(85vw, 50rem);
+  flex: 0 0 min(86vw, 26rem);
   position: relative;
   scroll-snap-align: center;
-  transition: opacity 600ms ease;
+  transition: opacity 450ms var(--ease-out);
   text-decoration: none;
 }
 
 .card[data-active="false"] {
-  opacity: 0.4;
+  opacity: 0.68;
 }
 
 .image {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
   width: 100%;
   overflow: hidden;
   background: var(--color-surface);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 0.5rem;
-}
-
-@media (min-width: 48rem) {
-  .image {
-    aspect-ratio: 16 / 9;
-  }
+  border: 1px solid var(--color-border);
 }
 
 .image img {
-  transition: transform 900ms var(--ease-out);
+  transition: transform 700ms var(--ease-out);
 }
 
 .card:hover .image img {
@@ -94,9 +87,9 @@
 .meta {
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  padding-top: 1.25rem;
+  text-align: left;
 }
 
 .number {
@@ -105,18 +98,18 @@
   font-weight: 500;
   letter-spacing: 0.15em;
   color: var(--color-accent);
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
 
 .meta h3 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
   line-height: 1.1;
   color: var(--color-foreground);
   margin: 0 0 1rem;
   font-weight: 400;
-  transition: color 300ms ease;
-  letter-spacing: -0.01em;
+  transition: color 300ms var(--ease-out);
+  letter-spacing: -0.035em;
 }
 
 .card:hover .meta h3 {
@@ -130,4 +123,20 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-text-secondary);
+}
+
+@media (min-width: 48rem) {
+  .card {
+    flex-basis: min(46vw, 27rem);
+  }
+}
+
+@media (min-width: 68.75rem) {
+  .card {
+    flex-basis: min(29vw, 27rem);
+  }
+
+  .card[data-active="false"] {
+    opacity: 1;
+  }
 }
