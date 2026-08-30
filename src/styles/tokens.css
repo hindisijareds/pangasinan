@@ -34,10 +34,10 @@
   --radius-card: 0px;
   --radius-pill: 9999px;
   
-  --content-max: 95rem;
-  --page-gutter: clamp(1.25rem, 5vw, 4rem);
-  --section-space: clamp(4rem, 8vw, 8rem);
-  --section-space-large: clamp(6rem, 12vw, 12rem);
+  --content-max: 90rem;
+  --page-gutter: clamp(1.25rem, 4vw, 3rem);
+  --section-space: clamp(4rem, 6vw, 6rem);
+  --section-space-large: clamp(5rem, 8vw, 8rem);
   
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-snap: cubic-bezier(0.22, 1, 0.36, 1);
