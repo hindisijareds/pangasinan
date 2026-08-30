@@ -2,8 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import { type CSSProperties, useEffect, useRef, useState } from "react";
-import { Button } from "@/components/atoms/Button/Button";
-import { Icon } from "@/components/atoms/Icon/Icon";
 import { ResponsiveImage } from "@/components/atoms/Image/ResponsiveImage";
 import { TransitionLink } from "@/components/motion/TransitionLink/TransitionLink";
 import { NavigationItem } from "@/components/molecules/NavigationItem/NavigationItem";
@@ -109,28 +107,26 @@ export function HeaderNavigation() {
       onFocusCapture={() => setHidden(false)}
     >
       <div className={styles.bar}>
-        <Button
+        <TransitionLink className={styles.brand} href="/">
+          <span className={styles.brandText}>PANGASINAN</span>
+        </TransitionLink>
+
+        <nav className={styles.desktopNav}>
+          <TransitionLink href="/" className={pathname === "/" ? styles.activeLink : ""}>DISCOVER</TransitionLink>
+          <TransitionLink href="/heritage" className={pathname === "/heritage" ? styles.activeLink : ""}>HERITAGE</TransitionLink>
+        </nav>
+
+        <button
           aria-controls="site-navigation"
           aria-expanded={open}
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-          className={styles.menuButton}
+          className={styles.menuToggle}
           id="menu-toggle"
           onClick={() => setOpen((value) => !value)}
           type="button"
-          variant="ghost"
         >
-          <Icon name={open ? "close" : "menu"} />
-          <span>{open ? "Close" : "Menu"}</span>
-        </Button>
-
-        <TransitionLink className={styles.brand} href="/">
-          <span aria-hidden="true" className={styles.brandMark}>P</span>
-          <span className={styles.brandText}>Pangasinan</span>
-        </TransitionLink>
-
-        <Button className={styles.exploreButton} href="/heritage" variant="ghost">
-          Explore places
-        </Button>
+          <span>{open ? "CLOSE" : "MENU"}</span>
+        </button>
       </div>
 
       <div

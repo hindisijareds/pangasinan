@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/atoms/Button/Button";
 import { Icon } from "@/components/atoms/Icon/Icon";
 import { ResponsiveImage } from "@/components/atoms/Image/ResponsiveImage";
-import { Typography } from "@/components/atoms/Typography/Typography";
 import { TransitionLink } from "@/components/motion/TransitionLink/TransitionLink";
 import styles from "./ExperienceCarousel.module.css";
 
@@ -108,15 +107,16 @@ export function ExperienceCarousel({ items }: Readonly<{ items: ExperienceCarous
             href={item.href}
             key={item.title}
           >
-            <ResponsiveImage
-              alt={item.alt}
-              className={styles.image}
-              sizes="(max-width: 767px) 78vw, 42vw"
-              src={item.image}
-            />
-            <span className={styles.number}>0{index + 1}</span>
+            <div className={styles.image}>
+              <ResponsiveImage
+                alt={item.alt}
+                sizes="(max-width: 767px) 85vw, 60vw"
+                src={item.image}
+              />
+            </div>
             <div className={styles.meta}>
-              <Typography as="h3" variant="title">{item.title}</Typography>
+              <span className={styles.number}>0{index + 1}</span>
+              <h3 className={styles.title}>{item.title}</h3>
               <span>{item.place}</span>
             </div>
           </TransitionLink>

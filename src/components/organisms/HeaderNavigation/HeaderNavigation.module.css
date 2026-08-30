@@ -54,79 +54,68 @@
 
 .bar {
   align-items: center;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
-  max-width: none;
-  min-height: 4.5rem;
+  max-width: var(--content-max);
   pointer-events: auto;
   position: relative;
 }
 
 .brand {
-  align-items: center;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 0.18rem;
-  justify-self: center;
-  text-align: center;
-}
-
-.brandMark {
-  align-items: center;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  display: flex;
-  font-family: var(--font-display);
-  font-size: 0.92rem;
-  height: 2.15rem;
-  justify-content: center;
-  transition: transform 400ms var(--ease-out);
-  width: 2.15rem;
-}
-
-.brand:hover .brandMark,
-.brand:focus-visible .brandMark {
-  transform: rotate(8deg) scale(1.06);
+  text-decoration: none;
 }
 
 .brandText {
-  font: 700 0.58rem/1 var(--font-sans);
-  letter-spacing: 0.18em;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-.menuButton,
-.exploreButton {
-  border-color: color-mix(in srgb, currentColor 55%, transparent);
+.desktopNav {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .desktopNav {
+    display: flex;
+    gap: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.desktopNav a {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
   color: inherit;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 200ms ease;
 }
 
-.bar .menuButton {
-  border: 0;
-  gap: 1rem;
-  justify-self: start;
-  min-height: auto;
-  padding: 0;
+.desktopNav a:hover,
+.desktopNav a.activeLink {
+  opacity: 1;
 }
 
-.bar .menuButton svg {
-  border: 1px solid currentColor;
-  box-sizing: content-box;
-  height: 1.15rem;
-  padding: 0.7rem;
-  transition: transform 450ms var(--ease-out);
-  width: 1.15rem;
-}
-
-.header[data-open="true"] .menuButton svg {
-  transform: rotate(90deg);
-}
-
-.bar .exploreButton {
-  justify-self: end;
-  min-height: 2.65rem;
-  min-width: 10.25rem;
+.menuToggle {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
 }
 
 .mobilePanel {
