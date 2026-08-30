@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/atoms/Button/Button";
 import { HeritageCard } from "@/components/molecules/HeritageCard/HeritageCard";
 import { SearchForm } from "@/components/molecules/SearchForm/SearchForm";
@@ -15,6 +15,11 @@ interface HeritageGridProps {
 export function HeritageGrid({ sites }: HeritageGridProps) {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(12);
+
+  useEffect(() => {
+    setVisibleCount(12);
+  }, [query, activeCategory]);
 
   const categories = useMemo(() => {
     const classes = new Set(sites.map((s) => s.heritageClass));
@@ -57,12 +62,21 @@ export function HeritageGrid({ sites }: HeritageGridProps) {
       </div>
 
       {filteredSites.length > 0 ? (
-        <div className={styles.grid} data-doc-component="heritage-grid">
-          {filteredSites.map((site, index) => (
-            <div data-delay={Math.min(4, index % 3)} data-reveal="fade-up" key={site.id}>
-              <HeritageCard headingLevel="h2" priority={index === 0} site={site} index={index} />
+        <div className={styles.resultsWrap}>
+          <div className={styles.grid} data-doc-component="heritage-grid">
+            {filteredSites.slice(0, visibleCount).map((site, index) => (
+              <div data-delay={Math.min(4, index % 3)} data-reveal="fade-up" key={site.id}>
+                <HeritageCard headingLevel="h2" priority={index === 0} site={site} index={index} />
+              </div>
+            ))}
+          </div>
+          {visibleCount < filteredSites.length && (
+            <div className={styles.loadMore} data-reveal="fade-up">
+              <Button onClick={() => setVisibleCount(c => c + 12)} variant="secondary">
+                Show more places
+              </Button>
             </div>
-          ))}
+          )}
         </div>
       ) : (
         <div className={styles.empty} role="status">

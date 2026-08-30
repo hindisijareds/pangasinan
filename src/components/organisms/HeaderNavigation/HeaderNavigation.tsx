@@ -114,8 +114,6 @@ export function HeaderNavigation() {
         <nav className={styles.desktopNav}>
           <TransitionLink href="/" className={pathname === "/" ? styles.activeLink : ""}>Discover</TransitionLink>
           <TransitionLink href="/heritage" className={pathname === "/heritage" ? styles.activeLink : ""}>Heritage</TransitionLink>
-          <TransitionLink href="/culture" className={pathname === "/culture" ? styles.activeLink : ""}>Culture</TransitionLink>
-          <TransitionLink href="/about" className={pathname === "/about" ? styles.activeLink : ""}>About</TransitionLink>
         </nav>
 
         <div className={styles.rightActions}>

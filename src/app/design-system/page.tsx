@@ -89,8 +89,11 @@ export default function DesignSystemPage() {
           <ResponsiveImage alt="Romulo Island in Hundred Islands National Park" className={styles.imagePreview} sizes="(max-width: 900px) 90vw, 70rem" src="/images/hundred-islands.jpg" />
         </Preview>
 
-        <Preview description="A reusable destination summary built from image and typography atoms." id="heritage-card" title="Molecule · Heritage Card">
-          <div className={styles.cardWrap}><HeritageCard site={heritageSites[0]} /></div>
+        <Preview description="A reusable destination summary built from image and typography atoms. Type A (Verified Image) and Type B (Text-first)." id="heritage-card" title="Molecule · Heritage Card">
+          <div className={styles.cardWrap}>
+            <HeritageCard site={heritageSites.find(s => s.image) || heritageSites[0]} />
+            <HeritageCard site={heritageSites.find(s => !s.image) || heritageSites[1]} />
+          </div>
         </Preview>
 
         <Preview description="Real links with current-page semantics and generous targets." id="navigation-item" title="Molecule · Navigation Item">

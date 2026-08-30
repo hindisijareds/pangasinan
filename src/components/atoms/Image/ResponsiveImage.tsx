@@ -7,7 +7,6 @@ import styles from "./ResponsiveImage.module.css";
 interface ResponsiveImageProps {
   alt: string;
   className?: string;
-  fullBleed?: boolean;
   imageClassName?: string;
   parallax?: number;
   priority?: boolean;
@@ -20,7 +19,6 @@ interface ResponsiveImageProps {
 export function ResponsiveImage({
   alt,
   className,
-  fullBleed = false,
   imageClassName,
   parallax,
   priority = false,
@@ -33,6 +31,9 @@ export function ResponsiveImage({
   const [loaded, setLoaded] = useState(priority);
   const fullSource = withBasePath(src);
   const smallSource = withBasePath(src.replace(/\.(webp|jpg|jpeg|png)$/, "-640.$1"));
+  
+  // Provide the browser with the available static variants so it can choose optimally
+  const srcSet = `${smallSource} 640w, ${fullSource} 1600w`;
 
   useEffect(() => {
     if (image.current?.complete) setLoaded(true);
@@ -47,19 +48,18 @@ export function ResponsiveImage({
       data-reveal={reveal}
     >
       <picture className={styles.picture}>
-        {fullBleed && <source media="(min-width: 48rem)" srcSet={fullSource} />}
-        {/* Native picture sources keep static exports responsive without an image server. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           alt={alt}
           className={[styles.image, imageClassName].filter(Boolean).join(" ")}
-          decoding="async"
+          decoding={priority ? "sync" : "async"}
           fetchPriority={priority ? "high" : "auto"}
           loading={priority ? "eager" : "lazy"}
           onLoad={() => setLoaded(true)}
           ref={image}
           sizes={sizes}
           src={smallSource}
+          srcSet={srcSet}
         />
       </picture>
     </div>
