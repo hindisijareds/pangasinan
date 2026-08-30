@@ -24,7 +24,7 @@
 }
 
 .homeHeader {
-  color: var(--color-on-dark);
+  /* color remains dark as the hero is no longer dark */
 }
 
 .homeHeader::before {
@@ -32,7 +32,7 @@
 }
 
 .homeHeader[data-scrolled="true"] {
-  color: var(--color-text-primary);
+  /* color remains dark */
 }
 
 .homeHeader[data-scrolled="true"]::before {
