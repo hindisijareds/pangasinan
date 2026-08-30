@@ -11,13 +11,13 @@ const items = [
   {
     href: "/",
     label: "Discover Pangasinan",
-    image: "/images/hundred-islands.webp",
+    image: "/images/hundred-islands.jpg",
     imageAlt: "Hundred Islands National Park",
   },
   {
     href: "/heritage",
     label: "Heritage collection",
-    image: "/images/provincial-capitol.webp",
+    image: "/images/provincial-capitol.jpg",
     imageAlt: "Pangasinan Provincial Capitol",
   },
 ];

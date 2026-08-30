@@ -32,7 +32,7 @@ export function ResponsiveImage({
   const image = useRef<HTMLImageElement>(null);
   const [loaded, setLoaded] = useState(priority);
   const fullSource = withBasePath(src);
-  const smallSource = withBasePath(src.replace(/\.webp$/, "-640.webp"));
+  const smallSource = withBasePath(src.replace(/\.(webp|jpg|jpeg|png)$/, "-640.$1"));
 
   useEffect(() => {
     if (image.current?.complete) setLoaded(true);

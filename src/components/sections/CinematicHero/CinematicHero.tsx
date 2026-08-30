@@ -35,7 +35,7 @@ export function CinematicHero() {
             className={styles.backdrop}
             priority
             sizes="(max-width: 767px) 100vw, 45vw"
-            src="/images/hundred-islands.webp"
+            src="/images/hundred-islands.jpg"
           />
           <div className={styles.handwrittenAnnotation} data-reveal="fade-up" data-delay="4">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className={styles.annotationArrow}>

@@ -11,28 +11,28 @@ const experiences: ExperienceCarouselItem[] = [
   {
     title: "Island nature",
     place: "Alaminos City",
-    image: "/images/hundred-islands.webp",
+    image: "/images/hundred-islands.jpg",
     href: "/heritage",
     alt: "Tree-covered islands and blue water in Hundred Islands National Park",
   },
   {
     title: "Coastal days",
     place: "Patar, Bolinao",
-    image: "/images/patar-beach.webp",
+    image: "/images/patar-beach.jpg",
     href: "/heritage",
     alt: "The open shoreline and sea at Patar Beach",
   },
   {
     title: "Living faith",
     place: "Manaoag",
-    image: "/images/manaoag-church.webp",
+    image: "/images/manaoag-church.jpg",
     href: "/heritage",
     alt: "The facade and bell tower of Manaoag Church",
   },
   {
     title: "Civic heritage",
     place: "Lingayen",
-    image: "/images/provincial-capitol.webp",
+    image: "/images/provincial-capitol.jpg",
     href: "/heritage",
     alt: "Pangasinan Provincial Capitol beneath a blue sky",
   },
@@ -69,7 +69,7 @@ export default function HomePage() {
               alt="Cape Bolinao Lighthouse framed by trees"
               className={styles.bolinaoImage}
               sizes="(max-width: 767px) 100vw, 75vw"
-              src="/images/bolinao-lighthouse.webp"
+              src="/images/bolinao-lighthouse.jpg"
             />
           </div>
           <div className={styles.bolinaoCopy} data-delay="1" data-reveal="fade-up">
@@ -99,16 +99,16 @@ export default function HomePage() {
           </div>
           
           <div className={styles.journeyImage1} data-reveal="clip">
-            <ResponsiveImage alt="Cape Bolinao Lighthouse" sizes="(max-width: 767px) 100vw, 30vw" src="/images/bolinao-lighthouse.webp" />
+            <ResponsiveImage alt="Cape Bolinao Lighthouse" sizes="(max-width: 767px) 100vw, 30vw" src="/images/bolinao-lighthouse.jpg" />
           </div>
           <div className={styles.journeyImage2} data-reveal="clip" data-delay="1">
-            <ResponsiveImage alt="Hundred Islands" sizes="(max-width: 767px) 100vw, 50vw" src="/images/hundred-islands.webp" />
+            <ResponsiveImage alt="Hundred Islands" sizes="(max-width: 767px) 100vw, 50vw" src="/images/hundred-islands.jpg" />
           </div>
           <div className={styles.journeyImage3} data-reveal="clip" data-delay="2">
-            <ResponsiveImage alt="Pangasinan Provincial Capitol" sizes="(max-width: 767px) 100vw, 25vw" src="/images/provincial-capitol.webp" />
+            <ResponsiveImage alt="Pangasinan Provincial Capitol" sizes="(max-width: 767px) 100vw, 25vw" src="/images/provincial-capitol.jpg" />
           </div>
           <div className={styles.journeyImage4} data-reveal="clip" data-delay="3">
-            <ResponsiveImage alt="Manaoag Church" sizes="(max-width: 767px) 100vw, 40vw" src="/images/manaoag-church.webp" />
+            <ResponsiveImage alt="Manaoag Church" sizes="(max-width: 767px) 100vw, 40vw" src="/images/manaoag-church.jpg" />
           </div>
         </section>
 
@@ -120,7 +120,7 @@ export default function HomePage() {
               alt="Boats and islands at Hundred Islands National Park"
               className={styles.seasonsImage}
               sizes="100vw"
-              src="/images/hundred-islands.webp"
+              src="/images/hundred-islands.jpg"
             />
           </div>
           <div className={styles.seasonsCopy} data-delay="1" data-reveal="fade-up">
@@ -143,7 +143,7 @@ export default function HomePage() {
               <h3 className={styles.previewTitle}>Hundred Islands</h3>
               <span className={styles.previewLoc}>ALAMINOS CITY</span>
               <div className={styles.previewImageReveal}>
-                 <ResponsiveImage alt="Hundred Islands" sizes="30vw" src="/images/hundred-islands.webp" />
+                 <ResponsiveImage alt="Hundred Islands" sizes="30vw" src="/images/hundred-islands.jpg" />
               </div>
             </Link>
             
@@ -152,7 +152,7 @@ export default function HomePage() {
               <h3 className={styles.previewTitle}>Cape Bolinao Lighthouse</h3>
               <span className={styles.previewLoc}>BOLINAO</span>
               <div className={styles.previewImageReveal}>
-                 <ResponsiveImage alt="Cape Bolinao Lighthouse" sizes="30vw" src="/images/bolinao-lighthouse.webp" />
+                 <ResponsiveImage alt="Cape Bolinao Lighthouse" sizes="30vw" src="/images/bolinao-lighthouse.jpg" />
               </div>
             </Link>
             
@@ -161,7 +161,7 @@ export default function HomePage() {
               <h3 className={styles.previewTitle}>Manaoag Church</h3>
               <span className={styles.previewLoc}>MANAOAG</span>
               <div className={styles.previewImageReveal}>
-                 <ResponsiveImage alt="Manaoag Church" sizes="30vw" src="/images/manaoag-church.webp" />
+                 <ResponsiveImage alt="Manaoag Church" sizes="30vw" src="/images/manaoag-church.jpg" />
               </div>
             </Link>
           </div>

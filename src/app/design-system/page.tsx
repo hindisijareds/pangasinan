@@ -86,7 +86,7 @@ export default function DesignSystemPage() {
         </Preview>
 
         <Preview description="Responsive local imagery with a fixed aspect ratio and useful alternative text." id="image" title="Atom · Image">
-          <ResponsiveImage alt="Romulo Island in Hundred Islands National Park" className={styles.imagePreview} sizes="(max-width: 900px) 90vw, 70rem" src="/images/hundred-islands.webp" />
+          <ResponsiveImage alt="Romulo Island in Hundred Islands National Park" className={styles.imagePreview} sizes="(max-width: 900px) 90vw, 70rem" src="/images/hundred-islands.jpg" />
         </Preview>
 
         <Preview description="A reusable destination summary built from image and typography atoms." id="heritage-card" title="Molecule · Heritage Card">
