@@ -12,7 +12,7 @@ All local website images were downloaded as reduced-resolution derivatives and c
 
 ## Heritage archive photography
 
-The 37 previously image-less AWARAN records now use the exact photograph attached to the corresponding record in the [AWARAN Heritage Archive](https://www.awaran.net/archive). Each image is stored as an optimized 1920px master and a 640px card variant. AWARAN does not currently publish an explicit reuse license for these record uploads, so its archive and original asset URL are retained in the [image source manifest](documentation/heritage-image-manifest.json).
+The 37 AWARAN records use the photograph attached to the corresponding entry in the [AWARAN Heritage Archive](https://www.awaran.net/archive). Each image is stored as an optimized master and a 640px card variant. The matching archive source URL is retained with every record in `src/data/heritageSites.ts`. AWARAN does not currently publish an explicit reuse license for these uploads, so permission should be confirmed before using them outside this academic showcase.
 
 Balungao Hot Spring uses a photograph of Mount Balungao and its surrounding landscape, the foothill setting associated with the hot spring area:
 

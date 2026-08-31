@@ -5,12 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit --incremental false",
-    "validate:content": "node scripts/validate-content.mjs",
-    "verify:ui": "node scripts/verify-ui.mjs",
-    "docs:pdf": "python scripts/generate_pdfs.py"
+    "typecheck": "tsc --noEmit --incremental false"
   },
   "dependencies": {
     "next": "14.2.35",
@@ -23,7 +19,6 @@
     "@types/react-dom": "18.3.6",
     "eslint": "8.57.1",
     "eslint-config-next": "14.2.35",
-    "playwright-core": "^1.62.1",
     "typescript": "5.8.3"
   },
   "engines": {
