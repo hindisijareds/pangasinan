@@ -17,6 +17,10 @@
   position: relative;
 }
 
+.image {
+  height: 100%;
+}
+
 .imageWrap::after {
   background: var(--color-deep);
   content: "";
