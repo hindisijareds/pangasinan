@@ -17,7 +17,7 @@
 }
 
 .grid {
-  align-items: start;
+  align-items: stretch;
   display: grid;
   gap: clamp(2.75rem, 5vw, 4.5rem) clamp(1.25rem, 3vw, 2.25rem);
   grid-template-columns: minmax(0, 1fr);
