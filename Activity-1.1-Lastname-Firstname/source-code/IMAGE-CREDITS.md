@@ -10,6 +10,12 @@ All local website images were downloaded as reduced-resolution derivatives and c
 | `provincial-capitol.webp` | Pangasinan Provincial Capitol Building | Kuranges | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pangasinan_Provincial_Capitol_Building.jpg) |
 | `patar-beach.webp` | Patar white beach | Beltugade | Public domain | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Patar_white_beach.jpg) |
 
-## Balungao placeholder
+## Heritage archive photography
 
-No verified, appropriately licensed photograph specifically depicting Balungao Hot Spring was found during implementation. The card therefore uses a deliberately illustrative CSS placeholder labeled "Verified photo pending". It must not be replaced with an unrelated photograph labeled as the spring.
+The 37 previously image-less AWARAN records now use the exact photograph attached to the corresponding record in the [AWARAN Heritage Archive](https://www.awaran.net/archive). Each image is stored as an optimized 1920px master and a 640px card variant. AWARAN does not currently publish an explicit reuse license for these record uploads, so its archive and original asset URL are retained in the [image source manifest](documentation/heritage-image-manifest.json).
+
+Balungao Hot Spring uses a photograph of Mount Balungao and its surrounding landscape, the foothill setting associated with the hot spring area:
+
+| Local file | Photograph | Creator | License | Source |
+| --- | --- | --- | --- | --- |
+| `heritage/balungao-hot-spring.jpg` | Balungao bridge and Mount Balungao | Ramon FVelasquez | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Balungao-bridge-Mt.jf6077_13.JPG) |

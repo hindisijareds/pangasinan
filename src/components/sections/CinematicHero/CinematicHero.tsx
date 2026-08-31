@@ -11,7 +11,7 @@ export function CinematicHero() {
             <span>PANGASINAN / PHILIPPINES</span>
           </span>
         </div>
-        
+
         <h1 className={styles.title} data-reveal="fade-up" data-delay="1">
           <span className={styles.titleLine}>Where land,</span>
           <span className={styles.titleLine}>water and memory</span>

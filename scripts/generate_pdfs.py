@@ -4,6 +4,7 @@ import html
 import re
 import shutil
 import textwrap
+from io import BytesIO
 from pathlib import Path
 
 from PIL import Image as PILImage
@@ -100,6 +101,10 @@ def build_styles():
         textColor=INK,
     ))
     styles.add(ParagraphStyle(
+        name="TableHeader", fontName=SANS, fontSize=6.8, leading=9,
+        textColor=SURFACE,
+    ))
+    styles.add(ParagraphStyle(
         name="CodeCustom", fontName="Courier", fontSize=6.4, leading=8.2,
         textColor=INK, leftIndent=7, rightIndent=7,
         borderPadding=8, backColor=CREAM, spaceBefore=3, spaceAfter=7,
@@ -164,10 +169,24 @@ class HeritageDocTemplate(BaseDocTemplate):
 def image_flowable(image_path: Path):
     with PILImage.open(image_path) as picture:
         width, height = picture.size
-    max_width = 170 * mm
-    max_height = 82 * mm
-    scale = min(max_width / width, max_height / height)
-    flowable = Image(str(image_path), width=width * scale, height=height * scale)
+        max_width = 170 * mm
+        is_route_viewport = image_path.stem.endswith("-viewport")
+        max_height = (160 if is_route_viewport else 82) * mm
+        scale = min(max_width / width, max_height / height)
+
+        # ReportLab otherwise embeds each full-resolution PNG even when it is
+        # printed as a small crop. Rasterize at roughly 160 dpi and encode once
+        # as a high-quality JPEG so the submission PDF stays practical to upload.
+        target_width = max(1, min(width, round(width * scale * 2.2)))
+        target_height = max(1, min(height, round(height * scale * 2.2)))
+        rendered = picture.convert("RGB")
+        if rendered.size != (target_width, target_height):
+            rendered = rendered.resize((target_width, target_height), PILImage.Resampling.LANCZOS)
+        buffer = BytesIO()
+        rendered.save(buffer, format="JPEG", quality=88, optimize=True, progressive=True)
+        buffer.seek(0)
+
+    flowable = Image(buffer, width=width * scale, height=height * scale)
     flowable.hAlign = "LEFT"
     return KeepTogether([flowable, Spacer(1, 3 * mm)])
 
@@ -185,7 +204,13 @@ def table_flowable(rows: list[list[str]]):
         widths = [usable * 0.30, usable * 0.70]
     else:
         widths = [usable / columns] * columns
-    data = [[Paragraph(inline_markup(cell), STYLES["TableCustom"]) for cell in row] for row in rows]
+    data = [
+        [
+            Paragraph(inline_markup(cell), STYLES["TableHeader" if row_index == 0 else "TableCustom"])
+            for cell in row
+        ]
+        for row_index, row in enumerate(rows)
+    ]
     table = Table(data, colWidths=widths[:columns], repeatRows=1, hAlign="LEFT")
     table.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, 0), DEEP),
@@ -311,6 +336,11 @@ def generate(source_relative: str, output_relative: str, report_name: str):
     final_copy = ROOT / "output" / "pdf" / output.name
     final_copy.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(output, final_copy)
+    submission_folder = ROOT / "Activity-1.1-Lastname-Firstname"
+    submission_section = "report" if output.name == "Framework-Selection-Report.pdf" else "documentation"
+    submission_copy = submission_folder / submission_section / output.name
+    submission_copy.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(output, submission_copy)
     print(f"Generated {output.relative_to(ROOT)}")
 
 

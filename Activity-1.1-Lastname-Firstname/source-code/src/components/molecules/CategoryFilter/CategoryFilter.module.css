@@ -1,0 +1,30 @@
+.filterGroup {
+  display: flex;
+  gap: 0.5rem 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.filterBtn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  border-bottom: 2px solid transparent;
+  min-height: 2.75rem;
+  padding: 0.65rem 0;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 300ms var(--ease-out), color 300ms var(--ease-out);
+}
+
+.filterBtn:hover {
+  color: var(--color-text-primary);
+}
+
+.filterBtn.active {
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+}

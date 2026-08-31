@@ -7,15 +7,17 @@
 | Project Title | Pangasinan Heritage Digital Showcase |
 | Student Name | **[STUDENT NAME - replace before submission]** |
 | Selected Framework | React + Next.js 14 App Router |
-| Live Website | **[GITHUB PAGES URL - available after repository deployment]** |
+| Live Website | https://hindisijareds.github.io/pangasinan/ |
 
-An accessible, mobile-first tourism showcase created for Elective 4 - Special Topics in IT. The experience pairs a cinematic Discover page with a searchable heritage collection while remaining suitable for static hosting on GitHub Pages.
+An accessible, mobile-first heritage showcase created for Elective 4 - Special Topics in IT. The experience pairs an editorial Discover page, a searchable cultural archive, and a visual story about the province while remaining suitable for static hosting on GitHub Pages.
 
 ## Pages
 
 - `/` - cinematic introduction, Hundred Islands and Bolinao stories, and a keyboard/touch-friendly destination carousel.
 - `/heritage` - accessible client-side search and a responsive destination grid.
-- `/design-system` - unlisted component-rendering surface used to produce authentic Activity 1 documentation previews.
+- `/heritage/[slug]` - statically generated detail views for the local heritage dataset.
+- `/about` - editorial overview of the province, its represented heritage types, and the digital project.
+- `/design-system` - unlisted component reference page for manual inspection; report screenshots are cropped from the real Home and Heritage experiences.
 
 ## Local setup
 
@@ -33,10 +35,29 @@ Open `http://localhost:3000`.
 ```bash
 npm run lint
 npm run typecheck
+npm run validate:content
 npm run build
 ```
 
 `npm run build` creates the static export in `out/`. No separate `next export` command is required with `output: "export"`.
+
+For the browser-level checks, serve the production export and run the UI verifier in a second terminal:
+
+```bash
+npx --yes serve@14.2.4 out -l 3000 --no-clipboard
+npm run verify:ui
+```
+
+## Regenerating the PDF deliverables
+
+Install the small documentation-only Python dependencies, then generate both PDFs from their editable Markdown sources:
+
+```bash
+python -m pip install -r requirements-docs.txt
+npm run docs:pdf
+```
+
+The generator writes the canonical PDFs to `report/` and `documentation/`, copies them to `output/pdf/`, and refreshes the matching files in the Activity 1 submission folder.
 
 ## Project structure
 
@@ -46,7 +67,7 @@ src/
   components/
     atoms/              Button, Typography, Icon, Image
     molecules/          Heritage Card, Search Form, Navigation Item
-    organisms/          Heritage Grid, Header Navigation
+    organisms/          Heritage Grid, Related Heritage, Header Navigation
     sections/           Cinematic Hero, carousel, footer
   data/                 Typed local tourism content
   styles/               Semantic color and layout tokens
@@ -69,10 +90,10 @@ The workflow in `.github/workflows/deploy-pages.yml` lints, builds, uploads `out
 
 After creating a public repository:
 
-1. Replace the student-name placeholder above.
+1. Replace the student-name placeholder in this README and both Markdown document sources.
 2. Push this project to the repository's `main` branch.
 3. In GitHub, open **Settings > Pages** and select **GitHub Actions** as the source if it is not selected automatically.
-4. Wait for the workflow to complete, then replace the Live Website placeholder with the emitted Pages URL.
+4. Wait for the workflow to complete and confirm the Live Website URL above.
 5. Run Lighthouse against that deployed URL and save the final evidence in `lighthouse/`.
 
 ## Accessibility and performance
@@ -87,13 +108,12 @@ After creating a public repository:
 
 ## Content and image responsibility
 
-Descriptions are intentionally concise and avoid unverified visitor statistics, fees, schedules, and historical claims. Photograph licenses and source links are recorded in [IMAGE-CREDITS.md](./IMAGE-CREDITS.md). Balungao Hot Spring uses a labeled placeholder until a verified photograph is available.
+Descriptions are intentionally concise and avoid unverified visitor statistics, fees, and schedules. Photograph licenses and source links are recorded in [IMAGE-CREDITS.md](./IMAGE-CREDITS.md). Records without verified local photography use a typography-led card instead of a fake image placeholder.
 
 ## Academic deliverables
 
 - `report/Framework-Selection-Report.pdf`
 - `documentation/Atomic-Design-System-Manual.pdf`
 - `Activity-1.1-Lastname-Firstname/`
-- `PROJECT-CHECKLIST.md`
 
 Dependency audit context is documented in [SECURITY-NOTES.md](./SECURITY-NOTES.md).

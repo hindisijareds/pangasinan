@@ -1,6 +1,6 @@
 # Security and Dependency Note
 
-`npm audit --omit=dev` reports advisories against the required Next.js 14 dependency line. The automated fix would upgrade to Next.js 16, which would violate the activity's explicit Next.js 14 requirement and turn the update into a framework migration.
+As of 31 August 2026, `npm audit --omit=dev` reports two affected production packages at high severity through the required Next.js 14 dependency line. The automated fix upgrades to a supported Next.js 16 release, which would violate the selected course option and turn the update into a framework migration. Next.js 14 is also outside the current Next.js support window.
 
 Risk is reduced for this submission because the deployed artifact is a static export:
 

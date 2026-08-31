@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { TransitionLink } from "@/components/motion/TransitionLink/TransitionLink";
 import styles from "./NavigationItem.module.css";
 
 interface NavigationItemProps {
@@ -10,13 +10,13 @@ interface NavigationItemProps {
 
 export function NavigationItem({ active, children, href, onClick }: NavigationItemProps) {
   return (
-    <Link
+    <TransitionLink
       aria-current={active ? "page" : undefined}
       className={[styles.link, active && styles.active].filter(Boolean).join(" ")}
       href={href}
       onClick={onClick}
     >
       {children}
-    </Link>
+    </TransitionLink>
   );
 }

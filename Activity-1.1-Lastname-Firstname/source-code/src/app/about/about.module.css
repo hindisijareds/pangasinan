@@ -1,0 +1,278 @@
+.main {
+  background: var(--color-background);
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(216, 204, 184, 0.34), transparent 38%),
+    var(--color-background);
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  min-height: min(78svh, 52rem);
+  padding: calc(var(--header-height) + 3rem) var(--page-gutter) 3rem;
+}
+
+.hero > .heroVisual {
+  aspect-ratio: 4 / 3;
+  order: 2;
+  overflow: hidden;
+  position: relative;
+}
+
+.heroOverlay {
+  background: linear-gradient(180deg, transparent 64%, rgba(23, 39, 31, 0.24));
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.heroImage {
+  height: 100%;
+}
+
+.heroContent {
+  align-content: end;
+  display: grid;
+  order: 1;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroContent {
+  animation: heroEnter 650ms var(--ease-out) both;
+}
+
+.heroEyebrow,
+.sectionEyebrow {
+  color: var(--color-accent);
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6.4rem);
+  font-weight: 500;
+  letter-spacing: -0.052em;
+  line-height: 0.88;
+  margin: 0;
+  max-width: 9ch;
+}
+
+.section,
+.splitSection,
+.asymmetricGrid {
+  margin: 0 auto;
+  max-width: var(--content-max);
+  padding: var(--section-gap) var(--page-gutter);
+}
+
+.columns,
+.splitSection,
+.asymmetricGrid {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 6rem);
+}
+
+.sectionTitle {
+  color: var(--color-foreground);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.75rem);
+  font-weight: 500;
+  letter-spacing: -0.048em;
+  line-height: 0.94;
+  margin: 0 0 1.75rem;
+}
+
+.bodyText {
+  color: var(--color-text-secondary);
+  display: grid;
+  font-size: clamp(1rem, 1.4vw, 1.125rem);
+  gap: 1.25rem;
+  line-height: 1.7;
+  max-width: 66ch;
+}
+
+.bodyText p {
+  margin: 0;
+}
+
+.splitSection {
+  align-items: center;
+  border-block: 1px solid var(--color-border);
+}
+
+.splitImageWrap {
+  aspect-ratio: 4 / 5;
+  background: var(--color-image-placeholder);
+  overflow: hidden;
+}
+
+.splitImage {
+  height: 100%;
+}
+
+.asymmetricGrid {
+  align-items: start;
+}
+
+.asymImage1,
+.asymImage2 {
+  background: var(--color-image-placeholder);
+  overflow: hidden;
+}
+
+.asymImage1 {
+  aspect-ratio: 4 / 3;
+}
+
+.asymImage2 {
+  aspect-ratio: 3 / 4;
+}
+
+.typesGrid {
+  display: grid;
+  gap: 2rem 1.5rem;
+}
+
+.typeBlock {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+}
+
+.typeBlock::before {
+  color: var(--color-accent);
+  content: "◆";
+  display: block;
+  font-size: 0.58rem;
+  margin-bottom: 1.25rem;
+}
+
+.typeTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0 0 0.8rem;
+}
+
+.typeBlock .bodyText {
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.projectSection {
+  background: var(--color-surface);
+  border-block: 1px solid var(--color-border);
+  padding: var(--section-gap) var(--page-gutter);
+}
+
+.projectInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin: 0 auto;
+  max-width: 62rem;
+}
+
+.ctaSection {
+  align-items: center;
+  color: var(--color-on-dark);
+  display: flex;
+  justify-content: center;
+  min-height: clamp(30rem, 60svh, 40rem);
+  overflow: hidden;
+  padding: var(--section-gap) var(--page-gutter);
+  position: relative;
+  text-align: center;
+}
+
+.ctaSection::after {
+  background: rgba(23, 39, 31, 0.66);
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.ctaSection .heroVisual {
+  inset: 0;
+  position: absolute;
+}
+
+.ctaSection .heroImage img {
+  object-position: 50% 66%;
+}
+
+.ctaContent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 54rem;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 48rem) {
+  .typesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 60rem) {
+  .hero {
+    align-items: stretch;
+    grid-template-columns: minmax(0, 0.9fr) minmax(28rem, 1.1fr);
+    padding-left: max(var(--page-gutter), calc((100vw - var(--content-max)) / 2 + var(--page-gutter)));
+    padding-right: max(var(--page-gutter), calc((100vw - var(--content-max)) / 2 + var(--page-gutter)));
+  }
+
+  .hero > .heroVisual {
+    aspect-ratio: auto;
+    min-height: 36rem;
+    order: 2;
+  }
+
+  .heroContent {
+    padding-bottom: 3rem;
+  }
+
+  .columns,
+  .splitSection {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .asymmetricGrid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .asymmetricGrid > .bodyText { grid-column: 1 / 6; padding-top: 4rem; }
+  .asymImage1 { grid-column: 7 / 13; }
+  .asymImage2 { grid-column: 3 / 7; margin-top: -8rem; }
+
+  .typesGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroContent {
+    animation: none;
+  }
+}

@@ -1,129 +1,50 @@
-"use client";
-
-import { useEffect, useRef } from "react";
+import Link from "next/link";
 import { ResponsiveImage } from "@/components/atoms/Image/ResponsiveImage";
-import { Typography } from "@/components/atoms/Typography/Typography";
 import styles from "./CinematicHero.module.css";
 
-function clamp(value: number, min = 0, max = 1) {
-  return Math.min(max, Math.max(min, value));
-}
-
 export function CinematicHero() {
-  const sequence = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const element = sequence.current;
-    if (!element) return;
-
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const pointerFine = window.matchMedia("(pointer: fine)");
-    let frame = 0;
-
-    const updateScroll = () => {
-      if (reduceMotion.matches || window.innerWidth < 768) return;
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => {
-        const rect = element.getBoundingClientRect();
-        const distance = Math.max(1, element.offsetHeight - window.innerHeight);
-        const progress = clamp(-rect.top / distance);
-        const storyOne = clamp(1 - Math.abs(progress - 0.48) / 0.18);
-        const storyTwo = clamp(1 - Math.abs(progress - 0.79) / 0.18);
-        element.style.setProperty("--intro-opacity", String(clamp(1 - progress * 4)));
-        element.style.setProperty("--story-one-opacity", String(storyOne));
-        element.style.setProperty("--story-two-opacity", String(storyTwo));
-        element.style.setProperty("--title-shift", `${progress * -72}px`);
-        element.style.setProperty("--image-scale", String(1.04 + progress * 0.09));
-      });
-    };
-
-    const updatePointer = (event: PointerEvent) => {
-      if (reduceMotion.matches || !pointerFine.matches) return;
-      const x = ((event.clientX / window.innerWidth) - 0.5) * -12;
-      const y = ((event.clientY / window.innerHeight) - 0.5) * -8;
-      element.style.setProperty("--pointer-x", `${x}px`);
-      element.style.setProperty("--pointer-y", `${y}px`);
-    };
-
-    updateScroll();
-    window.addEventListener("scroll", updateScroll, { passive: true });
-    window.addEventListener("resize", updateScroll);
-    window.addEventListener("pointermove", updatePointer, { passive: true });
-    return () => {
-      cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", updateScroll);
-      window.removeEventListener("resize", updateScroll);
-      window.removeEventListener("pointermove", updatePointer);
-    };
-  }, []);
-
   return (
-    <section aria-label="Discover Pangasinan cinematic introduction" className={styles.sequence} ref={sequence}>
-      <div className={styles.stage}>
-        <ResponsiveImage
-          alt=""
-          className={styles.backdrop}
-          fullBleed
-          priority
-          sizes="100vw"
-          src="/images/hundred-islands.webp"
-        />
-        <div className={styles.shade} />
-        <div aria-hidden="true" className={styles.grain} />
-
-        <div className={styles.intro}>
-          <div className={styles.introInner}>
-            <Typography className={styles.eyebrow} variant="eyebrow">
-              Province of Pangasinan · Philippines
-            </Typography>
-            <Typography as="h1" className={styles.title} variant="display">
-              Pangasinan
-            </Typography>
-            <div className={styles.introBottom}>
-              <Typography className={styles.lede} variant="body">
-                Follow the coast, cross island waters, and meet the places where landscape and living culture shape a province.
-              </Typography>
-              <ul aria-label="Showcase themes" className={styles.pills}>
-                {['Heritage', 'Nature', 'Culture'].map((pill) => (
-                  <li className={styles.pill} key={pill}>{pill}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
+    <section aria-label="Welcome to Pangasinan" className={styles.hero}>
+      <div className={styles.contentLeft}>
+        <div className={styles.headerMeta} data-reveal="fade-up">
+          <span className={styles.kicker}>
+            <span>PANGASINAN / PHILIPPINES</span>
+          </span>
         </div>
 
-        <span aria-hidden="true" className={styles.scrollCue}>Scroll to journey</span>
+        <h1 className={styles.title} data-reveal="fade-up" data-delay="1">
+          <span className={styles.titleLine}>Where land,</span>
+          <span className={styles.titleLine}>water and memory</span>
+          <span className={styles.titleLine}><em className={styles.italicText}>meet.</em></span>
+        </h1>
 
-        <div className={styles.stories}>
-          <article className={styles.story} data-story="hundred-islands">
-            <ResponsiveImage
-              alt="Boats beside tree-covered Romulo Island in Hundred Islands National Park"
-              className={styles.storyImage}
-              fullBleed
-              sizes="100vw"
-              src="/images/hundred-islands.webp"
-            />
-            <div className={styles.storyContent}>
-              <Typography className={styles.storyNumber} variant="eyebrow">01 · Alaminos City</Typography>
-              <Typography as="h2" variant="heading">A horizon made of islands.</Typography>
-              <Typography variant="body">Hundred Islands opens the journey with limestone forms, blue water, and the invitation to explore by boat.</Typography>
-            </div>
-          </article>
+        <p className={styles.supportText} data-reveal="fade-up" data-delay="2">
+          Islands, coastlines, churches, and towns hold the stories of a province shaped by water, faith, and local life.
+        </p>
 
-          <article className={styles.story} data-story="bolinao-lighthouse">
-            <ResponsiveImage
-              alt="Cape Bolinao Lighthouse framed by trees"
-              className={styles.storyImage}
-              fullBleed
-              sizes="100vw"
-              src="/images/bolinao-lighthouse.webp"
-            />
-            <div className={styles.storyContent}>
-              <Typography className={styles.storyNumber} variant="eyebrow">02 · Bolinao</Typography>
-              <Typography as="h2" variant="heading">A beacon at the western edge.</Typography>
-              <Typography variant="body">Cape Bolinao Lighthouse stands above a coastal landscape shaped by travel, navigation, and long views toward the sea.</Typography>
+        <Link className={styles.scrollCue} href="/heritage">
+          Explore Heritage →
+        </Link>
+      </div>
+
+      <div className={styles.contentRight}>
+        <div className={styles.imageWrapper} data-reveal="clip" data-delay="3">
+          <ResponsiveImage
+            alt="Hundred Islands National Park"
+            className={styles.backdrop}
+            priority
+            sizes="(max-width: 767px) 100vw, 45vw"
+            src="/images/hundred-islands.webp"
+          />
+          <div className={styles.handwrittenAnnotation} data-reveal="fade-up" data-delay="4">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" className={styles.annotationArrow}>
+              <path d="M5 5Q20 15 35 35M20 35H35V20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <div className={styles.annotationText}>
+              <span>HUNDRED ISLANDS / ALAMINOS</span>
+              <span className={styles.coords}>NATURAL HERITAGE</span>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>

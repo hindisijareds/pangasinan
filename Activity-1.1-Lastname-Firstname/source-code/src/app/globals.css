@@ -10,6 +10,7 @@ html {
   background: var(--color-background);
   color-scheme: light;
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -19,6 +20,28 @@ body {
   margin: 0;
   min-width: 20rem;
   overflow-x: clip;
+  position: relative;
+}
+
+/* Subtle warm radial gradient to break up flatness */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 0%, rgba(216, 204, 184, 0.28) 0%, transparent 52%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* 2% Noise grain for tactile paper feel */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
 }
 
 a {
@@ -39,8 +62,20 @@ svg {
 h1,
 h2,
 h3,
+h4,
 p {
   margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 ::selection {
@@ -53,6 +88,48 @@ p {
   outline-offset: 3px;
 }
 
+html[data-motion="ready"] [data-reveal] {
+  transition:
+    opacity 650ms var(--ease-out) var(--reveal-delay, 0ms),
+    transform 650ms var(--ease-out) var(--reveal-delay, 0ms),
+    clip-path 750ms var(--ease-out) var(--reveal-delay, 0ms);
+  will-change: opacity, transform, clip-path;
+}
+
+html[data-motion="ready"] [data-reveal="fade-up"]:not([data-visible="true"]) {
+  opacity: 0;
+  transform: translate3d(0, 2rem, 0);
+}
+
+html[data-motion="ready"] [data-reveal="scale"]:not([data-visible="true"]) {
+  opacity: 0;
+  transform: scale(0.94);
+}
+
+html[data-motion="ready"] [data-reveal="clip"]:not([data-visible="true"]) {
+  clip-path: inset(8% 0 92% 0);
+}
+
+html[data-motion="ready"] [data-reveal="line"]:not([data-visible="true"]) {
+  clip-path: inset(0 100% 0 0);
+}
+
+html[data-motion="ready"] [data-visible="true"] {
+  clip-path: inset(0 0 0 0);
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+[data-delay="1"] { --reveal-delay: 80ms; }
+[data-delay="2"] { --reveal-delay: 160ms; }
+[data-delay="3"] { --reveal-delay: 240ms; }
+[data-delay="4"] { --reveal-delay: 320ms; }
+
+[data-parallax] {
+  transform: translate3d(0, var(--parallax-y, 0), 0);
+  will-change: transform;
+}
+
 .skipLink {
   background: var(--color-surface);
   border-radius: var(--radius-pill);
@@ -63,7 +140,7 @@ p {
   position: fixed;
   top: 0;
   transform: translateY(-150%);
-  transition: transform 120ms ease;
+  transition: transform 180ms var(--ease-out);
   z-index: 100;
 }
 
@@ -83,5 +160,12 @@ p {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal],
+  [data-parallax] {
+    clip-path: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

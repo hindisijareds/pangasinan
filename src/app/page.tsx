@@ -94,7 +94,7 @@ export default function HomePage() {
           <div className={styles.journeyIntro} data-reveal="fade-up">
             <h2 className={styles.journeyHeading}>A province<br />in many frames.</h2>
           </div>
-          
+
           <div className={styles.journeyImage1} data-reveal="clip">
             <ResponsiveImage alt="Cape Bolinao Lighthouse" className={styles.journeyMedia} sizes="(max-width: 767px) 100vw, 30vw" src="/images/bolinao-lighthouse.webp" />
             <span className={styles.journeyCaption}>BOLINAO<br/>Cape Bolinao Lighthouse</span>

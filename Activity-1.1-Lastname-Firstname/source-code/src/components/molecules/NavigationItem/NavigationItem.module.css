@@ -20,7 +20,7 @@
   position: absolute;
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 180ms ease;
+  transition: transform 250ms var(--ease-out);
   width: calc(100% - 0.4rem);
 }
 

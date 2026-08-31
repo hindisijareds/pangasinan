@@ -16,14 +16,14 @@ export const metadata: Metadata = {
 };
 
 const tokens = [
-  ["Background", "var(--color-background)"],
-  ["Surface", "var(--color-surface)"],
-  ["Foreground", "var(--color-foreground)"],
-  ["Accent", "var(--color-accent)"],
-  ["Sea", "var(--color-sea)"],
-  ["Leaf", "var(--color-leaf)"],
-  ["Earth", "var(--color-earth)"],
-  ["Focus", "var(--color-focus)"],
+  ["Paper", "var(--color-background)"],
+  ["Soft Paper", "var(--color-surface)"],
+  ["Sand", "var(--color-surface-secondary)"],
+  ["Heritage Green", "var(--color-deep)"],
+  ["Dark Green", "var(--color-deep-dark)"],
+  ["Terracotta", "var(--color-accent)"],
+  ["Warm Brown", "var(--color-accent-strong)"],
+  ["Primary Text", "var(--color-foreground)"],
 ];
 
 function Preview({ children, description, id, title }: { children: React.ReactNode; description: string; id: string; title: string }) {
@@ -43,9 +43,9 @@ export default function DesignSystemPage() {
     <main className={styles.main} id="main-content">
       <div className={styles.inner}>
         <header className={styles.intro}>
-          <Typography variant="eyebrow">Activity 1 documentation surface</Typography>
-          <Typography as="h1" variant="heading">Atomic Design in use</Typography>
-          <Typography variant="body">A renderable reference for the real components used throughout the Pangasinan Heritage Digital Showcase.</Typography>
+          <Typography variant="eyebrow">Internal production documentation</Typography>
+          <Typography as="h1" variant="heading">Pangasinan design system</Typography>
+          <Typography variant="body">The production tokens and Atomic Design components shared by Home, Heritage, About, and every heritage detail view.</Typography>
         </header>
 
         <Preview description="Primary, secondary, and icon-only actions." id="button" title="Atom · Button">
@@ -89,13 +89,16 @@ export default function DesignSystemPage() {
           <ResponsiveImage alt="Romulo Island in Hundred Islands National Park" className={styles.imagePreview} sizes="(max-width: 900px) 90vw, 70rem" src="/images/hundred-islands.webp" />
         </Preview>
 
-        <Preview description="A reusable destination summary built from image and typography atoms." id="heritage-card" title="Molecule · Heritage Card">
-          <div className={styles.cardWrap}><HeritageCard site={heritageSites[0]} /></div>
+        <Preview description="A reusable destination summary built from image and typography atoms. Type A (Verified Image) and Type B (Text-first)." id="heritage-card" title="Molecule · Heritage Card">
+          <div className={styles.cardWrap}>
+            <HeritageCard site={heritageSites.find(s => s.image) || heritageSites[0]} />
+            <HeritageCard site={heritageSites.find(s => !s.image) || heritageSites[1]} />
+          </div>
         </Preview>
 
         <Preview description="Real links with current-page semantics and generous targets." id="navigation-item" title="Molecule · Navigation Item">
           <nav aria-label="Navigation item preview" className={styles.navPreview}>
-            <NavigationItem active href="/design-system">Discover</NavigationItem>
+            <NavigationItem active href="/design-system">Home</NavigationItem>
             <NavigationItem href="/heritage">Heritage sites</NavigationItem>
           </nav>
         </Preview>

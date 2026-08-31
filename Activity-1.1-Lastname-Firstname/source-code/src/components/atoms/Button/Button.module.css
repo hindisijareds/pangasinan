@@ -1,21 +1,57 @@
 .button {
   align-items: center;
   border: 1px solid transparent;
-  border-radius: var(--radius-pill);
+  border-radius: 0;
   cursor: pointer;
   display: inline-flex;
-  font: 700 0.78rem/1 var(--font-sans);
+  font: 650 0.72rem/1 var(--font-sans);
   gap: 0.65rem;
   justify-content: center;
-  letter-spacing: 0.09em;
-  min-height: 2.9rem;
-  padding: 0.85rem 1.2rem;
+  letter-spacing: 0.14em;
+  min-height: 3.25rem;
+  padding: 1rem 1.4rem;
   text-transform: uppercase;
-  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+  overflow: hidden;
+  transition: background-color 300ms var(--ease-out), color 300ms var(--ease-out), transform 300ms var(--ease-out);
 }
 
 .button:hover {
   transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.labelWindow {
+  display: inline-flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.labelPrimary,
+.labelClone {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.65rem;
+  justify-content: center;
+  transition: transform 400ms var(--ease-out);
+}
+
+.labelClone {
+  inset: 0;
+  position: absolute;
+  transform: translate3d(0, 120%, 0);
+}
+
+.button:hover .labelPrimary,
+.button:focus-visible .labelPrimary {
+  transform: translate3d(0, -120%, 0);
+}
+
+.button:hover .labelClone,
+.button:focus-visible .labelClone {
+  transform: translate3d(0, 0, 0);
 }
 
 .primary {
@@ -41,7 +77,7 @@
 
 .iconOnly {
   padding: 0.75rem;
-  width: 2.9rem;
+  width: 3.25rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -49,7 +85,21 @@
     transition: none;
   }
 
+  .labelPrimary,
+  .labelClone {
+    transition: none;
+  }
+
   .button:hover {
     transform: none;
+  }
+
+  .button:hover .labelPrimary,
+  .button:focus-visible .labelPrimary {
+    transform: none;
+  }
+
+  .labelClone {
+    display: none;
   }
 }

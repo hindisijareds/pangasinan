@@ -42,6 +42,17 @@ export function HeaderNavigation() {
   }, [pathname]);
 
   useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 60rem)");
+    const closePanel = (event: MediaQueryListEvent | MediaQueryList) => {
+      if (event.matches) setOpen(false);
+    };
+
+    closePanel(desktop);
+    desktop.addEventListener("change", closePanel);
+    return () => desktop.removeEventListener("change", closePanel);
+  }, []);
+
+  useEffect(() => {
     let lastY = window.scrollY;
     let frame = 0;
     const update = () => {
